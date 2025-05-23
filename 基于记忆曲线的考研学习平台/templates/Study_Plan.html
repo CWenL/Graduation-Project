@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/bootstrap.css">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <!-- <link rel="stylesheet" href="/static/css/homepage.css"> -->
+    <script src="/static/js/jquery-3.7.1.min.js" ></script>
+    <script src="/static/js/bootstrap.js"></script>
+    <script src="/static/js/bootstrap.bundle.js"></script>
+    <script src="/static/js/time.js"></script>
+    <script src="/static/js/search.js"></script>
+    <script src="/static/js/script.js"></script>
+    <title>Document</title>
+    <style>
+      .panel {
+    position: absolute;
+    top: 39%;
+    margin-top: -400px;
+    left: 46%;
+    margin-left: -893px;
+    background-color: rgb(255 255 255);
+    width: 80%;
+    height: auto;
+    min-height: 100%;
+    border-radius: 25px;
+    text-align: center;
+    padding: 20px 40px;
+    box-sizing: border-box;
+}
+.input-group-text {
+    font-size: 1.2rem;
+}
+.form-control {
+    font-size: 1.2rem;
+}
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="
+    padding-top: 0px; padding-bottom: 0px; position: fixed; width: 100%; z-index: 1000;">
+        <div class="container-fluid px-2" style="background-color: lavender; padding-left: 0px;">
+          <div class="p-3 rounded hover-effect left_more"><a class="navbar-brand" id="toggleSidebar" role="button">
+            <img style="width: 45px; height: 45px; float: right;" src="/static/imgs/菜单.png">
+            </a></div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <p class="fw-bolder home_h1">欢迎使用考研学习平台！</p>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-auto align-items-center d-flex">
+            <li class="nav-item">
+              <a class="nav-link active fs-4" aria-current="page" href="/homepage">
+                <img style="width: 35px; height: 35px;" src="/static/imgs/首页.png">
+                首页&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link fs-4" href="/GlobalNotice">
+                    <img style="width: 35px; height: 35px;" src="/static/imgs/公告.png">
+                  平台公告&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+              </li>
+            <li class="nav-item">
+              <a class="nav-link fs-4" href="/community">
+                <img style="width: 35px; height: 35px;" src="/static/imgs/交流社区.png">
+                交流社区&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fs-4" href="/userpage">
+                <img style="width: 35px; height: 35px;" src="/static/imgs/个人主页.png">
+                个人主页&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fs-4" href="/learning_us"><img style="width:35px; height:35px" src="/static/imgs/了解我们.png">
+                了解我们&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle fs-4" href="#" id="dropdownMenuButton" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                设置
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <li><a class="dropdown-item" href="{{ url_for('change_password') }}">修改密码</a></li>
+                <li><a class="dropdown-item" href="/logout">退出登录</a></li>
+                <!-- 管理员权限选项，只有管理员才能看到 -->
+                {% if power =="admin" %}
+                <li><a class="dropdown-item" href="{{ url_for('adminOp') }}">管理员面板</a></li>
+                {% endif %}
+                {% if power =="CommunityAdmin" %}
+                <li><a class="dropdown-item" href="{{ url_for('adminOp') }}">社区管理员面板</a></li>
+                {% endif %}
+              </ul>
+            </li>
+          </ul>
+          <img style="width: 35px; height: 35px;" src="/static/imgs/平台搜索.png">
+          &nbsp;&nbsp;
+          <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="搜你想看！" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
+        </div>
+        </nav>
+        <!-- 侧边栏 -->
+        <div id="sidebar" style="width: 11%; position: fixed; height: 100vh; background-color: rgb(244 244 251); color: rgb(0, 0, 0); padding: 20px;">
+          <h5 class="fw-bolder">学习功能列表</h5>
+          <div style="margin-top: 5.5rem;">
+              <a href="/DataChart" class="btn fs-4 mb-3 d-block sidebar-button" style="text-align: left;">
+                  学习数据可视化
+                  <img style="width: 35px; height: 35px; float: right;" src="/static/imgs/可视化.png">
+              </a>
+              <a href="/planpage" class="btn fs-4 mb-3 d-block sidebar-button" style="text-align: left;">
+                  学习规划
+                  <img style="width: 35px; height: 35px; float: right;border-bottom: 5px solid #ea8484;" src="/static/imgs/目标规划.png">
+              </a>
+              
+              <a href="/News" class="btn fs-4 mb-3 d-block sidebar-button" style="text-align: left;">
+                  考研相关资讯
+                  <img style="width: 35px; height: 35px; float: right;" src="/static/imgs/资讯.png">
+              </a>
+              <a href="/uploadpage" class="btn fs-4 mb-3 d-block sidebar-button" style="text-align: left;">
+                  上传错题
+                  <img style="width: 35px; height: 35px; float: right;" src="/static/imgs/错题解析-加入错题.png">
+              </a>
+              记忆曲线复习<hr>
+              <a href="/review" class="btn fs-4 mb-3 d-block sidebar-button" style="text-align: left;margin-bottom:0rem !important;">
+                  <span>错题本复习</span>
+                  <img style="width: 35px; height: 35px; float: right;" src="/static/imgs/复习.png">
+              </a>
+              <button class="dropdown-toggle btn fs-4 d-block sidebar-button" id="dropdown_label" style="margin-bottom:0rem !important;border-color: rgba(255, 255, 255, 0);">标签复习<img id="show_label" src="/static/imgs/展开.png"></button>
+              <div class="dropdown-content">
+                <a href="/Tags_Review/数学" class="btn fs-4 d-block sidebar-button" style="text-align: left;margin-bottom:0rem !important;">数学复习<img style="width: 35px; height: 35px; float: right;" src="/static/imgs/数学.png"></a>
+                    <a href="/Tags_Review/专业课" class="btn fs-4 d-block sidebar-button" style="text-align: left;margin-bottom:0rem !important;">专业课复习<img style="width: 35px; height: 35px; float: right;" src="/static/imgs/专业课.png"></a>
+                    <a href="/Tags_Review/英语" class="btn fs-4 d-block sidebar-button" style="text-align: left;margin-bottom:0rem !important;">英语复习<img style="width: 35px; height: 35px; float: right;" src="/static/imgs/英语.png"></a>
+                    <a href="/Tags_Review/政治" class="btn fs-4 d-block sidebar-button" style="text-align: left;margin-bottom:0rem !important;">政治复习<img style="width: 35px; height: 35px; float: right;" src="/static/imgs/政治.png"></a>
+              </div>
+          </div>
+      </div>
+          <div>
+            <div class="toast-container position-fixed bottom-0 end-0 p-3" style="position: fixed; top: 70px; right: 20px;">
+              <div id="uploadToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                  <div class="toast-header">
+                      <svg t="1739350551406" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="9721" width="20" height="20"><path d="M298.688 170.688h42.688v42.688h-42.688z" p-id="9722"></path><path d="M341.312 170.688H384v42.688h-42.688z" fill="#FFF100" p-id="9723"></path><path d="M384 170.688h42.688v42.688H384zM426.688 170.688h42.688v42.688h-42.688z" fill="#E50046" p-id="9724"></path><path d="M469.312 170.688H512v42.688h-42.688z" fill="#E50046" p-id="9725"></path><path d="M298.688 213.312h42.688V256h-42.688z" p-id="9726"></path><path d="M341.312 213.312H384V256h-42.688zM384 213.312h42.688V256H384zM426.688 213.312h42.688V256h-42.688z" fill="#E50046" p-id="9727"></path><path d="M469.312 213.312H512V256h-42.688z" fill="#E50046" p-id="9728"></path><path d="M256 256h42.688v42.688H256z" p-id="9729"></path><path d="M298.688 256h42.688v42.688h-42.688z" fill="#E50046" p-id="9730"></path><path d="M341.312 256H384v42.688h-42.688zM384 256h42.688v42.688H384z" fill="#E50046" p-id="9731"></path><path d="M426.688 256h42.688v42.688h-42.688z" fill="#FFF100" p-id="9732"></path><path d="M469.312 256H512v42.688h-42.688z" fill="#FFF100" p-id="9733"></path><path d="M256 298.688h42.688v42.688H256z" p-id="9734"></path><path d="M298.688 298.688h42.688v42.688h-42.688z" fill="#E50046" p-id="9735"></path><path d="M341.312 298.688H384v42.688h-42.688zM384 298.688h42.688v42.688H384z" fill="#E50046" p-id="9736"></path><path d="M426.688 298.688h42.688v42.688h-42.688z" fill="#FFF100" p-id="9737"></path><path d="M469.312 298.688H512v42.688h-42.688z" fill="#FFF100" p-id="9738"></path><path d="M512 170.688h42.688v42.688H512z" fill="#E50046" p-id="9739"></path><path d="M512 213.312h42.688V256H512zM512 256h42.688v42.688H512zM512 298.688h42.688v42.688H512z" fill="#FFF100" p-id="9740"></path><path d="M554.688 170.688h42.688v42.688h-42.688z" fill="#E50046" p-id="9741"></path><path d="M554.688 213.312h42.688V256h-42.688zM554.688 256h42.688v42.688h-42.688z" fill="#FFF100" p-id="9742"></path><path d="M554.688 298.688h42.688v42.688h-42.688zM597.312 170.688H640v42.624h-42.688z" fill="#E50046" p-id="9743"></path><path d="M597.312 213.312H640V256h-42.688zM597.312 256H640v42.688h-42.688z" fill="#FFF100" p-id="9744"></path><path d="M597.312 298.688H640v42.688h-42.688z" fill="#E50046" p-id="9745"></path><path d="M640 213.312h42.688V256H640zM640 256h42.688v42.688H640zM682.688 213.312h42.624V256h-42.624z" fill="#FFF100" p-id="9746"></path><path d="M640 170.688h42.688v42.624H640zM682.688 170.688h42.688v42.624h-42.688z" fill="#E50046" p-id="9747"></path><path d="M725.312 170.688H768v42.624h-42.688z" fill="#E50046" p-id="9748"></path><path d="M426.688 42.688h42.688v42.688h-42.688z" p-id="9749"></path><path d="M469.312 42.688H512v42.688h-42.688zM384 85.312h42.688V128H384z" p-id="9750"></path><path d="M426.688 85.312h42.688V128h-42.688z" fill="#FFF100" p-id="9751"></path><path d="M469.312 85.312H512V128h-42.688zM512 42.688h42.688v42.688H512z" fill="#FFF100" p-id="9752"></path><path d="M512 85.312h42.688V128H512zM554.688 42.688h42.688v42.688h-42.688z" fill="#FFF100" p-id="9753"></path><path d="M554.688 85.312h42.688V128h-42.688z" fill="#FFF100" p-id="9754"></path><path d="M597.312 42.688H640v42.688h-42.688z" fill="#FFF100" p-id="9755"></path><path d="M597.312 85.312H640V128h-42.688zM640 42.688h42.688v42.688H640z" fill="#FFF100" p-id="9756"></path><path d="M640 85.312h42.688V128H640zM682.688 42.688h42.688v42.688h-42.688z" fill="#FFF100" p-id="9757"></path><path d="M682.688 85.312h42.688V128h-42.688z" fill="#FFF100" p-id="9758"></path><path d="M725.312 42.688H768v42.688h-42.688z" fill="#FFF100" p-id="9759"></path><path d="M725.312 85.312H768V128h-42.688z" fill="#FFF100" p-id="9760"></path><path d="M768 42.688h42.688v42.688H768z" p-id="9761"></path><path d="M768 85.312h42.688V128H768zM682.688 298.688h42.688v42.688h-42.688zM725.312 256H768v42.688h-42.688z" fill="#FFF100" p-id="9762"></path><path d="M725.312 298.688H768v42.688h-42.688z" fill="#FFF100" p-id="9763"></path><path d="M768 213.312h42.688V256H768zM768 256h42.688v42.688H768zM768 298.688h42.688v42.688H768z" fill="#E50046" p-id="9764"></path><path d="M810.688 170.688h42.688v42.688h-42.688z" fill="#FFF100" p-id="9765"></path><path d="M810.688 213.312h42.688V256h-42.688z" fill="#FFF100" p-id="9766"></path><path d="M810.688 256h42.688v42.688h-42.688zM810.688 298.688h42.688v42.688h-42.688z" fill="#E50046" p-id="9767"></path><path d="M853.312 213.312H896V256h-42.688zM853.312 256H896v42.688h-42.688zM853.312 298.688H896v42.688h-42.688zM896 256h42.688v42.688H896zM896 298.688h42.688v42.688H896z" fill="#FFF100" p-id="9768"></path><path d="M938.624 298.688h42.688v42.688h-42.688z" fill="#E50046" p-id="9769"></path><path d="M682.688 384h42.688v42.688h-42.688zM682.688 426.688h42.688v42.688h-42.688z" fill="#FFF100" p-id="9770"></path><path d="M682.688 469.312h42.688V512h-42.688zM725.312 384H768v42.688h-42.688z" fill="#FFF100" p-id="9771"></path><path d="M725.312 426.688H768v42.688h-42.688z" fill="#FFF100" p-id="9772"></path><path d="M725.312 469.312H768V512h-42.688zM682.688 512h42.688v42.688h-42.688z" fill="#E50046" p-id="9773"></path><path d="M725.312 512H768v42.688h-42.688zM768 384h42.688v42.688H768zM768 426.688h42.688v42.688H768z" fill="#E50046" p-id="9774"></path><path d="M768 469.312h42.688V512H768z" fill="#E50046" p-id="9775"></path><path d="M768 512h42.688v42.688H768z" fill="#FFF100" p-id="9776"></path><path d="M682.688 554.688h42.688v42.688h-42.688z" fill="#E50046" p-id="9777"></path><path d="M682.688 597.312h42.688V640h-42.688z" fill="#FFF100" p-id="9778"></path><path d="M725.312 554.688H768v42.688h-42.688z" fill="#FFF100" p-id="9779"></path><path d="M725.312 597.312H768V640h-42.688zM682.688 640h42.688v42.688h-42.688z" fill="#FFF100" p-id="9780"></path><path d="M725.312 640H768v42.688h-42.688zM768 554.688h42.688v42.688H768z" fill="#FFF100" p-id="9781"></path><path d="M768 597.312h42.688V640H768z" fill="#FFF100" p-id="9782"></path><path d="M768 640h42.688v42.688H768zM682.688 682.688h42.688v42.688h-42.688z" fill="#E50046" p-id="9783"></path><path d="M725.312 682.688H768v42.688h-42.688z" fill="#E50046" p-id="9784"></path><path d="M768 682.688h42.688v42.688H768zM682.688 725.312h42.688V768h-42.688z" p-id="9785"></path><path d="M725.312 725.312H768V768h-42.688z" p-id="9786"></path><path d="M810.688 384h42.688v42.688h-42.688zM810.688 426.688h42.688v42.688h-42.688z" fill="#E50046" p-id="9787"></path><path d="M810.688 469.312h42.688V512h-42.688zM810.688 512h42.688v42.688h-42.688zM810.688 554.688h42.688v42.688h-42.688z" fill="#FFF100" p-id="9788"></path><path d="M810.688 597.312h42.688V640h-42.688z" fill="#FFF100" p-id="9789"></path><path d="M810.688 640h42.688v42.688h-42.688z" fill="#E50046" p-id="9790"></path><path d="M810.688 682.688h42.688v42.688h-42.688z" p-id="9791"></path><path d="M853.312 384H896v42.688h-42.688zM853.312 426.688H896v42.688h-42.688z" fill="#FFF100" p-id="9792"></path><path d="M853.312 469.312H896V512h-42.688zM896 384h42.688v42.688H896zM896 426.688h42.688v42.688H896z" fill="#FFF100" p-id="9793"></path><path d="M896 469.312h42.688V512H896zM853.312 512H896v42.688h-42.688z" fill="#FFF100" p-id="9794"></path><path d="M896 512h42.688v42.688H896zM938.624 384h42.688v42.688h-42.688zM938.688 426.688h42.688v42.688h-42.688z" fill="#E50046" p-id="9795"></path><path d="M938.688 469.312h42.688V512h-42.688z" fill="#E50046" p-id="9796"></path><path d="M938.688 512h42.688v42.688h-42.688z" p-id="9797"></path><path d="M853.312 554.688H896v42.688h-42.688z" fill="#FFF100" p-id="9798"></path><path d="M853.312 597.312H896V640h-42.688zM896 554.688h42.688v42.688H896z" fill="#E50046" p-id="9799"></path><path d="M896 597.312h42.688V640H896zM853.312 640H896v42.688h-42.688zM938.688 554.688h42.688v42.688h-42.688zM256 384h42.688v42.688H256z" p-id="9800"></path><path d="M298.688 384h42.688v42.688h-42.688z" fill="#E50046" p-id="9801"></path><path d="M341.312 384H384v42.688h-42.688z" fill="#E50046" p-id="9802"></path><path d="M384 384h42.688v42.688H384zM426.688 384h42.688v42.688h-42.688z" fill="#FFF100" p-id="9803"></path><path d="M469.312 384H512v42.688h-42.688z" fill="#E50046" p-id="9804"></path><path d="M256 426.688h42.688v42.688H256z" p-id="9805"></path><path d="M298.688 426.688h42.688v42.688h-42.688z" fill="#E50046" p-id="9806"></path><path d="M341.312 426.688H384v42.688h-42.688z" fill="#E50046" p-id="9807"></path><path d="M384 426.688h42.688v42.688H384zM426.688 426.688h42.688v42.688h-42.688z" fill="#FFF100" p-id="9808"></path><path d="M469.312 426.688H512v42.688h-42.688zM298.688 469.312h42.688V512h-42.688z" fill="#E50046" p-id="9809"></path><path d="M384 469.312h42.688V512H384zM426.688 469.312h42.688V512h-42.688z" fill="#FFF100" p-id="9810"></path><path d="M512 384h42.688v42.688H512zM512 426.688h42.688v42.688H512z" fill="#E50046" p-id="9811"></path><path d="M512 469.312h42.688V512H512z" fill="#E50046" p-id="9812"></path><path d="M298.688 512h42.688v42.688h-42.688z" p-id="9813"></path><path d="M384 512h42.688v42.688H384z" fill="#E50046" p-id="9814"></path><path d="M426.688 512h42.688v42.688h-42.688z" fill="#FFF100" p-id="9815"></path><path d="M554.688 384h42.688v42.688h-42.688zM554.688 426.688h42.688v42.688h-42.688z" fill="#E50046" p-id="9816"></path><path d="M597.312 384H640v42.688h-42.688zM597.312 426.688H640v42.688h-42.688z" fill="#E50046" p-id="9817"></path><path d="M597.312 469.312H640V512h-42.688zM554.688 512h42.688v42.688h-42.688z" fill="#E50046" p-id="9818"></path><path d="M597.312 512H640v42.688h-42.688z" fill="#E50046" p-id="9819"></path><path d="M298.688 554.688h42.688v42.688h-42.688z" p-id="9820"></path><path d="M384 554.688h42.688v42.688H384z" fill="#E50046" p-id="9821"></path><path d="M426.688 554.688h42.688v42.688h-42.688z" fill="#FFF100" p-id="9822"></path><path d="M298.688 597.312h42.688V640h-42.688z" p-id="9823"></path><path d="M426.688 597.312h42.688V640h-42.688z" fill="#E50046" p-id="9824"></path><path d="M512 554.688h42.688v42.688H512z" fill="#FFF100" p-id="9825"></path><path d="M512 597.312h42.688V640H512z" fill="#FFF100" p-id="9826"></path><path d="M256 640h42.688v42.688H256z" p-id="9827"></path><path d="M298.688 640h42.688v42.688h-42.688z" fill="#FFFFFF" p-id="9828"></path><path d="M341.312 640H384v42.688h-42.688z" p-id="9829"></path><path d="M384 640h42.688v42.688H384zM426.688 640h42.688v42.688h-42.688z" fill="#E50046" p-id="9830"></path><path d="M469.312 640H512v42.688h-42.688zM512 640h42.688v42.688H512zM597.312 554.688H640v42.688h-42.688z" fill="#E50046" p-id="9831"></path><path d="M597.312 597.312H640V640h-42.688zM554.688 640h42.688v42.688h-42.688z" fill="#FFF100" p-id="9832"></path><path d="M597.312 640H640v42.688h-42.688z" fill="#FFF100" p-id="9833"></path><path d="M213.312 682.688H256v42.688h-42.688z" p-id="9834"></path><path d="M256 682.688h42.688v42.688H256zM298.688 682.688h42.688v42.688h-42.688z" fill="#FFFFFF" p-id="9835"></path><path d="M341.312 682.688H384v42.688h-42.688z" fill="#E3E7E6" p-id="9836"></path><path d="M384 682.688h42.688v42.688H384zM426.688 682.688h42.688v42.688h-42.688z" p-id="9837"></path><path d="M469.312 682.688H512v42.688h-42.688z" p-id="9838"></path><path d="M512 682.688h42.688v42.688H512zM554.688 682.688h42.688v42.688h-42.688z" fill="#E50046" p-id="9839"></path><path d="M597.312 682.688H640v42.688h-42.688z" fill="#E50046" p-id="9840"></path><path d="M170.688 725.312h42.688V768h-42.688zM341.312 725.312H384V768h-42.688zM128 768h42.688v42.688H128zM512 725.312h42.688V768H512zM554.688 725.312h42.688V768h-42.688z" p-id="9841"></path><path d="M213.312 768H256v42.688h-42.688z" fill="#FFFFFF" p-id="9842"></path><path d="M256 768h42.688v42.688H256z" fill="#E3E7E6" p-id="9843"></path><path d="M298.688 768h42.688v42.688h-42.688z" p-id="9844"></path><path d="M170.688 810.688h42.688v42.688h-42.688z" fill="#FFFFFF" p-id="9845"></path><path d="M213.312 810.688H256v42.688h-42.688z" fill="#E3E7E6" p-id="9846"></path><path d="M256 810.688h42.688v42.688H256z" p-id="9847"></path><path d="M85.312 853.312H128V896h-42.688zM128 853.312h42.688V896H128z" fill="#FFFFFF" p-id="9848"></path><path d="M170.688 853.312h42.688V896h-42.688z" fill="#E3E7E6" p-id="9849"></path><path d="M213.312 853.312H256V896h-42.688z" p-id="9850"></path><path d="M42.688 896h42.688v42.688H42.688z" fill="#FFFFFF" p-id="9851"></path><path d="M85.312 896H128v42.688h-42.688z" fill="#FFFFFF" p-id="9852"></path><path d="M128 896h42.688v42.688H128z" fill="#E3E7E6" p-id="9853"></path><path d="M170.688 896h42.688v42.688h-42.688z" p-id="9854"></path><path d="M42.688 938.688h42.688v42.688H42.688z" fill="#E3E7E6" p-id="9855"></path><path d="M85.312 938.688H128v42.688h-42.688z" fill="#E3E7E6" p-id="9856"></path><path d="M128 938.688h42.688v42.688H128zM597.312 725.312H640V768h-42.688zM42.688 853.312h42.688V896H42.688zM341.312 128H384v42.688h-42.688z" p-id="9857"></path><path d="M384 128h42.688v42.688H384z" fill="#FFF100" p-id="9858"></path><path d="M426.688 128h42.688v42.688h-42.688z" fill="#E50046" p-id="9859"></path><path d="M469.312 128H512v42.688h-42.688z" fill="#E50046" p-id="9860"></path><path d="M256 341.312h42.688V384H256z" p-id="9861"></path><path d="M298.688 341.312h42.688V384h-42.688z" fill="#E50046" p-id="9862"></path><path d="M341.312 341.312H384V384h-42.688z" fill="#E50046" p-id="9863"></path><path d="M384 341.312h42.688V384H384zM426.688 341.312h42.688V384h-42.688z" fill="#FFF100" p-id="9864"></path><path d="M469.312 341.312H512V384h-42.688z" fill="#FFF100" p-id="9865"></path><path d="M512 0h42.688v42.688H512z" p-id="9866"></path><path d="M512 128h42.688v42.688H512zM512 341.312h42.688V384H512z" fill="#E50046" p-id="9867"></path><path d="M554.688 0h42.688v42.688h-42.688z" p-id="9868"></path><path d="M554.688 128h42.688v42.688h-42.688zM554.688 341.312h42.688V384h-42.688z" fill="#E50046" p-id="9869"></path><path d="M597.312 0H640v42.688h-42.688z" p-id="9870"></path><path d="M597.312 128H640v42.688h-42.688zM597.312 341.312H640V384h-42.688z" fill="#E50046" p-id="9871"></path><path d="M640 0h42.688v42.688H640z" p-id="9872"></path><path d="M640 128h42.688v42.688H640zM640 298.688h42.688v42.688H640z" fill="#E50046" p-id="9873"></path><path d="M640 341.312h42.688V384H640zM640 384h42.688v42.688H640z" fill="#E50046" p-id="9874"></path><path d="M640 426.688h42.688v42.688H640z" fill="#FFF100" p-id="9875"></path><path d="M640 469.312h42.688V512H640z" fill="#FFF100" p-id="9876"></path><path d="M640 512h42.688v42.688H640zM640 554.688h42.688v42.688H640z" fill="#E50046" p-id="9877"></path><path d="M640 597.312h42.688V640H640zM640 640h42.688v42.688H640z" fill="#FFF100" p-id="9878"></path><path d="M682.688 0h42.688v42.688h-42.688z" p-id="9879"></path><path d="M682.688 128h42.688v42.688h-42.688z" fill="#E50046" p-id="9880"></path><path d="M682.688 256h42.688v42.688h-42.688zM682.688 341.312h42.688V384h-42.688z" fill="#FFF100" p-id="9881"></path><path d="M725.312 0H768v42.688h-42.688z" p-id="9882"></path><path d="M725.312 128H768v42.688h-42.688z" fill="#FFF100" p-id="9883"></path><path d="M725.312 213.312H768V256h-42.688z" fill="#E50046" p-id="9884"></path><path d="M725.312 341.312H768V384h-42.688z" fill="#FFF100" p-id="9885"></path><path d="M853.312 85.312H896V128h-42.688z" p-id="9886"></path><path d="M853.312 128H896v42.688h-42.688z" fill="#E50046" p-id="9887"></path><path d="M896 128h42.688v42.688H896z" p-id="9888"></path><path d="M896 170.688h42.688v42.688H896z" fill="#E50046" p-id="9889"></path><path d="M938.624 170.688h42.688v42.688h-42.688z" p-id="9890"></path><path d="M938.624 213.312h42.688V256h-42.688zM981.312 256H1024v42.688h-42.688z" p-id="9891"></path><path d="M768 128h42.688v42.688H768zM768 170.688h42.688v42.688H768z" fill="#FFF100" p-id="9892"></path><path d="M768 341.312h42.688V384H768zM640 682.688h42.688v42.688H640z" fill="#E50046" p-id="9893"></path><path d="M640 725.312h42.688V768H640zM810.688 42.688h42.688v42.688h-42.688z" p-id="9894"></path><path d="M810.624 85.312h42.688V128h-42.688z" fill="#E50046" p-id="9895"></path><path d="M810.688 128h42.688v42.688h-42.688z" fill="#FFF100" p-id="9896"></path><path d="M810.688 341.312h42.688V384h-42.688z" fill="#E50046" p-id="9897"></path><path d="M853.312 170.688H896v42.688h-42.688zM853.312 341.312H896V384h-42.688zM896 213.312h42.688V256H896zM896 341.312h42.688V384H896z" fill="#FFF100" p-id="9898"></path><path d="M938.624 256h42.688v42.688h-42.688zM938.624 341.312h42.688V384h-42.688z" fill="#E50046" p-id="9899"></path><path d="M981.312 298.688H1024v42.688h-42.688z" p-id="9900"></path><path d="M981.312 341.312H1024V384h-42.688zM981.312 384H1024v42.688h-42.688zM981.312 426.688H1024v42.688h-42.688z" p-id="9901"></path><path d="M981.312 469.312H1024V512h-42.688zM0 896h42.688v42.688H0zM0 938.688h42.688v42.624H0zM42.688 981.312h42.688V1024H42.688z" p-id="9902"></path><path d="M85.312 981.312H128V1024h-42.688zM256 469.312h42.688V512H256z" p-id="9903"></path><path d="M341.312 469.312H384V512h-42.688z" fill="#E50046" p-id="9904"></path><path d="M469.312 469.312H512V512h-42.688z" fill="#FFF100" p-id="9905"></path><path d="M341.312 512H384v42.688h-42.688z" fill="#E50046" p-id="9906"></path><path d="M469.312 512H512v42.688h-42.688z" fill="#FFF100" p-id="9907"></path><path d="M512 512h42.688v42.688H512zM554.688 469.312h42.688V512h-42.688zM341.312 554.688H384v42.688h-42.688z" fill="#E50046" p-id="9908"></path><path d="M469.312 554.688H512v42.688h-42.688z" fill="#FFF100" p-id="9909"></path><path d="M341.312 597.312H384V640h-42.688zM384 597.312h42.688V640H384z" fill="#E50046" p-id="9910"></path><path d="M469.312 597.312H512V640h-42.688zM554.688 554.688h42.688v42.688h-42.688z" fill="#FFF100" p-id="9911"></path><path d="M554.688 597.312h42.688V640h-42.688z" fill="#FFF100" p-id="9912"></path><path d="M213.312 725.312H256V768h-42.688zM256 725.312h42.688V768H256z" fill="#FFFFFF" p-id="9913"></path><path d="M298.688 725.312h42.688V768h-42.688z" fill="#E3E7E6" p-id="9914"></path><path d="M170.688 768h42.688v42.688h-42.688z" fill="#FFFFFF" p-id="9915"></path><path d="M85.312 810.688H128v42.688h-42.688z" p-id="9916"></path><path d="M128 810.688h42.688v42.688H128z" fill="#FFFFFF" p-id="9917"></path></svg>
+                      <!-- <img src="..." class="rounded me-2" alt="..."> -->
+                      <strong class="me-auto">提示</strong>
+                      <small class="text-muted">刚刚</small>
+                      <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                  </div>
+                  <div class="toast-body">
+                    {{ message }}
+                  </div>
+              </div>
+            </div>
+            <form action="{{ url_for('plan') }}" method="POST" class="panel" id="studyPlanForm">            
+              <h1 style="font-weight: 800;">学习规划</h1><hr>
+              
+              <div class="row">
+                  <div class="col-md-6" style="background-color: #fdfdfd;">
+                      <h2 style="text-align: center;font-weight: 800;">一轮复习</h2>
+                      <div class="input-group" style="width:100%; margin-bottom: 10px; margin-top: 50px;">
+                          <label for="phase1_start" class="input-group-text" style="width: 30%;">开始日期：</label>
+                          <input type="date" id="phase1_start" name="phase1_start" class="form-control" value="{{ study_plan.phase1.start_date }}" required>
+                      </div>
+                      <div class="input-group" style="width:100%; margin-bottom: 10px;">
+                          <label for="phase1_end" class="input-group-text" style="width: 30%;">结束日期：</label>
+                          <input type="date" id="phase1_end" name="phase1_end" class="form-control" value="{{ study_plan.phase1.end_date }}" required>
+                      </div>
+                      <div class="input-group" style="width:100%; margin-bottom: 10px;">
+                          <label for="phase1_daily_hours" class="input-group-text" style="width: 30%;">每日总时长（小时）：</label>
+                          <input type="number" id="phase1_daily_hours" name="phase1_daily_hours" class="form-control" value="{{ study_plan.phase1.daily_hours }}" required>
+                      </div>
+                      <div class="input-group" style="width:100%; margin-bottom: 10px;">
+                          <label for="phase1_math_hours" class="input-group-text" style="width: 30%;">数学每日时长（小时）：</label>
+                          <input type="number" id="phase1_math_hours" name="phase1_math_hours" class="form-control" value="{{ study_plan.phase1.math_hours }}" required>
+                      </div>
+                      <div class="input-group" style="width:100%; margin-bottom: 10px;">
+                          <label for="phase1_english_hours" class="input-group-text" style="width: 30%;">英语每日时长（小时）：</label>
+                          <input type="number" id="phase1_english_hours" name="phase1_english_hours" class="form-control" value="{{ study_plan.phase1.english_hours }}" required>
+                      </div>
+                      <div class="input-group" style="width:100%; margin-bottom: 10px;">
+                          <label for="phase1_politics_hours" class="input-group-text" style="width: 30%;">政治每日时长（小时）：</label>
+                          <input type="number" id="phase1_politics_hours" name="phase1_politics_hours" class="form-control" value="{{ study_plan.phase1.politics_hours }}" required>
+                      </div>
+                      <div class="input-group" style="width:100%; margin-bottom: 100px;">
+                          <label for="phase1_professional_hours" class="input-group-text" style="width: 30%;">专业课每日时长（小时）：</label>
+                          <input type="number" id="phase1_professional_hours" name="phase1_professional_hours" class="form-control" value="{{ study_plan.phase1.professional_hours }}" required>
+                      </div>
+                  </div>
+                  <div class="col-md-6">
+                      <h3 style="text-align: center; margin-bottom: 20px;">一轮复习每日学习时间安排</h3>
+                      <iframe id="phase1_chart" 
+                              class="img-fluid chart-preview" 
+                              frameborder="0" 
+                              style="width: 100%; height: 100%; overflow: hidden;">
+                      </iframe>
+                  </div>
+              </div>
+              <hr>
+          
+              <div class="row">
+                  <div class="col-md-6" style="background-color: #fdfdfd;">
+                      <h2 style="text-align: center;font-weight: 800;">二轮强化</h2>
+                      <div class="input-group" style="width:100%; margin-bottom: 10px; margin-top: 50px;">
+                          <label for="phase2_start" class="input-group-text" style="width: 30%;">开始日期：</label>
+                          <input type="date" id="phase2_start" name="phase2_start" class="form-control" value="{{ study_plan.phase2.start_date }}" required>
+                      </div>
+                      <div class="input-group" style="width:100%; margin-bottom: 10px;">
+                          <label for="phase2_end" class="input-group-text" style="width: 30%;">结束日期：</label>
+                          <input type="date" id="phase2_end" name="phase2_end" class="form-control" value="{{ study_plan.phase2.end_date }}" required>
+                      </div>
+                      <div class="input-group" style="width:100%; margin-bottom: 10px;">
+                          <label for="phase2_daily_hours" class="input-group-text" style="width: 30%;">每日总时长（小时）：</label>
+                          <input type="number" id="phase2_daily_hours" name="phase2_daily_hours" class="form-control" value="{{ study_plan.phase2.daily_hours }}" required>
+                      </div>
+                      <div class="input-group" style="width:100%; margin-bottom: 10px;">
+                          <label for="phase2_math_hours" class="input-group-text" style="width: 30%;">数学每日时长（小时）：</label>
+                          <input type="number" id="phase2_math_hours" name="phase2_math_hours" class="form-control" value="{{ study_plan.phase2.math_hours }}" required>
+                      </div>
+                      <div class="input-group" style="width:100%; margin-bottom: 10px;">
+                          <label for="phase2_english_hours" class="input-group-text" style="width: 30%;">英语每日时长（小时）：</label>
+                          <input type="number" id="phase2_english_hours" name="phase2_english_hours" class="form-control" value="{{ study_plan.phase2.english_hours }}" required>
+                      </div>
+                      <div class="input-group" style="width:100%; margin-bottom: 10px;">
+                          <label for="phase2_politics_hours" class="input-group-text" style="width: 30%;">政治每日时长（小时）：</label>
+                          <input type="number" id="phase2_politics_hours" name="phase2_politics_hours" class="form-control" value="{{ study_plan.phase2.politics_hours }}" required>
+                      </div>
+                      <div class="input-group" style="width:100%; margin-bottom: 100px;">
+                          <label for="phase2_professional_hours" class="input-group-text" style="width: 30%;">专业课每日时长（小时）：</label>
+                          <input type="number" id="phase2_professional_hours" name="phase2_professional_hours" class="form-control" value="{{ study_plan.phase2.professional_hours }}" required>
+                      </div>
+                  </div>
+                  <div class="col-md-6">
+                      <h3 style="text-align: center; margin-bottom: 20px;">二轮强化每日学习时间安排</h3>
+                      <iframe id="phase2_chart" 
+                              class="img-fluid chart-preview" 
+                              frameborder="0" 
+                              style="width: 100%; height: 100%; overflow: hidden;">
+                      </iframe>
+                  </div>
+              </div>
+              <hr>
+          
+              <div class="row">
+                  <div class="col-md-6" style="background-color: #fdfdfd;">
+                      <h2 style="text-align: center;font-weight: 800;">三轮冲刺</h2>
+                      <div class="input-group" style="width:100%; margin-bottom: 10px; margin-top: 50px;">
+                          <label for="phase3_start" class="input-group-text" style="width: 30%;">开始日期：</label>
+                          <input type="date" id="phase3_start" name="phase3_start" class="form-control" value="{{ study_plan.phase3.start_date }}" required>
+                      </div>
+                      <div class="input-group" style="width:100%; margin-bottom: 10px;">
+                          <label for="phase3_end" class="input-group-text" style="width: 30%;">结束日期：</label>
+                          <input type="date" id="phase3_end" name="phase3_end" class="form-control" value="{{ study_plan.phase3.end_date }}" required>
+                      </div>
+                      <div class="input-group" style="width:100%; margin-bottom: 10px;">
+                          <label for="phase3_daily_hours" class="input-group-text" style="width: 30%;">每日总时长（小时）：</label>
+                          <input type="number" id="phase3_daily_hours" name="phase3_daily_hours" class="form-control" value="{{ study_plan.phase3.daily_hours }}" required>
+                      </div>
+                      <div class="input-group" style="width:100%; margin-bottom: 10px;">
+                          <label for="phase3_math_hours" class="input-group-text" style="width: 30%;">数学每日时长（小时）：</label>
+                          <input type="number" id="phase3_math_hours" name="phase3_math_hours" class="form-control" value="{{ study_plan.phase3.math_hours }}" required>
+                      </div>
+                      <div class="input-group" style="width:100%; margin-bottom: 10px;">
+                          <label for="phase3_english_hours" class="input-group-text" style="width: 30%;">英语每日时长（小时）：</label>
+                          <input type="number" id="phase3_english_hours" name="phase3_english_hours" class="form-control" value="{{ study_plan.phase3.english_hours }}" required>
+                      </div>
+                      <div class="input-group" style="width:100%; margin-bottom: 10px;">
+                          <label for="phase3_politics_hours" class="input-group-text" style="width: 30%;">政治每日时长（小时）：</label>
+                          <input type="number" id="phase3_politics_hours" name="phase3_politics_hours" class="form-control" value="{{ study_plan.phase3.politics_hours }}" required>
+                      </div>
+                      <div class="input-group" style="width:100%; margin-bottom: 50px;">
+                          <label for="phase3_professional_hours" class="input-group-text" style="width: 30%;">专业课每日时长（小时）：</label>
+                          <input type="number" id="phase3_professional_hours" name="phase3_professional_hours" class="form-control" value="{{ study_plan.phase3.professional_hours }}" required>
+                      </div>
+                      <button type="submit" class="btn btn-primary" style="margin-bottom: 50px;width: 20%;height: 7%;display: block;margin: 20px auto;">保存规划</button>
+                  </div>
+                  <div class="col-md-6">
+                      <h3 style="text-align: center; margin-bottom: 20px;">三轮冲刺每日学习时间安排</h3>
+                      <iframe id="phase3_chart" 
+                              class="img-fluid chart-preview" 
+                              frameborder="0" 
+                              style="width: 100%; height: 100%; overflow: hidden;">
+                      </iframe>
+                  </div>
+              </div>
+          
+              
+          </form>
+
+          </div>
+          <div class="time-container"><br><br><br>
+            <div id="time"></div>
+          </div>
+          <br><br><br>
+          <div class="time-container2">
+            <div id="countdown">00天 00小时 00分钟 00秒</div>
+          </div>
+          
+  <script>
+    // 获取 Toast 元素
+    const toastElement = document.getElementById('uploadToast');
+    const toast = new bootstrap.Toast(toastElement);
+    // 检查是否有上传成功的消息
+    const message = "{{ message }}";
+    if (message === "上传成功！") {
+        toastElement.querySelector('.toast-body').textContent = message;
+        toast.show();
+        // // 设置定时器，在 3 秒后隐藏 Toast
+        // setTimeout(() => {
+        //     toast.hide();
+        // }, 50000); // 5000 毫秒 = 5 秒
+    }
+  </script>  
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // 获取图表列表
+        fetch('/get_chart_list')
+            .then(response => response.json())
+            .then(chartList => {
+                // 创建一个对象来存储每个类型的图表路径
+                const chartPaths = {};
+                chartList.forEach(([path, type]) => {
+                    chartPaths[type] = path.replace('/static', ''); // 移除多余的/static前缀
+                });
+
+                // 设置学习规划饼图的 src 属性
+                if (chartPaths['一轮复习每日学习时间安排']) {
+                    document.getElementById('phase1_chart').src = "{{ url_for('static', filename='') }}" + chartPaths['一轮复习每日学习时间安排'];
+                }
+                if (chartPaths['二轮强化每日学习时间安排']) {
+                    document.getElementById('phase2_chart').src = "{{ url_for('static', filename='') }}" + chartPaths['二轮强化每日学习时间安排'];
+                }
+                if (chartPaths['三轮冲刺每日学习时间安排']) {
+                    document.getElementById('phase3_chart').src = "{{ url_for('static', filename='') }}" + chartPaths['三轮冲刺每日学习时间安排'];
+                }
+            });
+// 表单提交验证
+document.getElementById('studyPlanForm').addEventListener('submit', function(event) {
+            let isValid = true;
+            let errorMessage = '';
+
+            // 验证一轮复习
+            const phase1DailyHours = parseFloat(document.getElementById('phase1_daily_hours').value);
+            const phase1MathHours = parseFloat(document.getElementById('phase1_math_hours').value);
+            const phase1EnglishHours = parseFloat(document.getElementById('phase1_english_hours').value);
+            const phase1PoliticsHours = parseFloat(document.getElementById('phase1_politics_hours').value);
+            const phase1ProfessionalHours = parseFloat(document.getElementById('phase1_professional_hours').value);
+            const phase1Total = phase1MathHours + phase1EnglishHours + phase1PoliticsHours + phase1ProfessionalHours;
+
+            if (phase1DailyHours !== phase1Total) {
+                isValid = false;
+                errorMessage += '一轮复习的每日总时长与各科目时长总和不一致！\n';
+            }
+
+            // 验证二轮强化
+            const phase2DailyHours = parseFloat(document.getElementById('phase2_daily_hours').value);
+            const phase2MathHours = parseFloat(document.getElementById('phase2_math_hours').value);
+            const phase2EnglishHours = parseFloat(document.getElementById('phase2_english_hours').value);
+            const phase2PoliticsHours = parseFloat(document.getElementById('phase2_politics_hours').value);
+            const phase2ProfessionalHours = parseFloat(document.getElementById('phase2_professional_hours').value);
+            const phase2Total = phase2MathHours + phase2EnglishHours + phase2PoliticsHours + phase2ProfessionalHours;
+
+            if (phase2DailyHours !== phase2Total) {
+                isValid = false;
+                errorMessage += '二轮强化的每日总时长与各科目时长总和不一致！\n';
+            }
+
+            // 验证三轮冲刺
+            const phase3DailyHours = parseFloat(document.getElementById('phase3_daily_hours').value);
+            const phase3MathHours = parseFloat(document.getElementById('phase3_math_hours').value);
+            const phase3EnglishHours = parseFloat(document.getElementById('phase3_english_hours').value);
+            const phase3PoliticsHours = parseFloat(document.getElementById('phase3_politics_hours').value);
+            const phase3ProfessionalHours = parseFloat(document.getElementById('phase3_professional_hours').value);
+            const phase3Total = phase3MathHours + phase3EnglishHours + phase3PoliticsHours + phase3ProfessionalHours;
+
+            if (phase3DailyHours !== phase3Total) {
+                isValid = false;
+                errorMessage += '三轮冲刺的每日总时长与各科目时长总和不一致！\n';
+            }
+
+            if (!isValid) {
+                event.preventDefault(); // 阻止表单提交
+                alert(errorMessage);
+                window.location.href = `/planpage`;
+            }
+        });
+    });
+</script>      
+</body>
+</html>

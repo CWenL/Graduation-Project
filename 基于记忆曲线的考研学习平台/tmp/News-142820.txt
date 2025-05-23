@@ -1,0 +1,443 @@
+<html><head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<title>双非大学是什么意思_大学生必备网</title>
+<meta name="keywords" content="双非大学">
+<meta name="description" content="在早些年，双非大学通常指非985和非211的大学；目前由于985大学和211大学已经统筹为双一流大学，双非大学通常指非双一流大学。双非大学是在择校时经常听到的一个名词，以下是147所双一流大学名单，除去双一流大学，那么其他大学通常就是我们所说的双非大学了。">
+<meta name="mobile-agent" content="format=html5;url=https://m.dxsbb.com/news/142820.html">
+<meta name="mobile-agent" content="format=wml;url=https://m.dxsbb.com/news/142820.html">
+<meta name="mobile-agent" content="format=xhtml;url=https://m.dxsbb.com/news/142820.html">
+<link rel="alternate" media="only screen and (max-width: 640px)" href="https://m.dxsbb.com/news/142820.html">
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=202412">
+<script src="https://hm.baidu.com/hm.js?0fde2fa52b98e38f3c994a6100b45558"></script><script src="https://zz.bdstatic.com/linksubmit/push.js"></script><script src="/js/common.js"></script><script src="/js/jquery.min.js"></script>
+<script src="/js/m.js"></script>
+
+<script src="/js/OTca.js"></script>
+</head>
+<body>
+<div class="topBar">
+<div class="wrap">
+<div class="notice">欢迎访问大学生必备网！</div>
+<div class="favorite"><a href="/about/contact.html" target="_blank">我要纠错</a><a href="javascript:void(0);" onclick="addFavorite();">加入收藏</a></div>
+</div>
+</div>
+<div class="topLogo">
+<div class="wrap">
+<div class="logo">
+<a href="/"><img src="/img/logo.png?v=1" title="大学生必备网" alt="大学生必备网"></a>
+</div>
+<div class="search">
+<div class="searchBox">
+<input type="text" id="searchInput" class="searchInput" value="请输入要搜索的内容" onfocus="if (value =='请输入要搜索的内容'){value =''}" onblur="if (value ==''){value='请输入要搜索的内容'}">
+<input type="button" class="searchBtn" onclick="znss(document.getElementById('searchInput').value)" value="搜索">
+</div>
+</div>
+</div>
+</div>
+<div class="topMenu">
+<div class="menuList">
+<ul>
+<li class="active"><a href="/" target="_blank">首页</a></li>
+<li><a href="/news/list_97.html" target="_blank">高考动态</a></li>
+<li><a href="/news/list_180.html" target="_blank">高考分数</a></li>
+<li><a href="/news/list_223.html" target="_blank">一分一段</a></li>
+<li><a href="/news/list_1001.html" target="_blank">投档分数</a></li>
+<li><a href="/news/list_822.html" target="_blank">志愿填报</a></li>
+<li><a href="/news/list_88.html" target="_blank">大学名单</a></li>
+<li><a href="/news/list_75.html" target="_blank">大学排名</a></li>
+<li><a href="/news/list_652.html" target="_blank">985</a></li>
+<li><a href="/news/list_651.html" target="_blank">211</a></li>
+<li><a href="/news/list_178.html" target="_blank">双一流</a></li>
+<li><a href="/news/list_642.html" target="_blank">双高计划</a></li>
+<li><a href="/news/list_620.html" target="_blank">选科查询</a></li>
+<li><a href="/news/list_712.html" target="_blank">学科评估</a></li>
+<li><a href="/news/list_192.html" target="_blank">院 校 库</a></li>
+<li><a href="/news/list_76.html" target="_blank">专 业 库</a></li>
+</ul>
+</div>
+</div>
+<div class="position">当前位置：<a href="/">首页</a><span>&gt;</span><a href="/news/list_88.html" target="_blank">大学名单</a><span>&gt;</span><a href="/news/list_178.html" target="_blank">双一流</a><span>&gt;</span><a href="/news/list_1005.html" target="_blank">双非大学</a></div>
+<div class="navmenu">
+<ul class="second">
+<li class="firstname"><a href="/news/list_88.html">不限</a></li><li><a href="/news/list_206.html">全部</a></li><li><a href="/news/list_652.html">985大学</a></li><li><a href="/news/list_651.html">211大学</a></li><li class="selected"><a href="/news/list_178.html">双&nbsp;&nbsp;一&nbsp;&nbsp;流</a></li><li><a href="/news/list_642.html">双高计划</a></li><li><a href="/news/list_513.html">部委直属</a></li><li><a href="/news/list_1003.html">保研资格</a></li><li><a href="/news/list_1004.html">招研究生</a></li><li><a href="/news/list_184.html">按类划分</a></li><li><a href="/news/list_780.html">北京高校</a></li><li><a href="/news/list_781.html">天津高校</a></li><li><a href="/news/list_782.html">上海高校</a></li><li><a href="/news/list_783.html">重庆高校</a></li><li><a href="/news/list_784.html">河北高校</a></li><li><a href="/news/list_785.html">辽宁高校</a></li><li><a href="/news/list_786.html">吉林高校</a></li><li><a href="/news/list_787.html">黑龙江</a></li><li><a href="/news/list_788.html">江苏高校</a></li><li><a href="/news/list_789.html">浙江高校</a></li><li><a href="/news/list_790.html">安徽高校</a></li><li><a href="/news/list_791.html">福建高校</a></li><li><a href="/news/list_792.html">江西高校</a></li><li><a href="/news/list_793.html">山东高校</a></li><li><a href="/news/list_794.html">河南高校</a></li><li><a href="/news/list_795.html">湖北高校</a></li><li><a href="/news/list_796.html">湖南高校</a></li><li><a href="/news/list_797.html">广东高校</a></li><li><a href="/news/list_798.html">海南高校</a></li><li><a href="/news/list_799.html">四川高校</a></li><li><a href="/news/list_800.html">贵州高校</a></li><li><a href="/news/list_801.html">云南高校</a></li><li><a href="/news/list_802.html">陕西高校</a></li><li><a href="/news/list_810.html">山西高校</a></li><li><a href="/news/list_803.html">甘肃高校</a></li><li><a href="/news/list_804.html">青海高校</a></li><li><a href="/news/list_805.html">广西高校</a></li><li><a href="/news/list_806.html">宁夏高校</a></li><li><a href="/news/list_808.html">新疆高校</a></li><li><a href="/news/list_809.html">西藏高校</a></li><li><a href="/news/list_807.html">内蒙古</a></li>
+</ul>
+<ul class="third">
+<li class="secondname"><a href="/news/list_178.html">不限</a></li><li><a href="/news/list_226.html">建设大学</a></li><li><a href="/news/list_724.html">建设学科</a></li><li class="selected"><a href="/news/list_1005.html">双非大学</a></li>
+</ul>
+</div>
+<div class="wrap">
+<script>OTca('ot003');</script><div style="margin:10px 0 0 0;padding:5px 12px 0px 16px;border:1px solid #f5f5f5;border-radius:2px;background:#fefefe;box-shadow:0 1px 3px rgba(0,37,55,.05);width: 1160px;float: left;"><script type="text/javascript" src="//2021.dxsbb.com/source/hcu_i_rdu/common/d_d.js"></script>
+</div>
+
+</div>
+<div class="newsBody">
+<div class="newsareaL">
+<div id="article" style="height: 1600px;">
+<h1>双非大学是什么意思</h1>
+<div class="update">更新：2025-2-11 17:25:38&nbsp;&nbsp;&nbsp;&nbsp;发布：大学生必备网</div>
+<div class="content"><p style="text-align:center;"><img alt="双非大学是什么意思" title="双非大学是什么意思" src="https://img.dxsbb.com/upFiles/infoImg/2023090634505213.png"></p><p>在早些年，双非大学通常指非<a href="/news/list_195.html" class="keyWord" target="_blank">985</a>和非<a href="/news/list_194.html" class="keyWord" target="_blank">211</a>的大学；目前由于<a href="/news/list_195.html" class="keyWord" target="_blank">985大学</a>和<a href="/news/list_194.html" class="keyWord" target="_blank">211大学</a>已经统筹为<a href="/news/list_178.html" class="keyWord" target="_blank">双一流大学</a>，双非大学通常指非<a href="/news/list_178.html" class="keyWord" target="_blank">双一流</a>大学。双非大学是在择校时经常听到的一个名词，以下是147所双一流<a href="/news/list_88.html" class="keyWord" target="_blank">大学名单</a>，除去双一流大学，那么其他大学通常就是我们所说的双非大学了。</p><div class="tablebox"><table border="0" cellpadding="0" cellspacing="0" class="ke-zeroborder"><tbody><tr><td>序号</td><td>名称</td><td>省份</td></tr><tr><td>1</td><td><a href="/news/list_98.html" class="keyWord" target="_blank">北京</a>大学</td><td>北京</td></tr><tr><td>2</td><td>清华大学</td><td>北京</td></tr><tr><td>3</td><td>中国科学院大学</td><td>北京</td></tr><tr><td>4</td><td><a href="/news/list_116.html" class="keyWord" target="_blank">上海</a>交通大学</td><td>上海</td></tr><tr><td>5</td><td>复旦大学</td><td>上海</td></tr><tr><td>6</td><td><a href="/news/list_110.html" class="keyWord" target="_blank">浙江</a>大学</td><td>浙江</td></tr><tr><td>7</td><td>中国科学技术大学</td><td><a href="/news/list_106.html" class="keyWord" target="_blank">安徽</a></td></tr><tr><td>8</td><td>中国人民大学</td><td>北京</td></tr><tr><td>9</td><td>南京大学</td><td><a href="/news/list_99.html" class="keyWord" target="_blank">江苏</a></td></tr><tr><td>10</td><td>北京协和医学院</td><td>北京</td></tr><tr><td>11</td><td>国防科技大学</td><td><a href="/news/list_104.html" class="keyWord" target="_blank">湖南</a></td></tr><tr><td>12</td><td>北京航空航天大学</td><td>北京</td></tr><tr><td>13</td><td>北京<a href="/news/list_200.html" class="keyWord" target="_blank">理工</a>大学</td><td>北京</td></tr><tr><td>14</td><td>哈尔滨工业大学</td><td><a href="/news/list_113.html" class="keyWord" target="_blank">黑龙江</a></td></tr><tr><td>15</td><td>西安交通大学</td><td><a href="/news/list_108.html" class="keyWord" target="_blank">陕西</a></td></tr><tr><td>16</td><td>武汉大学</td><td><a href="/news/list_103.html" class="keyWord" target="_blank">湖北</a></td></tr><tr><td>17</td><td>同济大学</td><td>上海</td></tr><tr><td>18</td><td>南开大学</td><td><a href="/news/list_120.html" class="keyWord" target="_blank">天津</a></td></tr><tr><td>19</td><td>华中科技大学</td><td>湖北</td></tr><tr><td>20</td><td>北京<a href="/news/list_196.html" class="keyWord" target="_blank">师范</a>大学</td><td>北京</td></tr><tr><td>21</td><td>东南大学</td><td>江苏</td></tr><tr><td>22</td><td><a href="/news/list_109.html" class="keyWord" target="_blank">四川</a>大学</td><td>四川</td></tr><tr><td>23</td><td>华东师范大学</td><td>上海</td></tr><tr><td>24</td><td>电子科技大学</td><td>四川</td></tr><tr><td>25</td><td>中山大学</td><td><a href="/news/list_101.html" class="keyWord" target="_blank">广东</a></td></tr><tr><td>26</td><td>天津大学</td><td>天津</td></tr><tr><td>27</td><td>厦门大学</td><td><a href="/news/list_112.html" class="keyWord" target="_blank">福建</a></td></tr><tr><td>28</td><td>华南理工大学</td><td>广东</td></tr><tr><td>29</td><td>西北工业大学</td><td>陕西</td></tr><tr><td>30</td><td><a href="/news/list_100.html" class="keyWord" target="_blank">山东</a>大学</td><td>山东</td></tr><tr><td>31</td><td><a href="/news/list_117.html" class="keyWord" target="_blank">重庆</a>大学</td><td>重庆</td></tr><tr><td>32</td><td>中南大学</td><td>湖南</td></tr><tr><td>33</td><td>大连理工大学</td><td><a href="/news/list_107.html" class="keyWord" target="_blank">辽宁</a></td></tr><tr><td>34</td><td><a href="/news/list_119.html" class="keyWord" target="_blank">吉林</a>大学</td><td>吉林</td></tr><tr><td>35</td><td>兰州大学</td><td><a href="/news/list_123.html" class="keyWord" target="_blank">甘肃</a></td></tr><tr><td>36</td><td>中国农业大学</td><td>北京</td></tr><tr><td>37</td><td>中国海洋大学</td><td>山东</td></tr><tr><td>38</td><td>中央<a href="/news/list_202.html" class="keyWord" target="_blank">民族</a>大学</td><td>北京</td></tr><tr><td>39</td><td>湖南大学</td><td>湖南</td></tr><tr><td>40</td><td>东北大学</td><td>辽宁</td></tr><tr><td>41</td><td>西北<a href="/news/list_203.html" class="keyWord" target="_blank">农林</a>科技大学</td><td>陕西</td></tr><tr><td>42</td><td>上海科技大学</td><td>上海</td></tr><tr><td>43</td><td>南方科技大学</td><td>广东</td></tr><tr><td>44</td><td>郑州大学</td><td><a href="/news/list_102.html" class="keyWord" target="_blank">河南</a></td></tr><tr><td>45</td><td><a href="/news/list_118.html" class="keyWord" target="_blank">云南</a>大学</td><td>云南</td></tr><tr><td>46</td><td><a href="/news/list_124.html" class="keyWord" target="_blank">新疆</a>大学</td><td>新疆</td></tr><tr><td>47</td><td>上海<a href="/news/list_197.html" class="keyWord" target="_blank">财经</a>大学</td><td>上海</td></tr><tr><td>48</td><td>中央财经大学</td><td>北京</td></tr><tr><td>49</td><td>对外经济贸易大学</td><td>北京</td></tr><tr><td>50</td><td>北京邮电大学</td><td>北京</td></tr><tr><td>51</td><td>上海外国语大学</td><td>上海</td></tr><tr><td>52</td><td>西安电子科技大学</td><td>陕西</td></tr><tr><td>53</td><td>北京外国语大学</td><td>北京</td></tr><tr><td>54</td><td>南京理工大学</td><td>江苏</td></tr><tr><td>55</td><td>空军军医大学</td><td>陕西</td></tr><tr><td>56</td><td>北京交通大学</td><td>北京</td></tr><tr><td>57</td><td>中国<a href="/news/list_201.html" class="keyWord" target="_blank">政法</a>大学</td><td>北京</td></tr><tr><td>58</td><td>南京航空航天大学</td><td>江苏</td></tr><tr><td>59</td><td>上海大学</td><td>上海</td></tr><tr><td>60</td><td>西南财经大学</td><td>四川</td></tr><tr><td>61</td><td>北京科技大学</td><td>北京</td></tr><tr><td>62</td><td>华东理工大学</td><td>上海</td></tr><tr><td>63</td><td>中国传媒大学</td><td>北京</td></tr><tr><td>64</td><td>海军军医大学</td><td>上海</td></tr><tr><td>65</td><td>北京工业大学</td><td>北京</td></tr><tr><td>66</td><td>北京化工大学</td><td>北京</td></tr><tr><td>67</td><td>河海大学</td><td>江苏</td></tr><tr><td>68</td><td>天津医科大学</td><td>天津</td></tr><tr><td>69</td><td>北京林业大学</td><td>北京</td></tr><tr><td>70</td><td>苏州大学</td><td>江苏</td></tr><tr><td>71</td><td>东华大学</td><td>上海</td></tr><tr><td>72</td><td>西南交通大学</td><td>四川</td></tr><tr><td>73</td><td>华中师范大学</td><td>湖北</td></tr><tr><td>74</td><td>暨南大学</td><td>广东</td></tr><tr><td>75</td><td>华北电力大学</td><td>北京</td></tr><tr><td>76</td><td>中南财经政法大学</td><td>湖北</td></tr><tr><td>77</td><td>南京师范大学</td><td>江苏</td></tr><tr><td>78</td><td>哈尔滨工程大学</td><td>黑龙江</td></tr><tr><td>79</td><td>武汉理工大学</td><td>湖北</td></tr><tr><td>80</td><td>陕西师范大学</td><td>陕西</td></tr><tr><td>81</td><td>华南师范大学</td><td>广东</td></tr><tr><td>82</td><td>合肥工业大学</td><td>安徽</td></tr><tr><td>83</td><td>中央音乐学院</td><td>北京</td></tr><tr><td>84</td><td>西南大学</td><td>重庆</td></tr><tr><td>85</td><td>江南大学</td><td>江苏</td></tr><tr><td>86</td><td>东北师范大学</td><td>吉林</td></tr><tr><td>87</td><td>安徽大学</td><td>安徽</td></tr><tr><td>88</td><td>西北大学</td><td>陕西</td></tr><tr><td>89</td><td>福州大学</td><td>福建</td></tr><tr><td>90</td><td><a href="/news/list_105.html" class="keyWord" target="_blank">河北</a>工业大学</td><td>河北</td></tr><tr><td>91</td><td>首都师范大学</td><td>北京</td></tr><tr><td>92</td><td>湖南师范大学</td><td>湖南</td></tr><tr><td>93</td><td>北京中<a href="/news/list_198.html" class="keyWord" target="_blank">医药</a>大学</td><td>北京</td></tr><tr><td>94</td><td>中国地质大学（北京）</td><td>北京</td></tr><tr><td>95</td><td>中国地质大学（武汉）</td><td>湖北</td></tr><tr><td>96</td><td>中国矿业大学（北京）</td><td>北京</td></tr><tr><td>97</td><td>长安大学</td><td>陕西</td></tr><tr><td>98</td><td>中国矿业大学</td><td>江苏</td></tr><tr><td>99</td><td>中国石油大学（北京）</td><td>北京</td></tr><tr><td>100</td><td>中国石油大学（华东）</td><td>山东</td></tr><tr><td>101</td><td><a href="/news/list_125.html" class="keyWord" target="_blank">海南</a>大学</td><td>海南</td></tr><tr><td>102</td><td>南京农业大学</td><td>江苏</td></tr><tr><td>103</td><td>大连海事大学</td><td>辽宁</td></tr><tr><td>104</td><td>南昌大学</td><td><a href="/news/list_111.html" class="keyWord" target="_blank">江西</a></td></tr><tr><td>105</td><td>华中农业大学</td><td>湖北</td></tr><tr><td>106</td><td>中国药科大学</td><td>江苏</td></tr><tr><td>107</td><td>辽宁大学</td><td>辽宁</td></tr><tr><td>108</td><td>太原理工大学</td><td><a href="/news/list_114.html" class="keyWord" target="_blank">山西</a></td></tr><tr><td>109</td><td><a href="/news/list_121.html" class="keyWord" target="_blank">贵州</a>大学</td><td>贵州</td></tr><tr><td>110</td><td>北京<a href="/news/list_205.html" class="keyWord" target="_blank">体育</a>大学</td><td>北京</td></tr><tr><td>111</td><td>延边大学</td><td>吉林</td></tr><tr><td>112</td><td><a href="/news/list_115.html" class="keyWord" target="_blank">广西</a>大学</td><td>广西</td></tr><tr><td>113</td><td>东北林业大学</td><td>黑龙江</td></tr><tr><td>114</td><td>四川农业大学</td><td>四川</td></tr><tr><td>115</td><td><a href="/news/list_122.html" class="keyWord" target="_blank">内蒙古</a>大学</td><td>内蒙古</td></tr><tr><td>116</td><td>东北农业大学</td><td>黑龙江</td></tr><tr><td>117</td><td><a href="/news/list_126.html" class="keyWord" target="_blank">宁夏</a>大学</td><td>宁夏</td></tr><tr><td>118</td><td><a href="/news/list_127.html" class="keyWord" target="_blank">青海</a>大学</td><td>青海</td></tr><tr><td>119</td><td>石河子大学</td><td>新疆</td></tr><tr><td>120</td><td><a href="/news/list_128.html" class="keyWord" target="_blank">西藏</a>大学</td><td>西藏</td></tr><tr><td>121</td><td>中国人民公安大学</td><td>北京</td></tr><tr><td>122</td><td>外交学院</td><td>北京</td></tr><tr><td>123</td><td>中央美术学院</td><td>北京</td></tr><tr><td>124</td><td>中央戏剧学院</td><td>北京</td></tr><tr><td>125</td><td>宁波大学</td><td>浙江</td></tr><tr><td>126</td><td>南京邮电大学</td><td>江苏</td></tr><tr><td>127</td><td>中国音乐学院</td><td>北京</td></tr><tr><td>128</td><td>南京中医药大学</td><td>江苏</td></tr><tr><td>129</td><td>上海海洋大学</td><td>上海</td></tr><tr><td>130</td><td>南京信息工程大学</td><td>江苏</td></tr><tr><td>131</td><td>中国美术学院</td><td>浙江</td></tr><tr><td>132</td><td>广州中医药大学</td><td>广东</td></tr><tr><td>133</td><td>上海中医药大学</td><td>上海</td></tr><tr><td>134</td><td>上海音乐学院</td><td>上海</td></tr><tr><td>135</td><td>成都理工大学</td><td>四川</td></tr><tr><td>136</td><td>河南大学</td><td>河南</td></tr><tr><td>137</td><td>南京林业大学</td><td>江苏</td></tr><tr><td>138</td><td>天津工业大学</td><td>天津</td></tr><tr><td>139</td><td>天津中医药大学</td><td>天津</td></tr><tr><td>140</td><td>成都中医药大学</td><td>四川</td></tr><tr><td>141</td><td>华南农业大学</td><td>广东</td></tr><tr><td>142</td><td>西南石油大学</td><td>四川</td></tr><tr><td>143</td><td>上海体育大学</td><td>上海</td></tr><tr><td>144</td><td>南京医科大学</td><td>江苏</td></tr><tr><td>145</td><td>广州医科大学</td><td>广东</td></tr><tr><td>146</td><td>山西大学</td><td>山西</td></tr><tr><td>147</td><td>湘潭大学</td><td>湖南</td></tr></tbody></table></div></div>
+<div class="mark">标签：<a href="/news/?list_mark-%E5%8F%8C%E9%9D%9E%E5%A4%A7%E5%AD%A6.html" target="_blank">双非大学</a>&nbsp;</div>
+</div><div id="readAll"><button id="readAll_btn">阅读全文</button></div>
+<script>OTca('ot022');</script><div style="background:#fefefe;float:left;overflow:hidden;width: 800px;padding:20px 20px 10px 20px;margin:10px 0 0 0;">
+<script type="text/javascript" src="//2021.dxsbb.com/production/up/source/o_qeq/rq/m.js"></script>
+</div>
+
+<div class="marknews">
+<h2>相关推荐</h2>
+<ul>
+<li>
+<a href="/news/142818.html" target="_blank">
+<div class="a"><img src="https://img.dxsbb.com/upFiles/infoImg/school/67.jpg" alt="北京双非大学有哪些 附具体名单一览表"></div>
+<div class="b"><h3>北京双非大学有哪些 附具体名单一览表</h3><p class="time">2024-6-19</p></div>
+</a>
+</li>
+<li>
+<a href="/news/142843.html" target="_blank">
+<div class="a"><img src="https://img.dxsbb.com/upFiles/infoImg/school/686.jpg" alt="上海双非大学有哪些 附具体名单一览表"></div>
+<div class="b"><h3>上海双非大学有哪些 附具体名单一览表</h3><p class="time">2024-6-19</p></div>
+</a>
+</li>
+<li>
+<a href="/news/142842.html" target="_blank">
+<div class="a"><img src="https://img.dxsbb.com/upFiles/infoImg/school/1358.png" alt="山东双非大学有哪些 附具体名单一览表"></div>
+<div class="b"><h3>山东双非大学有哪些 附具体名单一览表</h3><p class="time">2024-6-19</p></div>
+</a>
+</li>
+<li>
+<a href="/news/142804.html" target="_blank">
+<div class="a"><img src="https://img.dxsbb.com/upFiles/infoImg/school/1635.jpg" alt="湖北双非大学有哪些 附具体名单一览表"></div>
+<div class="b"><h3>湖北双非大学有哪些 附具体名单一览表</h3><p class="time">2024-6-19</p></div>
+</a>
+</li>
+<script>OTca('ot016');</script><li style="background:#fefefe;float:left;overflow:hidden;width:800px;">
+<script type="text/javascript" src="//2021.dxsbb.com/source/hcbl_r/k_ylb.js"></script>
+</li>
+
+<li>
+<a href="/news/142839.html" target="_blank">
+<div class="a"><img src="https://img.dxsbb.com/upFiles/infoImg/school/2241.jpg" alt="四川双非大学有哪些 附具体名单一览表"></div>
+<div class="b"><h3>四川双非大学有哪些 附具体名单一览表</h3><p class="time">2024-6-19</p></div>
+</a>
+</li>
+<li>
+<a href="/news/142805.html" target="_blank">
+<div class="a"><img src="https://img.dxsbb.com/upFiles/infoImg/school/2825.jpg" alt="广东双非大学有哪些 附具体名单一览表"></div>
+<div class="b"><h3>广东双非大学有哪些 附具体名单一览表</h3><p class="time">2024-6-19</p></div>
+</a>
+</li>
+<li>
+<a href="/news/142802.html" target="_blank">
+<div class="a"><img src="https://img.dxsbb.com/upFiles/infoImg/school/1768.jpg" alt="湖南双非大学有哪些 附具体名单一览表"></div>
+<div class="b"><h3>湖南双非大学有哪些 附具体名单一览表</h3><p class="time">2024-6-19</p></div>
+</a>
+</li>
+<li>
+<a href="/news/142806.html" target="_blank">
+<div class="a"><img src="https://img.dxsbb.com/upFiles/infoImg/school/1498.jpg" alt="河南双非大学有哪些 附具体名单一览表"></div>
+<div class="b"><h3>河南双非大学有哪些 附具体名单一览表</h3><p class="time">2024-6-19</p></div>
+</a>
+</li>
+<script>OTca('ot018');</script><li style="background:#fefefe;float:left;overflow:hidden;width:800px;"><script type="text/javascript" src="//2021.dxsbb.com/source/jew/common/b/k/source/wgdd.js"></script>
+</li>
+
+<li>
+<a href="/news/142812.html" target="_blank">
+<div class="a"><img src="https://img.dxsbb.com/upFiles/infoImg/school/770.jpg" alt="南京双非大学有哪些 附具体名单一览表"></div>
+<div class="b"><h3>南京双非大学有哪些 附具体名单一览表</h3><p class="time">2024-4-2</p></div>
+</a>
+</li>
+<li>
+<a href="/news/142824.html" target="_blank">
+<div class="a"><img src="https://img.dxsbb.com/upFiles/infoImg/school/1015.jpg" alt="安徽双非大学有哪些 附具体名单一览表"></div>
+<div class="b"><h3>安徽双非大学有哪些 附具体名单一览表</h3><p class="time">2024-6-19</p></div>
+</a>
+</li>
+<li>
+<a href="/news/142814.html" target="_blank">
+<div class="a"><img src="https://img.dxsbb.com/upFiles/infoImg/school/957.jpg" alt="浙江双非大学有哪些 附具体名单一览表"></div>
+<div class="b"><h3>浙江双非大学有哪些 附具体名单一览表</h3><p class="time">2024-6-19</p></div>
+</a>
+</li>
+<li>
+<a href="/news/142807.html" target="_blank">
+<div class="a"><img src="https://img.dxsbb.com/upFiles/infoImg/school/1635.jpg" alt="武汉双非大学有哪些 附具体名单一览表"></div>
+<div class="b"><h3>武汉双非大学有哪些 附具体名单一览表</h3><p class="time">2024-4-2</p></div>
+</a>
+</li>
+<script>OTca('ot020');</script><li style="background:#fefefe;float:left;overflow:hidden;width:800px;"><script type="text/javascript" src="//2021.dxsbb.com/production/g/b_tkth_cc/common/c.js"></script></li>
+
+</ul>
+</div>
+<div class="hotnews">
+<h2>热门推荐</h2>
+<ul>
+<li>
+<a href="/news/142820.html" target="_blank">
+<div class="a"><img src="https://img.dxsbb.com/upFiles/infoImg/2023090634505213.png" alt="双非大学是什么意思"></div>
+<div class="b"><h3>双非大学是什么意思</h3><p class="time">2025-2-11</p></div>
+</a>
+</li>
+<li>
+<a href="/news/142818.html" target="_blank">
+<div class="a"><img src="https://img.dxsbb.com/upFiles/infoImg/school/67.jpg" alt="北京双非大学有哪些 附具体名单一览表"></div>
+<div class="b"><h3>北京双非大学有哪些 附具体名单一览表</h3><p class="time">2024-6-19</p></div>
+</a>
+</li>
+<li>
+<a href="/news/142843.html" target="_blank">
+<div class="a"><img src="https://img.dxsbb.com/upFiles/infoImg/school/686.jpg" alt="上海双非大学有哪些 附具体名单一览表"></div>
+<div class="b"><h3>上海双非大学有哪些 附具体名单一览表</h3><p class="time">2024-6-19</p></div>
+</a>
+</li>
+<li>
+<a href="/news/142842.html" target="_blank">
+<div class="a"><img src="https://img.dxsbb.com/upFiles/infoImg/school/1358.png" alt="山东双非大学有哪些 附具体名单一览表"></div>
+<div class="b"><h3>山东双非大学有哪些 附具体名单一览表</h3><p class="time">2024-6-19</p></div>
+</a>
+</li>
+<li>
+<a href="/news/142804.html" target="_blank">
+<div class="a"><img src="https://img.dxsbb.com/upFiles/infoImg/school/1635.jpg" alt="湖北双非大学有哪些 附具体名单一览表"></div>
+<div class="b"><h3>湖北双非大学有哪些 附具体名单一览表</h3><p class="time">2024-6-19</p></div>
+</a>
+</li>
+<li>
+<a href="/news/142839.html" target="_blank">
+<div class="a"><img src="https://img.dxsbb.com/upFiles/infoImg/school/2241.jpg" alt="四川双非大学有哪些 附具体名单一览表"></div>
+<div class="b"><h3>四川双非大学有哪些 附具体名单一览表</h3><p class="time">2024-6-19</p></div>
+</a>
+</li>
+<li>
+<a href="/news/142805.html" target="_blank">
+<div class="a"><img src="https://img.dxsbb.com/upFiles/infoImg/school/2825.jpg" alt="广东双非大学有哪些 附具体名单一览表"></div>
+<div class="b"><h3>广东双非大学有哪些 附具体名单一览表</h3><p class="time">2024-6-19</p></div>
+</a>
+</li>
+<li>
+<a href="/news/142802.html" target="_blank">
+<div class="a"><img src="https://img.dxsbb.com/upFiles/infoImg/school/1768.jpg" alt="湖南双非大学有哪些 附具体名单一览表"></div>
+<div class="b"><h3>湖南双非大学有哪些 附具体名单一览表</h3><p class="time">2024-6-19</p></div>
+</a>
+</li>
+<li>
+<a href="/news/142806.html" target="_blank">
+<div class="a"><img src="https://img.dxsbb.com/upFiles/infoImg/school/1498.jpg" alt="河南双非大学有哪些 附具体名单一览表"></div>
+<div class="b"><h3>河南双非大学有哪些 附具体名单一览表</h3><p class="time">2024-6-19</p></div>
+</a>
+</li>
+<li>
+<a href="/news/142812.html" target="_blank">
+<div class="a"><img src="https://img.dxsbb.com/upFiles/infoImg/school/770.jpg" alt="南京双非大学有哪些 附具体名单一览表"></div>
+<div class="b"><h3>南京双非大学有哪些 附具体名单一览表</h3><p class="time">2024-4-2</p></div>
+</a>
+</li>
+</ul>
+</div>
+<div class="shangxia">
+<div class="shang">上一篇：没有了 <span class="qwlb"><a href="/news/list_1005.html" target="_blank">前往列表</a></span></div>
+<div class="xia">下一篇：<a href="/news/10816.html">西藏双非大学有哪些 附具体名单一览表</a> <span class="qwsy"><a href="/" target="_blank">前往首页</a></span></div>
+</div>
+</div>
+<div class="newsareaR">
+<div class="rightbox">
+<h2>高考动态</h2>
+<ul>
+<li><a href="/news/list_181.html" target="_blank">高考改革</a></li>
+<li><a href="/news/list_449.html" target="_blank">高考报名</a></li>
+<li><a href="/news/list_888.html" target="_blank">高考时间</a></li>
+<li><a href="/news/list_174.html" target="_blank">高考科目</a></li>
+<li><a href="/news/list_220.html" target="_blank">高考总分</a></li>
+<li><a href="/news/list_457.html" target="_blank">高考作文</a></li>
+<li><a href="/news/list_821.html" target="_blank">成绩查询</a></li>
+<li><a href="/news/list_822.html" target="_blank">志愿填报</a></li>
+<li><a href="/news/list_180.html" target="_blank">高考分数</a></li>
+<li><a href="/news/list_223.html" target="_blank">一分一段</a></li>
+<li><a href="/news/list_1001.html" target="_blank">投档分数</a></li>
+<li><a href="/news/list_553.html" target="_blank">录取查询</a></li>
+</ul>
+</div>
+<div class="rightbox">
+<h2>大学名单</h2>
+<ul>
+<li><a href="/news/list_652.html" target="_blank">985大学</a></li>
+<li><a href="/news/list_651.html" target="_blank">211大学</a></li>
+<li><a href="/news/list_178.html" target="_blank">双 一 流</a></li>
+<li><a href="/news/list_642.html" target="_blank">双高计划</a></li>
+<li><a href="/news/list_158.html" target="_blank">本科大学</a></li>
+<li><a href="/news/list_159.html" target="_blank">专科大学</a></li>
+<li><a href="/news/list_189.html" target="_blank">公办大学</a></li>
+<li><a href="/news/list_190.html" target="_blank">民办大学</a></li>
+<li><a href="/news/list_547.html" target="_blank">公办本科</a></li>
+<li><a href="/news/list_459.html" target="_blank">公办专科</a></li>
+<li><a href="/news/list_548.html" target="_blank">民办本科</a></li>
+<li><a href="/news/list_460.html" target="_blank">民办专科</a></li>
+</ul>
+</div>
+<script>OTca('ot024');</script><div style="margin: 10px 0 0 0;float:left;padding: 20px;background: #ffffff;">
+<script type="text/javascript" src="//2021.dxsbb.com/site/jed/common/n/static/t/man-g.js"></script>
+</div>
+
+<div class="rightbox">
+<h2>院 校 库</h2>
+<ul>
+<li><a href="/news/list_721.html" target="_blank">院校概况</a></li>
+<li><a href="/news/list_720.html" target="_blank">招生章程</a></li>
+<li><a href="/news/list_744.html" target="_blank">招生专业</a></li>
+<li><a href="/news/list_818.html" target="_blank">重点专业</a></li>
+<li><a href="/news/list_823.html" target="_blank">招生计划</a></li>
+<li><a href="/news/list_168.html" target="_blank">录取分数</a></li>
+<li><a href="/news/list_565.html" target="_blank">录取规则</a></li>
+<li><a href="/news/list_815.html" target="_blank">就业情况</a></li>
+<li><a href="/news/list_722.html" target="_blank">收费标准</a></li>
+<li><a href="/news/list_813.html" target="_blank">奖助学金</a></li>
+<li><a href="/news/list_814.html" target="_blank">宿舍条件</a></li>
+<li><a href="/news/list_817.html" target="_blank">学校地址</a></li>
+</ul>
+</div>
+<div class="rightbox">
+<h2>专 业 库</h2>
+<ul>
+<li><a href="/news/list_96.html" target="_blank">本科专业</a></li>
+<li><a href="/news/list_240.html" target="_blank">专科专业</a></li>
+<li><a href="/news/list_452.html" target="_blank">女生专业</a></li>
+<li><a href="/news/list_453.html" target="_blank">男生专业</a></li>
+<li><a href="/news/list_454.html" target="_blank">热门专业</a></li>
+<li><a href="/news/list_160.html" target="_blank">专业介绍</a></li>
+<li><a href="/news/list_650.html" target="_blank">开设院校</a></li>
+<li><a href="/news/list_90.html" target="_blank">专业就业</a></li>
+<li><a href="/news/list_712.html" target="_blank">学科评估</a></li>
+<li><a href="/news/list_857.html" target="_blank">专业认证</a></li>
+<li><a href="/news/list_955.html" target="_blank">特色专业</a></li>
+<li><a href="/news/list_162.html" target="_blank">专业排名</a></li>
+</ul>
+</div>
+<script>OTca('ot025');</script><div style="margin: 10px 0 0 0;float:left;padding: 20px;background: #ffffff;">
+<script type="text/javascript" src="//2021.dxsbb.com/source/xsboy/resource/u/common/o_bh.js"></script>
+</div>
+
+<div class="rightbox">
+<h2>各省高考</h2>
+<ul>
+<li><a href="/news/list_97.html" target="_blank">全国高考</a></li>
+<li><a href="/news/list_99.html" target="_blank">江苏高考</a></li>
+<li><a href="/news/list_110.html" target="_blank">浙江高考</a></li>
+<li><a href="/news/list_100.html" target="_blank">山东高考</a></li>
+<li><a href="/news/list_112.html" target="_blank">福建高考</a></li>
+<li><a href="/news/list_103.html" target="_blank">湖北高考</a></li>
+<li><a href="/news/list_104.html" target="_blank">湖南高考</a></li>
+<li><a href="/news/list_106.html" target="_blank">安徽高考</a></li>
+<li><a href="/news/list_111.html" target="_blank">江西高考</a></li>
+<li><a href="/news/list_105.html" target="_blank">河北高考</a></li>
+<li><a href="/news/list_107.html" target="_blank">辽宁高考</a></li>
+<li><a href="/news/list_119.html" target="_blank">吉林高考</a></li>
+<li><a href="/news/list_113.html" target="_blank">黑 龙 江</a></li>
+<li><a href="/news/list_102.html" target="_blank">河南高考</a></li>
+<li><a href="/news/list_108.html" target="_blank">陕西高考</a></li>
+<li><a href="/news/list_114.html" target="_blank">山西高考</a></li>
+<li><a href="/news/list_123.html" target="_blank">甘肃高考</a></li>
+<li><a href="/news/list_109.html" target="_blank">四川高考</a></li>
+<li><a href="/news/list_121.html" target="_blank">贵州高考</a></li>
+<li><a href="/news/list_118.html" target="_blank">云南高考</a></li>
+<li><a href="/news/list_127.html" target="_blank">青海高考</a></li>
+<li><a href="/news/list_101.html" target="_blank">广东高考</a></li>
+<li><a href="/news/list_115.html" target="_blank">广西高考</a></li>
+<li><a href="/news/list_125.html" target="_blank">海南高考</a></li>
+<li><a href="/news/list_126.html" target="_blank">宁夏高考</a></li>
+<li><a href="/news/list_98.html" target="_blank">北京高考</a></li>
+<li><a href="/news/list_116.html" target="_blank">上海高考</a></li>
+<li><a href="/news/list_120.html" target="_blank">天津高考</a></li>
+<li><a href="/news/list_117.html" target="_blank">重庆高考</a></li>
+<li><a href="/news/list_124.html" target="_blank">新疆高考</a></li>
+<li><a href="/news/list_128.html" target="_blank">西藏高考</a></li>
+<li><a href="/news/list_122.html" target="_blank">内 蒙 古</a></li>
+</ul>
+</div>
+<div class="rightbox">
+<h2>特殊类型</h2>
+<ul>
+<li><a href="/news/list_156.html" target="_blank">强基计划</a></li>
+<li><a href="/news/list_171.html" target="_blank">艺术高考</a></li>
+<li><a href="/news/list_172.html" target="_blank">体育高考</a></li>
+<li><a href="/news/list_209.html" target="_blank">高职单招</a></li>
+</ul>
+</div>
+<script>OTca('ot026');</script><div style="float:left;margin: 10px 0 0 0;padding: 20px;background: #ffffff;">
+<script type="text/javascript" src="//2021.dxsbb.com/site/fa-j/openjs/s-sx/source/igz.js"></script></div>
+
+<div class="new">
+<h2>最近更新</h2>
+<ul>
+<li>
+<a href="/news/142820.html" target="_blank">
+<div class="a"><img src="https://img.dxsbb.com/upFiles/infoImg/2023090634505213.png" alt="双非大学是什么意思"></div>
+<div class="b"><h3>双非大学是什么意思</h3><p class="time">2025-2-11</p></div>
+</a>
+</li>
+<li>
+<a href="/news/10816.html" target="_blank">
+<div class="a"><img src="https://img.dxsbb.com/upFiles/infoImg/school/2519.jpg" alt="西藏双非大学有哪些 附具体名单一览表"></div>
+<div class="b"><h3>西藏双非大学有哪些 附具体名单一览表</h3><p class="time">2024-6-19</p></div>
+</a>
+</li>
+<li>
+<a href="/news/142832.html" target="_blank">
+<div class="a"><img src="https://img.dxsbb.com/upFiles/infoImg/school/358.jpg" alt="内蒙古双非大学有哪些 附具体名单一览表"></div>
+<div class="b"><h3>内蒙古双非大学有哪些 附具体名单一览表</h3><p class="time">2024-6-19</p></div>
+</a>
+</li>
+<li>
+<a href="/news/142815.html" target="_blank">
+<div class="a"><img src="https://img.dxsbb.com/upFiles/infoImg/school/2055.jpg" alt="广西双非大学有哪些 附具体名单一览表"></div>
+<div class="b"><h3>广西双非大学有哪些 附具体名单一览表</h3><p class="time">2024-6-19</p></div>
+</a>
+</li>
+<li>
+<a href="/news/142845.html" target="_blank">
+<div class="a"><img src="https://img.dxsbb.com/upFiles/infoImg/school/2683.png" alt="宁夏双非大学有哪些 附具体名单一览表"></div>
+<div class="b"><h3>宁夏双非大学有哪些 附具体名单一览表</h3><p class="time">2024-6-19</p></div>
+</a>
+</li>
+<li>
+<a href="/news/142829.html" target="_blank">
+<div class="a"><img src="https://img.dxsbb.com/upFiles/infoImg/school/2706.png" alt="新疆双非大学有哪些 附具体名单一览表"></div>
+<div class="b"><h3>新疆双非大学有哪些 附具体名单一览表</h3><p class="time">2024-6-19</p></div>
+</a>
+</li>
+<li>
+<a href="/news/142834.html" target="_blank">
+<div class="a"><img src="https://img.dxsbb.com/upFiles/infoImg/school/2671.jpg" alt="青海双非大学有哪些 附具体名单一览表"></div>
+<div class="b"><h3>青海双非大学有哪些 附具体名单一览表</h3><p class="time">2024-6-19</p></div>
+</a>
+</li>
+<li>
+<a href="/news/142830.html" target="_blank">
+<div class="a"><img src="https://img.dxsbb.com/upFiles/infoImg/school/2623.jpg" alt="甘肃双非大学有哪些 附具体名单一览表"></div>
+<div class="b"><h3>甘肃双非大学有哪些 附具体名单一览表</h3><p class="time">2024-6-19</p></div>
+</a>
+</li>
+<li>
+<a href="/news/142835.html" target="_blank">
+<div class="a"><img src="https://img.dxsbb.com/upFiles/infoImg/school/2545.png" alt="陕西双非大学有哪些 附具体名单一览表"></div>
+<div class="b"><h3>陕西双非大学有哪些 附具体名单一览表</h3><p class="time">2024-6-19</p></div>
+</a>
+</li>
+<li>
+<a href="/news/142828.html" target="_blank">
+<div class="a"><img src="https://img.dxsbb.com/upFiles/infoImg/school/2442.jpg" alt="云南双非大学有哪些 附具体名单一览表"></div>
+<div class="b"><h3>云南双非大学有哪些 附具体名单一览表</h3><p class="time">2024-6-19</p></div>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="bottomBody">
+<div class="Copyright"><p class="about">Copyright&nbsp;©&nbsp;大学生必备网&nbsp;&nbsp;&nbsp;&nbsp;<a href="/about/contact.html" target="_blank">联系我们</a></p>
+<p class="beian"><a href="https://beian.miit.gov.cn" target="_blank">鄂ICP备2024032864号-2</a>&nbsp;&nbsp;&nbsp;&nbsp;<a target="_blank" href="https://www.beian.gov.cn/portal/registerSystemInfo?recordcode=42011102003869"><img src="/img/beian.png">鄂公网安备42011102003869号</a></p></div>
+</div>
+<script src="/js/g.js?v=20240928"></script><script src="/js/viewimages.js"></script>
+<script src="/js/echo.min.js"></script>
+<div style="position: fixed; bottom: 50px; right: 50px; width: 56px; height: 56px; border-radius: 5px; background: url(/img/backtop.png) 2px 2px no-repeat; background-color: #fff; "><a href="javascript:window.scrollTo(0, 0);" style="float: left; display: inline; margin-bottom: 1px; width: 56px; height: 56px; color: #fff; "></a></div>
+
+<script src="/readNum.asp?mudi=add&amp;dataID=142820&amp;isNoReturn=0"></script>
+
+</body></html>

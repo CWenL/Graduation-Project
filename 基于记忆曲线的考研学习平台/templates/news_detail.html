@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/static/css/post.css">
+  <link rel="stylesheet" href="/static/css/bootstrap.css">
+  <title>帖子详情</title>
+  <script src="/static/js/jquery-3.7.1.min.js" ></script>
+  <script src="/static/js/bootstrap.js"></script>
+  <script src="/static/js/bootstrap.bundle.js"></script>
+  <script src="/static/js/time.js"></script>
+</head>
+<style>
+    .text-with-indent {
+            text-indent: 2em; /* 首行缩进两个字符 */            
+            font-size: 26px !important;
+            line-height: 1.5em; /* 设置行高 */
+            letter-spacing: 0.05em; /* 设置字符间距 */
+            white-space: pre-line; /* 保留空白符序列，但是正常换行 */
+        }
+</style>
+<body>
+<div style="position: absolute;width:50%;height:100%;min-height: 2000px;
+left: 50%;transform: translate(-50%, 0%);">
+<!-- 模态框结构 -->
+<div id="myModal" class="modal">
+    <!-- 模态框的内容 -->
+    <div class="modal-content">
+      <span class="close" style="font-size: 40px;">&times;</span>
+      <img class="modal-image" id="modalImage">
+    </div>
+  </div>
+  <!-- 导航栏 -->
+  <header>
+    <!-- 绑定返回按钮事件 -->
+    <div style="float: left;">
+      <button class="back-btn" onclick="window.history.back();">返回上一级</button>
+      <button class="back-btn" onclick="window.location.href='/new';">返回资讯页</button>
+      </div>
+    <h1>资讯详情</h1>
+  </header>
+
+  <!-- 帖子内容 -->
+  <section class="post-content">
+    <h2 class="post-title"><b>标题&nbsp;:</b>&nbsp;{{ news[1] }}</h2><br>
+    <div class="post-body">
+        <!-- 图片部分 -->
+        <img src="{{ news[6] }}" style="width: 100%; height: auto;" alt="News Image">
+        <br><br>
+      <div id="text-container">
+        <!-- 文本通过js插入 -->
+
+      </div>
+    </div><br>
+    <div class="post-info">
+        <span class="author"style="float: left;">作者: {{ news[3] }}</span><br>
+        <span class="post-time" style="float: right;">发布时间: {{ news[2] }}</span><br>
+        
+    </div>   
+  </section>
+</div>
+</div>
+<div class="time-container">
+  <div id="time"></div>
+</div>
+<br><br><br><br><br><br>
+<div class="time-container2">
+  <div id="countdown">00天 00小时 00分钟 00秒</div>
+</div>
+</div>
+<script>
+    const text = `{{ news[4] | safe }}`    // 获取文本容器
+    const textContainer = document.getElementById('text-container');
+    // 插入格式化后的文本
+    textContainer.innerHTML = formatText(text);
+    function formatText(text) {
+    // 先去除所有空格
+    const cleanedText = text.replace(/\s+/g, ''); // 替换所有空白字符为空字符串
+    // 定义每段的最大字符数
+    const maxCharsPerParagraph = 300;
+
+    // 分割文本为多段
+    let formattedText = '';
+    let currentParagraph = '';
+
+    for (let i = 0; i < cleanedText.length; i++) {
+        currentParagraph += cleanedText[i];
+        if ((i + 1) % maxCharsPerParagraph === 0) {
+            formattedText += '<p class="text-with-indent">' + currentParagraph + '</p>';
+            currentParagraph = '';
+        }
+    }
+
+    // 添加最后一段（如果存在）
+    if (currentParagraph) {
+        formattedText += '<p class="text-with-indent">' + currentParagraph + '</p>';
+    }
+
+    return formattedText;
+    }
+</script>
+<script src="/static/js/modal.js"></script>   
+</body>
+</html>

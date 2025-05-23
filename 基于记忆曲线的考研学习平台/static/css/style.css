@@ -1,0 +1,620 @@
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: url(../imgs/study.jpg) no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  /* background-color: rgb(234, 235, 236); */
+}
+.home_h1 {
+  background-image: radial-gradient(#ED4264, #FFEDBC);
+  width: 250px;
+  height: 50px;
+  font-size: 20px;
+  background-clip: text;
+  color: transparent;
+  animation: ani 3s infinite ease-in-out;
+  background-position: 200px 200px;
+  padding-top: 15px;
+}
+
+@keyframes ani {
+  0% {
+    background-position: 250px 200px;
+  }
+
+  100% {
+    background-position: 450px 400px;
+
+  }
+}
+
+.hover-effect {
+    transition: background-color 0.3s ease, color 0.3s ease; /* 平滑过渡效果 */
+  }
+  
+  .hover-effect:hover {
+    background-color: rgb(40, 123, 159); /* 鼠标悬停时背景颜色变为黄色 */
+    color: #333; /* 鼠标悬停时文字颜色变为深灰色 */
+  }
+
+  .left_more {
+    margin-left: 0; /* 使div靠左对齐，取消左边距 */
+    margin-right: auto; /* 使div在容器中靠左对齐 */
+  }
+
+
+  /* 折叠 */
+  #row-main {
+    overflow-x: hidden; /* 必要的，用于隐藏折叠的侧边栏 */
+  }
+  #sidebar {
+    transition: margin 0.3s ease; /* 侧边栏的动画效果 */
+  }
+  #content {
+    transition: width 0.3s ease; /* 内容部分的动画效果 */
+  }
+
+
+  .panel{
+    position: absolute;
+    top: 40%;
+    margin-top: -400px;
+    left: 50%;
+    margin-left: -900px;
+    /* absolute居中 */
+    background-color: rgb(255 255 255 / 90%);
+    width: 70%;
+    /* height: 自适应且最小2800px */
+    height: auto;
+    border-radius: 25px;
+    text-align: center;
+    padding: 20px 40px;
+    box-sizing: border-box;
+  }
+
+  .offcanvas-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1040;
+    width: 100vw;
+    height: 100vh;
+    background-color: #ffffff00;
+  }
+
+  .sidebar-button {
+    transition: background-color 0.3s ease;
+    margin-bottom: 1.5rem !important;
+}
+
+.sidebar-button:hover {
+    background-color: rgb(228, 228, 228) !important;
+    color: rgb(0, 0, 0) !important;
+}
+
+.time-container {
+  position: fixed; /* 固定定位 */
+  right: -15px;
+  top: 9%;
+  z-index: 10;
+  transform: translateY(-50%);
+  background-color: #f6cca2d6;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  max-width: 600px;
+  width: 10%;
+}
+.time-container2 {
+  position: fixed; /* 固定定位 */
+  right: -15px;
+  top: 12%;
+  z-index: 10;
+  transform: translateY(-50%);
+  background-color: rgba(188, 238, 243, 0.839);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  max-width: 600px;
+  width: 10%;
+  margin-top: 150px;
+}
+
+#time {
+  font-size: 24px;
+  color: #333333;
+  letter-spacing: 1px;
+  line-height: 1.5;
+}
+
+#countdown {
+  font-size: 24px;
+  color: #333333;
+  letter-spacing: 1px;
+  line-height: 1.5;
+}
+
+#time::before {
+  content: "当前时间：";
+  font-size: 18px;
+  color: #666666;
+  display: block;
+  margin-bottom: 10px;
+}
+
+#countdown::before {
+  content: "距离考研十二月还有：";
+  font-size: 18px;
+  color: #666666;
+  display: block;
+  margin-bottom: 10px;
+}
+
+
+body, html {
+  font-family: '宋体', 'Times New Roman', sans-serif;
+  line-height: 1.5;
+}
+
+.paper-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #ffffff00;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.page_title {
+  font-size: 50px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.abstract {
+  font-size: 16px;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+.section {
+  margin-bottom: 20px;
+}
+
+.section-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.section-content {
+  font-size: 16px;
+  text-indent: 2em;
+}
+
+
+/* 自定义按钮样式 */
+.btn-outline-success {
+  background-color: rgba(249, 250, 251,0.8); /* 不透明的背景颜色 */
+  border-color: rgb(25, 135, 84); /* 与背景颜色一致的边框颜色 */
+}
+
+.btn-outline-success:hover {
+  background-color: rgb(25, 135, 84); /* 鼠标悬停时的背景颜色 */
+  border-color: rgb(247, 205, 154); /* 鼠标悬停时的边框颜色 */
+}
+
+.custom-title {
+  text-align: center; /* 居中对齐 */
+  color: #000602; /* 黑色 */
+  font-weight: bold; /* 加粗 */
+  margin-bottom: 20px; /* 底部外边距 */
+  font-size: 2.5rem; /* 字体大小 */
+  line-height: 1.2; /* 行高 */
+  letter-spacing: 1px; /* 字母间距 */
+}
+
+
+
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-10px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  75% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.bouncing-text {
+  display: inline-block;
+  font-size: 24px;
+  font-weight: bold;
+  color: #007bff;
+  animation: bounce 1s ease infinite;
+}
+
+
+/* 模态框样式 */
+.modal {
+  display: none; /* 默认隐藏 */
+  position: fixed; /* 固定位置 */
+  z-index: 1; /* 位于顶层 */
+  left: 0;
+  top: 0;
+  width: 100%; /* 全宽 */
+  height: 100%; /* 全高 */
+  overflow: auto; /* 允许滚动条 */
+  background-color: rgb(0,0,0); /* 背景色 */
+  background-color: rgba(0,0,0,0.9); /* 背景色，带透明度 */
+}
+
+
+/* 模态框内容样式 */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 居中显示 */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 60%; /* 宽度 */
+}
+
+/* 关闭按钮样式 */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 70px;
+  font-weight: 900;
+}
+
+
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 导航栏样式 */
+.vertical-navbar {
+  position: fixed; /* 固定位置 */
+  right: 0; /* 停靠在右边 */
+  top: 50%; /* 从顶部开始的50%位置 */
+  transform: translateY(-50%); /* 向上移动自身高度的50% */
+  z-index: 1000; /* 高于其他元素 */
+  background-color: #fff7f7;
+  border: 3px solid #cbcbcb;
+  overflow-x: hidden; /* 隐藏水平滚动条 */
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 20px;
+  border-radius: 15px;
+}
+
+.vertical-navbar a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+}
+
+.vertical-navbar a:hover {
+  color: #0a0a0a;
+}
+
+/* 页面内容样式 */
+.content {
+  margin-right: 60px; /* 留出导航栏的空间 */
+  padding: 16px;
+}
+
+/* 按钮样式 */
+.scroll-btn {
+  position: fixed;
+  right: 20px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 18px;
+  transition: background-color 0.3s;
+}
+
+#scrollToTopBtn {
+  top: 20px;
+}
+
+#scrollToBottomBtn {
+  bottom: 20px;
+  top: auto;
+}
+
+/* 按钮悬停效果 */
+.scroll-btn:hover {
+  background-color: #45a049;
+}
+
+.offcanvas {
+  --bs-offcanvas-width: 300px;
+}
+.offcanvas-body-button {
+  border:none;
+  display: block; 
+  width: 100%; 
+  height:100%;
+  color: #000;
+  line-height: 45px;
+}
+/* 按钮悬停效果 */
+.offcanvas-body-button:hover {
+  background-color: #696b69;
+}
+
+
+
+.search-box {
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+.search-box input {
+  width: 70%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 18px;
+  height: 60px;
+}
+
+.search-box button {
+  width: 28%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 4px;
+  background-color: #ff4444;
+  color: white;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none !important;
+}
+
+#sidebar {
+  width: 11%;
+  position: fixed;
+  height: 100vh;
+  background-color: rgba(239, 237, 237, 0.792);
+  color: rgb(0, 0, 0);
+  padding: 20px;
+  transition: transform 0.3s ease-out;
+  transform: translateY(0);
+}
+
+#sidebar.collapsed {
+  transform: translateY(-100vh);
+}
+
+/* 按钮样式优化 */
+#toggleSidebar {
+  display: inline-block;
+  padding: 8px;
+  border-radius: 4px;
+  transition: transform 0.3s ease-out;
+}
+
+#toggleSidebar.collapsed {
+  transform: rotate(180deg);
+}
+
+
+#sidebar {
+  width: 11%;
+  position: fixed;
+  height: 100vh;
+  background-color: rgba(239, 237, 237, 0.792);
+  color: rgb(0, 0, 0);
+  padding: 20px;
+}
+
+#sidebar h5 {
+  font-weight: bolder;
+}
+
+#sidebar div {
+  margin-top: 1.5rem;
+}
+
+.sidebar-button {
+  display: block;
+  width: 100%;
+  padding: 15px 0;
+  text-align: left;
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s;
+}
+
+.sidebar-button img {
+  width: 35px;
+  height: 35px;
+  float: right;
+}
+
+.dropdown-toggle {
+  display: block;
+  width: 100%;
+  padding: 15px 0;
+  text-align: left;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  transition: color 0.3s;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.dropdown-toggle:hover {
+  color: #007bff;
+}
+
+.dropdown-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.dropdown-toggle.active + .dropdown-content {
+  max-height: 300px;
+  opacity: 1;
+  visibility: visible;
+  transition: max-height 0.3s ease-in, opacity 0.3s, visibility 0.3s;
+}
+
+#show_label.collapsed {
+  transition: transform 0.3s ease-out;
+  transform: rotate(180deg);
+}
+#show_label {
+  transition: transform 0.3s ease-out;
+}
+
+.file_input {
+    position: relative;
+    display: inline-block;  
+    background: #D0EEFF;  
+    border: 1px solid #99D3F5;  
+    border-radius: 4px;  
+    padding: 4px 12px;  
+    overflow: hidden;  
+    color: #1E88C7;  
+    text-decoration: none;  
+    text-indent: 0;  
+    line-height: 30px;
+  }
+  .file_input input {
+    position: absolute;  
+    font-size: 100px;  
+    right: 0;  
+    top: 0;  
+    opacity: 
+    0;
+  }
+  .file_input:hover {  
+    background: #AADFFD;  
+    border-color: #78C3F3;  
+    color: #004974;  
+    text-decoration: none;
+  }
+
+  .btn-gradient {  
+    display: inline-block;  
+    padding: 12px 24px;  
+    font-size: 16px;  
+    color: #fff;  
+    background: linear-gradient(45deg, #6a11cb 0%, #2575fc 100%);  
+    border: none;  
+    border-radius: 25px; 
+    cursor: pointer;  
+    transition: background 0.3s ease;
+    }
+  .btn-gradient:hover {  
+    background: linear-gradient(45deg, #2575fc 0%, #6a11cb 100%);
+  }
+
+  .btn-3d {  
+    display: inline-block;  
+    padding: 12px 24px;  
+    font-size: 16px;  
+    color: #fff;  
+    background: #73dcd1;  
+    border: none;  
+    border-radius: 25px;  
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);  
+    transition: transform 0.3s ease;
+    }
+    .btn-3d:hover {  
+    transform: translateY(-5px);
+    }
+
+
+
+  /* 自定义上传按钮的容器 */
+  .upload-container {
+      position: relative;
+      display: inline-block;
+      margin: 20px;
+  }
+
+  /* 自定义按钮样式 */
+  .upload-button {
+      padding: 12px 24px;
+      background: linear-gradient(135deg, #6e8efb, #a777e3);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 4px 15px rgba(110, 142, 251, 0.3);
+      transition: transform 0.3s, box-shadow 0.3s;
+      outline: none;
+  }
+
+  /* 按钮悬停效果 */
+  .upload-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(110, 142, 251, 0.4);
+  }
+
+  /* 按钮点击效果 */
+  .upload-button:active {
+      transform: translateY(0);
+  }
+
+  /* 文件名显示区域 */
+  .file-name {
+      margin-top: 10px;
+      font-size: 14px;
+      color: #666;
+      display: flex;
+      align-items: center;
+  }
+
+  /* 文件名旁边的图标 */
+  .file-icon {
+      margin-right: 8px;
+      color: #a777e3;
+  }
+

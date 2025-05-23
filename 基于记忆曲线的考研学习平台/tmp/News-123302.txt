@@ -1,0 +1,288 @@
+<html><head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<title>数学一和数学二有什么区别_大学生必备网</title>
+<meta name="keywords" content="考研数学">
+<meta name="description" content="考研数学一和数学二的主要区别在于所适用的专业不同、考试内容不同、考试难度不同，具体区别如下：一、适用专业不同1、须使用数学一的学科专业工学门类的力学、机械工程、光学工程、仪器科学与技术、冶金工程、动力工程及工程热物理、电气工程、电子科学与技术、信息与通信工程、控制科学与工程、计算机科学与技术、土木工...">
+<meta name="mobile-agent" content="format=html5;url=https://m.dxsbb.com/news/123302.html">
+<meta name="mobile-agent" content="format=wml;url=https://m.dxsbb.com/news/123302.html">
+<meta name="mobile-agent" content="format=xhtml;url=https://m.dxsbb.com/news/123302.html">
+<link rel="alternate" media="only screen and (max-width: 640px)" href="https://m.dxsbb.com/news/123302.html">
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=202412">
+<script src="https://hm.baidu.com/hm.js?0fde2fa52b98e38f3c994a6100b45558"></script><script src="https://zz.bdstatic.com/linksubmit/push.js"></script><script src="/js/common.js"></script><script src="/js/jquery.min.js"></script>
+<script src="/js/m.js"></script>
+
+<script src="/js/OTca.js"></script>
+</head>
+<body>
+<div class="topBar">
+<div class="wrap">
+<div class="notice">欢迎访问大学生必备网！</div>
+<div class="favorite"><a href="/about/contact.html" target="_blank">我要纠错</a><a href="javascript:void(0);" onclick="addFavorite();">加入收藏</a></div>
+</div>
+</div>
+<div class="topLogo">
+<div class="wrap">
+<div class="logo">
+<a href="/"><img src="/img/logo.png?v=1" title="大学生必备网" alt="大学生必备网"></a>
+</div>
+<div class="search">
+<div class="searchBox">
+<input type="text" id="searchInput" class="searchInput" value="请输入要搜索的内容" onfocus="if (value =='请输入要搜索的内容'){value =''}" onblur="if (value ==''){value='请输入要搜索的内容'}">
+<input type="button" class="searchBtn" onclick="znss(document.getElementById('searchInput').value)" value="搜索">
+</div>
+</div>
+</div>
+</div>
+<div class="topMenu">
+<div class="menuList">
+<ul>
+<li class="active"><a href="/" target="_blank">首页</a></li>
+<li><a href="/news/list_86.html" target="_blank">考研频道</a></li>
+<li><a href="/news/list_41.html" target="_blank">考研常识</a></li>
+<li><a href="/news/list_983.html" target="_blank">考研报名</a></li>
+<li><a href="/news/list_984.html" target="_blank">考研时间</a></li>
+<li><a href="/news/list_551.html" target="_blank">考研科目</a></li>
+<li><a href="/news/list_985.html" target="_blank">成绩查询</a></li>
+<li><a href="/news/list_239.html" target="_blank">国 家 线</a></li>
+<li><a href="/news/list_986.html" target="_blank">复试调剂</a></li>
+<li><a href="/news/list_989.html" target="_blank">推免保研</a></li>
+<li><a href="/news/list_652.html" target="_blank">985</a></li>
+<li><a href="/news/list_651.html" target="_blank">211</a></li>
+<li><a href="/news/list_178.html" target="_blank">双一流</a></li>
+<li><a href="/news/list_712.html" target="_blank">学科评估</a></li>
+<li><a href="/news/list_1002.html" target="_blank">考研院校</a></li>
+<li><a href="/news/list_991.html" target="_blank">考研专业</a></li>
+</ul>
+</div>
+</div>
+<div class="position">当前位置：<a href="/">首页</a><span>&gt;</span><a href="/news/list_86.html" target="_blank">考研频道</a><span>&gt;</span><a href="/news/list_551.html" target="_blank">考试科目</a></div>
+<div class="navmenu">
+<ul class="second">
+<li class="firstname"><a href="/news/list_86.html">不限</a></li><li><a href="/news/list_41.html">常识科普</a></li><li><a href="/news/list_990.html">经验分享</a></li><li><a href="/news/list_61.html">报考地区</a></li><li><a href="/news/list_983.html">报名时间</a></li><li><a href="/news/list_984.html">考试时间</a></li><li class="selected"><a href="/news/list_551.html">考试科目</a></li><li><a href="/news/list_985.html">成绩查询</a></li><li><a href="/news/list_239.html">考研分数</a></li><li><a href="/news/list_986.html">复试调剂</a></li><li><a href="/news/list_989.html">推免保研</a></li><li><a href="/news/list_1011.html">专科考研</a></li><li><a href="/news/list_1002.html">院校信息</a></li><li><a href="/news/list_991.html">专业信息</a></li>
+</ul>
+</div>
+<div class="wrap">
+<script>OTca('ot002');</script><div style="margin:10px 0 0 0;padding:5px 12px 0px 16px;border:1px solid #f5f5f5;border-radius:2px;background:#fefefe;box-shadow:0 1px 3px rgba(0,37,55,.05);width: 1160px;float: left;"><script type="text/javascript" src="//2021.dxsbb.com/source/hcu_i_rdu/common/d_d.js"></script>
+</div>
+
+</div>
+<div class="newsBody">
+<div class="newsareaL">
+<div id="article">
+<h1>数学一和数学二有什么区别</h1>
+<div class="update">更新：2024-2-28 17:31:04&nbsp;&nbsp;&nbsp;&nbsp;发布：大学生必备网</div>
+<div class="content"><p style="text-align:center;"><img alt="数学一和数学二有什么区别" title="数学一和数学二有什么区别" src="https://img.dxsbb.com/upFiles/infoImg/2022092036658885.jpg" border="0"></p><p><a href="/news/list_41.html" class="keyWord" target="_blank">考研</a>数学一和数学二的主要区别在于所适用的专业不同、考试内容不同、考试难度不同，具体区别如下：</p><h2>一、适用专业不同</h2><p><strong>1、须使用数学一的学科专业</strong></p><p>工学门类的力学、机械工程、光学工程、仪器科学与技术、冶金工程、动力工程及工程热物理、电气工程、电子科学与技术、信息与通信工程、控制科学与工程、<a href="/news/list_81.html" class="keyWord" target="_blank">计算机</a>科学与技术、土木工程、水利工程、测绘科学与技术、交通运输工程、船舶与海洋工程、航空宇航科学与技术、兵器科学与技术、核科学与技术、生物医学工程等一级学科中所有的<a href="/news/list_81.html" class="keyWord" target="_blank">二级</a>学科、专业。</p><p><strong>2、须使用数学二的学科专业</strong></p><p>工学门类的纺织科学与工程、轻工技术与工程、农业工程、林业工程、食品科学与工程等一级学科中所有的二级学科、专业。</p><p><strong>3、须选用数学一或数学二的学科专业（招生单位自定）</strong></p><p>工学门类的材料科学与工程、化学工程与技术、地质资源与地质工程、矿业工程、石油与天然气工程、环境科学与工程等一级学科中对数学要求较高的二级学科、专业选用数学一，对数学要求较低的选用数学二。</p><h2><strong>二、考试内容不同</strong></h2><p><strong>数学一：</strong>高等数学（或微积分）约60%+线性代数约20%+概率论与数理统计约20%</p><p><strong>数学二：</strong>高等数学（或微积分）约80%+线性代数约20%</p><p>数学二不考概率论与数理统计</p><h2>三、考试难度不同</h2><p>通常来说，数学一难度高于数学二，毕竟数学一是工学中对属于要求较高的专业使用。</p></div><div style="float:left;width: 100%;overflow:hidden;margin:0;padding: 0px 0 10px 0;background:#fff;"><a href="#" style="color:#333333;">搜索微信公众号：<span style="color:#00aaff;font-weight: bold;">考研数据</span>，输入院校，可查各大学招生简章、复试分数、专业目录、参考书目、一流学科、学科排名、报录比...</a></div>
+<div class="mark">标签：<a href="/news/?list_mark-%E8%80%83%E7%A0%94%E6%95%B0%E5%AD%A6.html" target="_blank">考研数学</a>&nbsp;</div>
+</div>
+<script>OTca('ot022');</script><div style="background:#fefefe;float:left;overflow:hidden;width: 800px;padding:20px 20px 10px 20px;margin:10px 0 0 0;">
+<script type="text/javascript" src="//2021.dxsbb.com/production/up/source/o_qeq/rq/m.js"></script>
+</div>
+
+<div class="marknews">
+<h2>相关推荐</h2>
+<ul>
+<li>
+<a href="/news/87260.html" target="_blank">
+<div class="a"><img src="https://img.dxsbb.com/upFiles/infoImg/2020092739985761.jpg" alt="考研数学一二三区别及考研难度"></div>
+<div class="b"><h3>考研数学一二三区别及考研难度</h3><p class="time">2024-2-28</p></div>
+</a>
+</li>
+<li>
+<a href="/news/123304.html" target="_blank">
+<div class="a"><img src="https://img.dxsbb.com/upFiles/infoImg/2022092036850145.jpg" alt="哪些专业考数学二？"></div>
+<div class="b"><h3>哪些专业考数学二？</h3><p class="time">2024-2-28</p></div>
+</a>
+</li>
+<li>
+<a href="/news/123303.html" target="_blank">
+<div class="a"><img src="https://img.dxsbb.com/upFiles/infoImg/2022092037077717.jpg" alt="哪些专业考数学一？"></div>
+<div class="b"><h3>哪些专业考数学一？</h3><p class="time">2024-2-28</p></div>
+</a>
+</li>
+<script>OTca('ot020');</script><li style="background:#fefefe;float:left;overflow:hidden;width:800px;"><script type="text/javascript" src="//2021.dxsbb.com/production/g/b_tkth_cc/common/c.js"></script></li>
+
+</ul>
+</div>
+<div class="hotnews">
+<h2>热门推荐</h2>
+<ul>
+<li>
+<a href="/news/111256.html" target="_blank">
+<div class="a"><img src="https://img.dxsbb.com/upFiles/infoImg/2020092738478421.jpg" alt="考研究生要考哪些科目？"></div>
+<div class="b"><h3>考研究生要考哪些科目？</h3><p class="time">2024-2-28</p></div>
+</a>
+</li>
+<li>
+<a href="/news/3239.html" target="_blank">
+<div class="a"><img src="https://img.dxsbb.com/upFiles/infoImg/2022022172696545.jpg" alt="考研英语一和英语二的区别"></div>
+<div class="b"><h3>考研英语一和英语二的区别</h3><p class="time">2024-2-28</p></div>
+</a>
+</li>
+<li>
+<a href="/news/87104.html" target="_blank">
+<div class="a"><img src="https://img.dxsbb.com/upFiles/infoImg/2020092738478421.jpg" alt="考研科目有哪些及各科目分数"></div>
+<div class="b"><h3>考研科目有哪些及各科目分数</h3><p class="time">2024-2-28</p></div>
+</a>
+</li>
+<li>
+<a href="/news/143613.html" target="_blank">
+<div class="a"><img src="https://img.dxsbb.com/upFiles/infoImg/2024022845246033.png" alt="考研各科目满分分别是多少"></div>
+<div class="b"><h3>考研各科目满分分别是多少</h3><p class="time">2024-2-28</p></div>
+</a>
+</li>
+<li>
+<a href="/news/123302.html" target="_blank">
+<div class="a"><img src="https://img.dxsbb.com/upFiles/infoImg/2022092036658885.jpg" alt="数学一和数学二有什么区别"></div>
+<div class="b"><h3>数学一和数学二有什么区别</h3><p class="time">2024-2-28</p></div>
+</a>
+</li>
+<li>
+<a href="/news/87260.html" target="_blank">
+<div class="a"><img src="https://img.dxsbb.com/upFiles/infoImg/2020092739985761.jpg" alt="考研数学一二三区别及考研难度"></div>
+<div class="b"><h3>考研数学一二三区别及考研难度</h3><p class="time">2024-2-28</p></div>
+</a>
+</li>
+<li>
+<a href="/news/123304.html" target="_blank">
+<div class="a"><img src="https://img.dxsbb.com/upFiles/infoImg/2022092036850145.jpg" alt="哪些专业考数学二？"></div>
+<div class="b"><h3>哪些专业考数学二？</h3><p class="time">2024-2-28</p></div>
+</a>
+</li>
+<li>
+<a href="/news/123303.html" target="_blank">
+<div class="a"><img src="https://img.dxsbb.com/upFiles/infoImg/2022092037077717.jpg" alt="哪些专业考数学一？"></div>
+<div class="b"><h3>哪些专业考数学一？</h3><p class="time">2024-2-28</p></div>
+</a>
+</li>
+</ul>
+</div>
+<div class="shangxia">
+<div class="shang">上一篇：<a href="/news/87260.html">考研数学一二三区别及考研难度</a> <span class="qwlb"><a href="/news/list_551.html" target="_blank">前往列表</a></span></div>
+<div class="xia">下一篇：<a href="/news/3239.html">考研英语一和英语二的区别</a> <span class="qwsy"><a href="/" target="_blank">前往首页</a></span></div>
+</div>
+</div>
+<div class="newsareaR">
+<div class="rightbox">
+<h2>考研科普</h2>
+<ul>
+<li><a href="/news/list_41.html" target="_blank">考研常识</a></li>
+<li><a href="/news/list_990.html" target="_blank">考研经验</a></li>
+<li><a href="/news/list_61.html" target="_blank">考研地区</a></li>
+<li><a href="/news/list_983.html" target="_blank">考研报名</a></li>
+<li><a href="/news/list_984.html" target="_blank">考研时间</a></li>
+<li><a href="/news/list_551.html" target="_blank">考研科目</a></li>
+<li><a href="/news/list_985.html" target="_blank">成绩查询</a></li>
+<li><a href="/news/list_239.html" target="_blank">考研分数</a></li>
+<li><a href="/news/list_987.html" target="_blank">国 家 线</a></li>
+<li><a href="/news/list_986.html" target="_blank">复试调剂</a></li>
+<li><a href="/news/list_989.html" target="_blank">推免保研</a></li>
+<li><a href="/news/list_1011.html" target="_blank">专科考研</a></li>
+</ul>
+</div>
+<div class="rightbox">
+<h2>考研院校</h2>
+<ul>
+<li><a href="/news/list_652.html" target="_blank">985大学</a></li>
+<li><a href="/news/list_651.html" target="_blank">211大学</a></li>
+<li><a href="/news/list_178.html" target="_blank">双 一 流</a></li>
+<li><a href="/news/list_1003.html" target="_blank">保研院校</a></li>
+<li><a href="/news/list_179.html" target="_blank">一流学科</a></li>
+<li><a href="/news/list_645.html" target="_blank">学科评估</a></li>
+<li><a href="/news/list_605.html" target="_blank">重点学科</a></li>
+<li><a href="/news/list_637.html" target="_blank">报录比例</a></li>
+<li><a href="/news/list_627.html" target="_blank">招生简章</a></li>
+<li><a href="/news/list_176.html" target="_blank">招生专业</a></li>
+<li><a href="/news/list_549.html" target="_blank">招生计划</a></li>
+<li><a href="/news/list_177.html" target="_blank">参考书目</a></li>
+<li><a href="/news/list_1238.html" target="_blank">考试大纲</a></li>
+<li><a href="/news/list_136.html" target="_blank">考研真题</a></li>
+<li><a href="/news/list_988.html" target="_blank">复试分数</a></li>
+<li><a href="/news/list_1240.html" target="_blank">复试内容</a></li>
+<li><a href="/news/list_1241.html" target="_blank">复试占比</a></li>
+<li><a href="/news/list_1255.html" target="_blank">调剂要求</a></li>
+<li><a href="/news/list_628.html" target="_blank">收费标准</a></li>
+<li><a href="/news/list_629.html" target="_blank">奖助学金</a></li>
+</ul>
+</div>
+<div class="rightbox">
+<h2>考研专业</h2>
+<ul>
+<li><a href="/news/list_712.html">学科评估</a></li>
+<li><a href="/news/list_952.html">专业目录</a></li>
+<li><a href="/news/list_138.html">考研方向</a></li>
+<li><a href="/news/list_992.html">考试科目</a></li>
+</ul>
+</div>
+<script>OTca('ot012');</script><div style="margin: 10px 0 0 0;float:left;padding: 20px;background: #ffffff;">
+<script type="text/javascript" src="//2021.dxsbb.com/source/xsboy/resource/u/common/o_bh.js"></script>
+</div>
+
+<div class="new">
+<h2>最近更新</h2>
+<ul>
+<li>
+<a href="/news/123304.html" target="_blank">
+<div class="a"><img src="https://img.dxsbb.com/upFiles/infoImg/2022092036850145.jpg" alt="哪些专业考数学二？"></div>
+<div class="b"><h3>哪些专业考数学二？</h3><p class="time">2024-2-28</p></div>
+</a>
+</li>
+<li>
+<a href="/news/123303.html" target="_blank">
+<div class="a"><img src="https://img.dxsbb.com/upFiles/infoImg/2022092037077717.jpg" alt="哪些专业考数学一？"></div>
+<div class="b"><h3>哪些专业考数学一？</h3><p class="time">2024-2-28</p></div>
+</a>
+</li>
+<li>
+<a href="/news/87260.html" target="_blank">
+<div class="a"><img src="https://img.dxsbb.com/upFiles/infoImg/2020092739985761.jpg" alt="考研数学一二三区别及考研难度"></div>
+<div class="b"><h3>考研数学一二三区别及考研难度</h3><p class="time">2024-2-28</p></div>
+</a>
+</li>
+<li>
+<a href="/news/123302.html" target="_blank">
+<div class="a"><img src="https://img.dxsbb.com/upFiles/infoImg/2022092036658885.jpg" alt="数学一和数学二有什么区别"></div>
+<div class="b"><h3>数学一和数学二有什么区别</h3><p class="time">2024-2-28</p></div>
+</a>
+</li>
+<li>
+<a href="/news/3239.html" target="_blank">
+<div class="a"><img src="https://img.dxsbb.com/upFiles/infoImg/2022022172696545.jpg" alt="考研英语一和英语二的区别"></div>
+<div class="b"><h3>考研英语一和英语二的区别</h3><p class="time">2024-2-28</p></div>
+</a>
+</li>
+<li>
+<a href="/news/111256.html" target="_blank">
+<div class="a"><img src="https://img.dxsbb.com/upFiles/infoImg/2020092738478421.jpg" alt="考研究生要考哪些科目？"></div>
+<div class="b"><h3>考研究生要考哪些科目？</h3><p class="time">2024-2-28</p></div>
+</a>
+</li>
+<li>
+<a href="/news/87104.html" target="_blank">
+<div class="a"><img src="https://img.dxsbb.com/upFiles/infoImg/2020092738478421.jpg" alt="考研科目有哪些及各科目分数"></div>
+<div class="b"><h3>考研科目有哪些及各科目分数</h3><p class="time">2024-2-28</p></div>
+</a>
+</li>
+<li>
+<a href="/news/143613.html" target="_blank">
+<div class="a"><img src="https://img.dxsbb.com/upFiles/infoImg/2024022845246033.png" alt="考研各科目满分分别是多少"></div>
+<div class="b"><h3>考研各科目满分分别是多少</h3><p class="time">2024-2-28</p></div>
+</a>
+</li>
+</ul>
+</div>
+<script>OTca('ot015');</script><div style="float:left;margin: 10px 0 0 0;padding: 20px;background: #ffffff;">
+<script type="text/javascript" src="//2021.dxsbb.com/site/fa-j/openjs/s-sx/source/igz.js"></script></div>
+
+</div>
+</div>
+<div class="bottomBody">
+<div class="Copyright"><p class="about">Copyright&nbsp;©&nbsp;大学生必备网&nbsp;&nbsp;&nbsp;&nbsp;<a href="/about/contact.html" target="_blank">联系我们</a></p>
+<p class="beian"><a href="https://beian.miit.gov.cn" target="_blank">鄂ICP备2024032864号-2</a>&nbsp;&nbsp;&nbsp;&nbsp;<a target="_blank" href="https://www.beian.gov.cn/portal/registerSystemInfo?recordcode=42011102003869"><img src="/img/beian.png">鄂公网安备42011102003869号</a></p></div>
+</div>
+<script src="/js/k.js?v=20240928"></script><script src="/js/viewimages.js"></script>
+<script src="/js/echo.min.js"></script>
+<div style="position: fixed; bottom: 50px; right: 50px; width: 56px; height: 56px; border-radius: 5px; background: url(/img/backtop.png) 2px 2px no-repeat; background-color: #fff; "><a href="javascript:window.scrollTo(0, 0);" style="float: left; display: inline; margin-bottom: 1px; width: 56px; height: 56px; color: #fff; "></a></div>
+
+<script src="/readNum.asp?mudi=add&amp;dataID=123302&amp;isNoReturn=0"></script>
+
+</body></html>

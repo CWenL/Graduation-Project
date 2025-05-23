@@ -1,0 +1,226 @@
+/* 公告部分样式*/
+.banner {
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), 
+                url('../imgs/星空2.webp') no-repeat center/cover;
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+    /* 新增优化属性 */
+    background-attachment: local;  /* 视差效果 */
+    min-height: 400px;              /* 保持容器高度 */
+    animation: fadeIn 1s ease;      /* 入场动画 */
+  }
+  /* 动画定义 */
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  .search-box {
+    max-width: 800px;
+    margin: 20px auto;
+  }
+  
+  .search-box input {
+    width: 70%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 18px;
+    height: 60px;
+}
+  
+  .search-box button {
+    width: 28%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 4px;
+    background-color: #ff4444;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .content-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+  }
+  
+  .container {
+    display: flex;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: left;
+  }
+  
+  .sidebar {
+    width: 25%;
+    padding: 15px;
+  }
+  
+  .sidebar-menu {
+    list-style: none;
+    border-left: 3px solid #ff4444;
+  }
+  
+  .sidebar-menu li {
+    padding: 12px 0;
+  }
+  
+  .sidebar-menu a {
+    color: #333;
+    text-decoration: none;
+    display: block;
+    padding: 8px 15px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+  }
+  
+  .sidebar-menu a.active {
+    background-color: #e9ecef;
+    color: #007bff;
+  }
+  
+  .content-area {
+    flex: 1;
+    padding: 15px;
+    width: 75%;
+    background-color: rgb(255, 255, 255);
+  }
+  
+  .notice-item,.news-item {
+    cursor: pointer; /* 将鼠标样式设为指针，避免出现哑铃形状 */
+    display: block;
+    padding: 12px 0;
+    border-bottom: 1px dashed #ddd;
+    padding: 30px 0;/*加高 */
+  }
+  
+  .notice-title,.news-title {
+    font-size: 1.8rem;
+    margin-bottom: 8px;
+  }
+  
+  .notice_detail-title,.news_detail-title {
+    font-size: 3.5rem;
+    text-align:center;
+    font-size:3.5rem;
+    font-weight:800
+  }
+  
+  .notice-title:hover,.news-title:hover {
+    color: red; /* 鼠标悬停时标题变红 */
+  }
+  
+  /* 其他原有样式保留 */
+  .notice-meta {
+    color: #666;
+    font-size: 1.1rem;
+    line-height: 1.8;
+  }
+  .news-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+    
+  }
+  .time, .publisher {
+    color: #666;
+    font-size: 1.1rem;
+    line-height: 1.8;
+  }
+  .notice-meta span,.news-meta span {
+    margin-right: 15px;
+  }
+  .meta-icon {
+    margin-right: 5px;
+    color: #999;
+  }
+  .pagination {
+    text-align: center;
+    margin-top: 25px;
+  }
+  
+  .pagination button {
+    padding: 10px 18px; /* 增大内边距让按钮更饱满 */
+    margin: 0 8px; /* 调整间距 */
+    cursor: pointer;
+    background-color: #ffffff;
+    color: #333; /* 优化文字颜色对比度 */
+    border: 1px solid #e0e0e0; /* 更细腻的边框颜色 */
+    border-radius: 6px; /* 增大圆角让视觉更柔和 */
+    transition: all 0.3s ease; /* 添加过渡动画 */
+    font-size: 14px;
+  }
+  
+  .pagination button:hover {
+    background-color: #4b8cd2;
+    border-color: #4b8cd2; /* 悬停时边框颜色同步 */
+    color: white; /* 悬停文字变色 */
+  }
+  
+  .pagination button:active {
+    transform: scale(0.96); /* 点击时的缩放反馈 */
+  }
+  
+  .pagination button:disabled {
+    background-color: #f5f5f5; /* 禁用状态更浅背景 */
+    color: #bdbdbd; /* 禁用文字颜色 */
+    border-color: #f5f5f5;
+    cursor: not-allowed;
+  }
+  
+  .pagination button.active { /* 新增当前页按钮样式 */
+    background-color: #4b8cd2;
+    color: white;
+    border-color: #4b8cd2;
+    font-weight: 600;
+  }
+  
+  /* 新增详情布局样式 */
+  .new-notice-detail,.new-news-detail {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  .detail-content {
+    line-height: 1.8;
+    font-size: 1.6rem;
+    color: #333;
+    margin: 20px 0;
+  }
+  .nav-area {
+    display: flex;
+    justify-content: space-between;
+    color: #666;
+    padding: 15px 0;
+    border-top: 1px dashed #ccc;
+    margin-top: 30px;
+  }
+  .nav-area a {
+    text-decoration: none;
+    color: #666;
+  }
+  .nav-area a:hover {
+    color: #007bff;
+  }
+  .back-btn {
+    display: inline-block;
+    padding: 8px 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    text-decoration: none;
+    color: #333;
+    transition: background-color 0.3s;
+  }
+  .back-btn:hover {
+    background-color: #f0f0f0;
+  }
+
+  

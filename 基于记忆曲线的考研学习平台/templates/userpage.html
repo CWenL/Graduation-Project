@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/bootstrap.css">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/CardStyle.css">
+    <!-- <link rel="stylesheet" href="https://gcore.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"> -->
+    <link rel="stylesheet" href="/static/css/flatpickr.min.css">
+    <!-- <link rel="stylesheet" href="/static/css/homepage.css"> -->
+    <script src="/static/js/jquery-3.7.1.min.js" ></script>
+    <script src="/static/js/bootstrap.js"></script>
+    <script src="/static/js/bootstrap.bundle.js"></script>
+    <script src="/static/js/time.js"></script>
+    <script src="/static/js/search.js"></script>
+    <script src="/static/js/script.js"></script>
+    <title>Document</title>
+    <style>
+      /* 自定义样式 */
+      .accordion-item {
+          margin-bottom: 10px;
+      }
+      .accordion-button {
+          background-color: #f8f9fa;
+      }
+      .accordion-body {
+          padding: 1rem;
+          border: 1px solid #dee2e6;
+          border-top: none;
+      }
+      .pagination {
+  margin: 1rem 0;
+}
+
+.pagination a.page-link {
+  color: #0d6efd;
+  border-radius: 0.375rem;
+}
+
+.pagination a.page-link:hover {
+  background-color: #e9ecef;
+}
+
+.pagination .active a.page-link {
+  background-color: #0d6efd;
+  color: white;
+  border-color: #0d6efd;
+}
+
+.pagination .disabled a.page-link {
+  color: #6c757d;
+  cursor: not-allowed;
+  background-color: transparent;
+  border-color: #dee2e6;
+}
+.banner {
+        background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), 
+              url('/static/imgs/个主页2.gif') no-repeat center/cover;
+        color: white;
+        text-align: center;
+        padding: 80px 20px;
+        /* 新增优化属性 */
+        background-attachment: local;  /* 视差效果 */
+        min-height: 400px;              /* 保持容器高度 */
+        animation: fadeIn 1s ease;      /* 入场动画 */
+      }
+      /* 动画定义 */
+      @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+      }
+      .container {
+        max-width: 100%;
+    }
+    .panel {
+    position: absolute;
+    top: 38%;
+    margin-top: -400px;
+    left: 46%;
+    margin-left: -893px;
+    background-color: rgba(250, 250, 250, 0.9);
+    width: 80%;
+    height: auto;
+    min-height: 100%;
+    border-radius: 25px;
+    text-align: center;
+    padding: 20px 40px;
+    box-sizing: border-box;
+    }
+  .btn_select{
+    --bs-btn-padding-x: 10.75rem;
+    --bs-btn-padding-y: 1.375rem;
+    --bs-btn-font-family: ;
+    --bs-btn-font-size: 1.75rem;
+    --bs-btn-font-weight: 800;
+    border:none;
+  }
+    </style>
+</head>
+<body style=" background: rgb(231, 231, 231);">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light" style="
+  padding-top: 0px; padding-bottom: 0px; position: fixed; width: 100%; z-index: 1000;">
+      <div class="container-fluid px-2" style="background-color: lavender; padding-left: 0px;">
+        <div class="p-3 rounded hover-effect left_more"><a class="navbar-brand" id="toggleSidebar" role="button">
+          <img style="width: 45px; height: 45px; float: right;" src="/static/imgs/菜单.png">
+          </a></div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <p class="fw-bolder home_h1">欢迎使用考研学习平台！</p>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-auto align-items-center d-flex">
+          <li class="nav-item">
+            <a class="nav-link active fs-4" aria-current="page" href="/homepage">
+              <img style="width: 35px; height: 35px;" src="/static/imgs/首页.png">
+              首页&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link fs-4" href="/GlobalNotice">
+                  <img style="width: 35px; height: 35px;" src="/static/imgs/公告.png">
+                平台公告&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+            </li>
+          <li class="nav-item">
+            <a class="nav-link fs-4" href="/community">
+              <img style="width: 35px; height: 35px;" src="/static/imgs/交流社区.png">
+              交流社区&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fs-4" href="/userpage">
+              <img style="width: 35px; height: 35px;border-bottom: 5px solid #5ed8c5;" src="/static/imgs/个人主页.png">
+              个人主页&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fs-4" href="/learning_us"><img style="width:35px; height:35px" src="/static/imgs/了解我们.png">
+              了解我们&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle fs-4" href="#" id="dropdownMenuButton" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              设置
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <li><a class="dropdown-item" href="{{ url_for('change_password') }}">修改密码</a></li>
+              <li><a class="dropdown-item" href="/logout">退出登录</a></li>
+              <!-- 管理员权限选项，只有管理员才能看到 -->
+              {% if power =="admin" %}
+              <li><a class="dropdown-item" href="{{ url_for('adminOp') }}">管理员面板</a></li>
+              {% endif %}
+              {% if power =="CommunityAdmin" %}
+              <li><a class="dropdown-item" href="{{ url_for('adminOp') }}">社区管理员面板</a></li>
+              {% endif %}
+            </ul>
+          </li>
+        </ul>
+        <img style="width: 35px; height: 35px;" src="/static/imgs/平台搜索.png">
+        &nbsp;&nbsp;
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="搜你想看！" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+      </div>
+      </nav>
+        <!-- 侧边栏 -->
+        <div id="sidebar" style="width: 11%; position: fixed; height: 100vh; background-color: rgb(244 244 251); color: rgb(0, 0, 0); padding: 20px;">
+          <h5 class="fw-bolder">学习功能列表</h5>
+          <div class="ps-1 pe-1" style="margin-top: 5.5rem;">
+              <a href="/DataChart" class="btn fs-4 mb-3 d-block sidebar-button" style="text-align: left;">
+                  学习数据可视化
+                  <img style="width: 35px; height: 35px; float: right;" src="/static/imgs/可视化.png">
+              </a>
+              <a href="/planpage" class="btn fs-4 mb-3 d-block sidebar-button" style="text-align: left;">
+                  学习规划
+                  <img style="width: 35px; height: 35px; float: right;" src="/static/imgs/目标规划.png">
+              </a>
+              
+              <a href="/News" class="btn fs-4 mb-3 d-block sidebar-button" style="text-align: left;">
+                  考研相关资讯
+                  <img style="width: 35px; height: 35px; float: right;" src="/static/imgs/资讯.png">
+              </a>
+              <a href="/uploadpage" class="btn fs-4 mb-3 d-block sidebar-button" style="text-align: left;">
+                  上传错题
+                  <img style="width: 35px; height: 35px; float: right;" src="/static/imgs/错题解析-加入错题.png">
+              </a>
+              记忆曲线复习<hr>
+              <a href="/review" class="btn fs-4 mb-3 d-block sidebar-button" style="text-align: left;margin-bottom:0rem !important;">
+                  <span>错题本复习</span>
+                  <img style="width: 35px; height: 35px; float: right;" src="/static/imgs/复习.png">
+              </a>
+              <button class="dropdown-toggle btn fs-4 d-block sidebar-button" id="dropdown_label" style="margin-bottom:0rem !important;border-color: rgba(255, 255, 255, 0);">标签复习<img id="show_label" src="/static/imgs/展开.png"></button>
+              <div class="dropdown-content">
+                <a href="/Tags_Review/数学" class="btn fs-4 d-block sidebar-button" style="text-align: left;margin-bottom:0rem !important;">数学复习<img style="width: 35px; height: 35px; float: right;" src="/static/imgs/数学.png"></a>
+                    <a href="/Tags_Review/专业课" class="btn fs-4 d-block sidebar-button" style="text-align: left;margin-bottom:0rem !important;">专业课复习<img style="width: 35px; height: 35px; float: right;" src="/static/imgs/专业课.png"></a>
+                    <a href="/Tags_Review/英语" class="btn fs-4 d-block sidebar-button" style="text-align: left;margin-bottom:0rem !important;">英语复习<img style="width: 35px; height: 35px; float: right;" src="/static/imgs/英语.png"></a>
+                    <a href="/Tags_Review/政治" class="btn fs-4 d-block sidebar-button" style="text-align: left;margin-bottom:0rem !important;">政治复习<img style="width: 35px; height: 35px; float: right;" src="/static/imgs/政治.png"></a>
+              </div>
+          </div>
+      </div>
+          <div>
+            <!-- 表单部分 -->
+            <section id="section1"></section>
+            <div class="time-container"><br><br><br>
+              <div id="time"></div>
+            </div>
+            <br><br><br>
+            <div class="time-container2">
+              <div id="countdown">00天 00小时 00分钟 00秒</div>
+            </div>
+    <div class="panel">
+      <!-- 模态框结构 -->
+      <div id="myModal" class="modal">
+        <!-- 模态框的内容 -->
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <img class="modal-image" id="modalImage">
+        </div>
+      </div>
+      <div class="container">
+        <div class="banner" style="border-radius: 30px;">
+          <h1 style="font-weight: 600;font-size: 3.5rem;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">个人主页</h1>
+          <p>获取个人信息</p><br>
+        </div>
+      <div class="row mt-5">
+              <div class="card">
+                  <div class="card-body">
+                      <h5 class="card-title input-group">个人信息</h5>
+                      <hr>
+                      <div class="input-group">
+                        <label for="username" style="background-color: white;width: 6%;font-size: 1.25rem;"class="input-group-text">账号名：</label>
+                        <input style="background-color: white;width: 25%;font-size: 1.25rem;"type="text" class="input-group-text" id="username" name="username" value="{{ user[0][0] }} &nbsp;" disabled>
+                        <label for="userEmail" style="background-color: white;width: 6%;font-size: 1.25rem;" class="input-group-text">邮箱：</label>
+                        <input style="background-color: white;width: 25%;font-size: 1.25rem;"type="text" class="input-group-text" id="userEmail" name="userEmail" value="{{ user[0][2] }}&nbsp;" disabled>
+                        <label for="userPower" style="background-color: white;width: 6%;font-size: 1.25rem;" class="input-group-text">权限：</label>
+                        <input style="background-color: white;width: 25%;font-size: 1.25rem;"type="text" class="input-group-text" id="userPower" name="userPower" value="{{ user[0][3] }}" disabled>                
+                        <a href="{{ url_for('change_password') }}" style="text-decoration: none;font-size: 1.25rem;"><button class="btn btn-md text-center bg-danger text-white rounded-lg">修改密码</button></a><br/>
+                      </div> 
+                      <div style="background-color: white;font-size: 1.25rem;text-align:left;" class="input-group">
+                        <label style="background-color: white;width: 8%;font-size: 1.25rem;"class="input-group-text">巴法云密钥：</label>
+                        <span style="background-color: white;width: 25%;font-size: 1.25rem;justify-content: space-between;" class="input-group-text" ><span id="key-view">**********</span> 
+                        <img id="key-img" data-no-modal src="/static/imgs/禁止查看.png" style="width: 25px; height: 25px; cursor: pointer;"></span>
+                        <button class="btn btn-md text-center bg-warning text-white rounded-lg" id="show-private-key-btn">设置私钥</button>
+                        <label style="background-color: white;width: 55%;font-size: 1.25rem;"class="input-group-text"><a href="https://cloud.bemfa.com/tcp/index.html" style="text-decoration:none;color: #4d074b;">添加巴法云私钥后提供微信推送服务（自行前往巴法云注册账户获取私钥）</a></label>
+                      </div>
+                      <div id="key-setting"  style="background-color: white;font-size: 1.25rem;text-align:left;display: none;" class="input-group">
+                        <input style="background-color: white;width: 25%;font-size: 1.25rem;border-color: #dadada;" type="text" id="set-key-input" placeholder="输入新私钥">
+                        <button id="set-key-btn" class="btn btn-success">保存设置</button>
+                      </div>
+                      <p class="card-text input-group-text" style="background-color: white;font-size: 25px;">当日完成复习的错题数：{{ reviewNum }}</p>
+                  </div>
+              </div>
+      </div>
+      <div class="container my-3 input-group-text justify-content-center" role="group" aria-label="First group"style="margin-bottom: 0px !important;background-color:white">
+        <button class="btn_select btn btn-outline-secondary input-group-text top-nav-button" data-bs-target="#collapseOne1"><img style="width: 55px;pointer-events: none;" src="/static/imgs/我的错题.png">我的错题</button>
+        <button class="btn_select btn btn-outline-secondary input-group-text top-nav-button" data-bs-target="#collapseTwo2"><img style="width: 55px;pointer-events: none;" src="/static/imgs/我的帖子.png">我的帖子</button>
+        <button class="btn_select btn btn-outline-secondary input-group-text top-nav-button" data-bs-target="#collapseThree3"><img style="width: 55px;pointer-events: none;" src="/static/imgs/我的评论.png">我的评论</button>
+        </div>
+        <div class="vertical-navbar">
+          <a href="#section1">↑顶部</a>
+          <a href="#section2">↓底部</a>
+        </div>
+      <div class="accordion" id="accordionExample">
+          <div class="accordion-item">
+              <div id="collapseOne1" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                  data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    <!-- 日期查询表单 -->
+                    <form action="{{ url_for('userpage') }}" method="get" class="mb-4">
+                      <input type="hidden" name="section" value="study">
+                      <div class="row g-2 align-items-center justify-content-center">
+                          <div class="col-md-3">
+                            <div class="input-group">
+                              <span class="input-group-text" id="basic-addon1">开始日期:</span>
+                              <input type="date" class="form-control" id="study_start_date" name="study_start_date" class="form-control">
+                            </div>
+                          </div>
+                          <div class="col-md-3">
+                            <div class="input-group">
+                              <span class="input-group-text" id="basic-addon1">结束日期:</span>
+                              <input type="date" class="form-control" id="study_end_date" name="study_end_date" class="form-control">
+                            </div>
+                          </div>
+                          <div class="col-md-1">
+                              <button type="submit" class="btn btn-primary w-100">搜索</button>
+                          </div>
+                      </div>
+                    </form>
+                      <p>这里显示用户近期上传的错题记录。</p>
+                      <ul style="font-size: 1.5rem;">
+                          {% for data in studydata %}
+                          <li class="input-group">
+                              <strong>题目类型：</strong>{{ data[3] }}<br>
+                          </li>
+                          <li class="input-group">
+                              <strong>文字描述：</strong>{{ data[2] }}<br>
+                          </li>
+                          <li class="d-flex justify-content-between align-items-center">
+                              <small>完成时间：{{ data[7] }}</small><br>
+                              <small>最近复习时间：{{ data[8] }}</small><br>
+                              <small>当前权重：{{ data[9] }}</small><br>
+                              <div class="btn btn-outline-dark btn-sm ms-2" style="--bs-btn-hover-bg: #b8babb;border:none"><a style="color: rgb(0, 0, 0);" href="{{ url_for('Wrong_detail', Wrong_id=data[0]) }}" style="text-decoration: none;">查看详情</a></div>
+                          </li>
+                          
+                          <hr>
+                          {% endfor %}
+                      </ul>
+                      <!-- 分页导航 -->
+                      <nav class="mt-4">
+                        <ul class="pagination justify-content-center">
+                          <!-- 上一页 -->
+                          <li class="page-item {% if study_page == 1 %}disabled{% endif %}">
+                            <a class="page-link" href="{{ url_for('userpage', study_page=study_page-1, forum_page=forum_page, comment_page=comment_page) }}#collapseOne1" aria-label="Previous">
+                              <span aria-hidden="true">&laquo;</span>
+                            </a>
+                          </li>
+                          <!-- 页码 -->
+                          {% set study_pages = (study_total / per_page) | ceil %}
+                          {% for p in range(1, study_pages + 1) %}
+                            <li class="page-item {% if p == study_page %}active{% endif %}">
+                              <a class="page-link" href="{{ url_for('userpage', study_page=p, forum_page=forum_page, comment_page=comment_page) }}#collapseOne1">
+                                {{ p }}
+                              </a>
+                            </li>
+                          {% endfor %}
+                          <!-- 下一页 -->
+                          <li class="page-item {% if study_page == study_pages %}disabled{% endif %}">
+                            <a class="page-link" href="{{ url_for('userpage', study_page=study_page+1, forum_page=forum_page, comment_page=comment_page) }}#collapseOne1" aria-label="Next">
+                              <span aria-hidden="true">&raquo;</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </nav>
+                  </div>
+              </div>
+          </div>
+              <div id="collapseTwo2" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                  data-bs-parent="#accordionExample">
+                  <div class="accordion-body" style="background-color: white;">
+                    <!-- 日期查询表单 -->
+                    <form action="{{ url_for('userpage') }}" method="get" class="mb-4">
+                      <input type="hidden" name="section" value="forum">
+                      <div class="row g-2 align-items-center justify-content-center">
+                          <div class="col-md-3">
+                            <div class="input-group">
+                              <span class="input-group-text" id="basic-addon1">开始日期:</span>
+                              <input type="date" class="form-control" id="forum_start_date" name="forum_start_date" class="form-control">
+                            </div>
+                          </div>
+                          <div class="col-md-3">
+                            <div class="input-group">
+                              <span id="basic-addon1" class="input-group-text">结束日期:</span>
+                              <input type="date" id="forum_end_date" name="forum_end_date" class="form-control">
+                            </div>
+                          </div>
+                          <div class="col-md-1">
+                              <button type="submit" class="btn btn-primary w-100">搜索</button>
+                          </div>
+                      </div>
+                    </form>
+                      <p>这里显示用户在社区中发布的帖子。</p>
+                      <ul>
+                          <!-- 卡片区域 -->
+                          {% for fdata in forumdata %}
+                          <!-- 卡片区域 -->
+                          <a href="{{ url_for('post_detail', post_id=fdata[0]) }}" class="card-link" style="text-decoration: none;">
+                          <div class="card card-wrapper">
+                            <!-- 图片部分 -->
+                            <img src="{{ fdata[7] }}" class="card-img" alt="Post Image">
+                            <!-- 内容部分 -->
+                            <div class="card-body"style="text-align: left;">
+                              <h5 class="card-title">{{ fdata[1] }}</h5>
+                              <p class="card-text">{{ fdata[6][:20] }}...</p>
+                              <!-- 标签部分 -->
+                              <div class="tags" style="text-align: left;">
+                                {% set tags = fdata[5].split('#') %}
+                                {% for tag in tags %}
+                                    {% if tag %}
+                                        {% if loop.index == 2 %}
+                                            <span class="badge bg-danger">{{ tag }}</span>
+                                        {% elif loop.index == 3 %}
+                                            <span class="badge bg-primary">{{ tag }}</span>
+                                        {% elif loop.index == 4 %}
+                                            <span class="badge bg-info">{{ tag }}</span>
+                                        {% endif %}
+                                    {% endif %}
+                                {% endfor %}
+                              </div>
+                              <!-- 其他信息 -->
+                              <p class="card-text"style="text-align: left;">{{fdata[2]}}  | {{fdata[4]}}</p>
+                              <p class="card-text"style="text-align: left;"><span style="float: left;">Cool</span>
+                                <span style="float: right; font-size: large;"><i class="bi bi-eye "></i> {{fdata[9]}} view</span></p>
+                              <div class="d-flex justify-content-between">
+                                <span class="auction-time" style="color: darkgrey;">{{fdata[3]}}</span>
+                                <span class="no-bids"><i class="bi bi-heart"></i> {{fdata[8]}} Support</span>
+                              </div>
+                            </div>
+                          </div>
+                          </a>
+                        <!-- 卡片区域 -->
+                        {% endfor %}
+                        </div>
+                      </ul>
+                      <!-- 分页导航 -->
+                      <nav class="mt-4">
+                        <ul class="pagination justify-content-center">
+                          <!-- 上一页 -->
+                          <li class="page-item {% if forum_page == 1 %}disabled{% endif %}">
+                            <a class="page-link" href="{{ url_for('userpage', study_page=study_page, forum_page=forum_page-1, comment_page=comment_page) }}#collapseTwo2" aria-label="Previous">
+                              <span aria-hidden="true">&laquo;</span>
+                            </a>
+                          </li>
+                          <!-- 页码 -->
+                          {% set forum_pages = (forum_total / per_page) | ceil %}
+                          {% for p in range(1, forum_pages + 1) %}
+                            <li class="page-item {% if p == forum_page %}active{% endif %}">
+                              <a class="page-link" href="{{ url_for('userpage', study_page=study_page, forum_page=p, comment_page=comment_page) }}#collapseTwo2">
+                                {{ p }}
+                              </a>
+                            </li>
+                          {% endfor %}
+                          <!-- 下一页 -->
+                          <li class="page-item {% if forum_page == forum_pages %}disabled{% endif %}">
+                            <a class="page-link" href="{{ url_for('userpage', study_page=study_page, forum_page=forum_page+1, comment_page=comment_page) }}#collapseTwo2" aria-label="Next">
+                              <span aria-hidden="true">&raquo;</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </nav>
+                  </div>
+          </div>
+            <div class="accordion-item" style="background-color: rgb(255, 255, 255);">
+              <div id="collapseThree3" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                  data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    <!-- 日期查询表单 -->
+                    <form action="{{ url_for('userpage') }}" method="get">
+                      <input type="hidden" name="section" value="comment">
+                      <div class="row g-2 align-items-center justify-content-center">
+                          <div class="col-md-3">
+                            <div class="input-group">
+                              <label for="comment_start_date" class="input-group-text">开始日期:</label>
+                              <input type="date" id="comment_start_date" name="comment_start_date" class="form-control">
+                            </div>
+                          </div>
+                          <div class="col-md-3">
+                            <div class="input-group">
+                              <label for="comment_end_date" class="input-group-text">结束日期:</label>
+                              <input type="date" id="comment_end_date" name="comment_end_date" class="form-control">
+                            </div>
+                          </div>
+                          <div class="col-md-1">
+                              <button type="submit" class="btn btn-primary w-100 mt-0">搜索</button>
+                          </div>
+                      </div>
+                    </form><br>
+                    <p>这里显示用户在社区中进行的评论。</p>
+                          {% for cdata in commentdata %}
+                          <div style="font-size: 30px;font-weight: 500;text-align: left;"><b>评论内容：</b>{{ cdata[3] }}
+                            {% if cdata[5] %}
+                            <img src="{{ cdata[5] }}" style="max-width: 300px;max-height: 300px;">
+                            {% endif %}
+                          </div>
+                          <div class="d-flex justify-content-between align-items-center">
+                            <small class="text-muted">发布者：{{ cdata[2] }}</small><br>
+                            <small class="text-muted">发布时间：{{ cdata[4] }}</small><br>
+                            <div class="btn btn-info btn-sm ms-2"><a href="/post/{{cdata[1]}}" style="text-decoration: none;color: aliceblue;">前往相关帖</a></div>
+                          </div><hr>
+                          {% endfor %}
+                      <!-- 分页导航 -->
+                      <nav class="mt-4">
+                        <ul class="pagination justify-content-center">
+                          <!-- 上一页 -->
+                          <li class="page-item {% if comment_page == 1 %}disabled{% endif %}">
+                            <a class="page-link" href="{{ url_for('userpage', study_page=study_page, forum_page=forum_page, comment_page=comment_page-1) }}#collapseThree3" aria-label="Previous">
+                              <span aria-hidden="true">&laquo;</span>
+                            </a>
+                          </li>
+                          <!-- 页码 -->
+                          {% set comment_pages = (comment_total / per_page) | ceil %}
+                          {% for p in range(1, comment_pages + 1) %}
+                            <li class="page-item {% if p == comment_page %}active{% endif %}">
+                              <a class="page-link" href="{{ url_for('userpage', study_page=study_page, forum_page=forum_page, comment_page=p) }}#collapseThree3">
+                                {{ p }}
+                              </a>
+                            </li>
+                          {% endfor %}
+                          <!-- 下一页 -->
+                          <li class="page-item {% if comment_page == comment_pages %}disabled{% endif %}">
+                            <a class="page-link" href="{{ url_for('userpage', study_page=study_page, forum_page=forum_page, comment_page=comment_page+1) }}#collapseThree3" aria-label="Next">
+                              <span aria-hidden="true">&raquo;</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </nav>
+                  </div>
+              </div>
+          </div>
+          <section id="section2"></section> 
+      </div>
+</div>
+  
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    // 设置浏览器手动管理滚动位置，防止因 hash 导致自动滚动
+    if ('scrollRestoration' in history) {
+        history.scrollRestoration = 'manual';
+    }
+    // 获取 URL 中的 section 参数（日期搜索标识）和 hash
+    const urlParams = new URLSearchParams(window.location.search);
+    const section = urlParams.get('section');
+    let hash = window.location.hash;
+    // 优先根据 section 参数确定展开面板，无则用 hash，再无则默认错题面板
+    const defaultTarget = '#collapseOne1';
+    const targetId = section 
+      ? section === 'study' 
+      ? '#collapseOne1' 
+      : section === 'forum' 
+      ? '#collapseTwo2' 
+      : section === 'comment' 
+      ? '#collapseThree3' 
+      : hash || defaultTarget 
+      : hash || defaultTarget;
+    // 展开目标面板
+    const targetCollapse = document.querySelector(targetId);
+    if (targetCollapse) {
+      const bsCollapse = new bootstrap.Collapse(targetCollapse, { toggle: false });
+      bsCollapse.show();
+      const allCollapses = document.querySelectorAll('.accordion-collapse');
+      allCollapses.forEach(function (collapse) {
+        if (collapse.id !== targetId.slice(1)) {
+          const otherBsCollapse = new bootstrap.Collapse(collapse, { toggle: false });
+          otherBsCollapse.hide();
+        }
+      });
+    }
+    // 防止因 hash 导致页面滚动
+    window.scrollTo(0, 0);
+    const topNavButtons = document.querySelectorAll('.top-nav-button');
+    topNavButtons.forEach(function (button) {
+        button.addEventListener('click', function (e) {
+            e.preventDefault(); // 阻止默认锚点跳转行为
+            const targetId = this.getAttribute('data-bs-target');
+            const targetCollapse = document.querySelector(targetId);
+            const bsCollapse = new bootstrap.Collapse(targetCollapse, { toggle: false });
+            if (targetCollapse.classList.contains('show')) {
+                // 如果面板已展开，则收起，并更新 URL（移除 hash）
+                bsCollapse.hide();
+                history.pushState(null, '', window.location.pathname + window.location.search);
+            } else {
+                // 展开目标面板，同时收起其他面板
+                bsCollapse.show();
+                const allCollapses = document.querySelectorAll('.accordion-collapse');
+                allCollapses.forEach(function (collapse) {
+                    if (collapse.id !== targetId.slice(1)) {
+                        const otherBsCollapse = new bootstrap.Collapse(collapse, { toggle: false });
+                        otherBsCollapse.hide();
+                    }
+                });
+                // 更新 URL 的 hash，这样刷新后仍然会保留对应的面板
+                history.pushState(null, '', targetId);
+            }
+            // 操作后滚动到页面顶部
+            window.scrollTo(0, 0);
+        });
+    });
+});
+</script>
+<script src="https://gcore.jsdelivr.net/npm/flatpickr"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+    function toggleKeyVisibility(e) {
+        console.log('点击事件触发');
+        e.preventDefault(); 
+        e.stopPropagation(); 
+        const keyView = document.getElementById('key-view');
+        const img = document.getElementById('key-img');
+        console.log(img.src);
+        if (!keyView || !img) {
+            console.error('无法获取 key-view 或 key-img 元素');
+            return;
+        }
+        // 解码 URL
+        const decodedSrc = decodeURIComponent(img.src);
+        if (decodedSrc.includes('禁止查看.png')) {
+            fetch('/api/get-bafa-key', {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            })
+           .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.json();
+            })
+           .then(data => {
+                if (data.success) {
+                    img.src = "/static/imgs/查看.png";
+                    keyView.textContent = data.bafaKey;
+                } else {
+                    alert(data.msg);
+                }
+            })
+           .catch(error => {
+                console.error('Fetch error:', error);
+                alert('请求出错，请稍后重试。');
+            });
+        } else {
+            img.src = "/static/imgs/禁止查看.png";
+            keyView.textContent = '**********';
+        }
+    }
+    // 获取按钮和修改私钥部分
+    const showPrivateKeyBtn = document.getElementById('show-private-key-btn');
+    const key_setting = document.getElementById('key-setting');
+    // 检查按钮是否存在
+    if (showPrivateKeyBtn) {
+        // 添加点击事件
+        showPrivateKeyBtn.addEventListener('click', function() {
+            // 切换显示状态
+            if (key_setting.style.display === 'none') {
+              key_setting.style.display = 'block';
+            } else {
+              key_setting.style.display = 'none';
+            }
+        });
+    }
+    const img = document.getElementById('key-img');
+    if (img) {
+        img.addEventListener('click', toggleKeyVisibility);
+    }
+
+    const setKeyBtn = document.getElementById('set-key-btn');
+    if (setKeyBtn) {
+        setKeyBtn.addEventListener('click', function() {
+            const newKey = document.getElementById('set-key-input').value;
+            fetch('/api/set-bafa-key', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ new_bafa_key: newKey })
+            })
+           .then(response => response.json())
+           .then(data => {
+                if (data.success) {
+                    alert('私钥设置成功！');
+                    document.getElementById('key-view').textContent = newKey;
+                } else {
+                    alert(data.msg);
+                }
+            });
+        });
+    }
+});
+</script>
+<script src="/static/js/modal.js"></script>   
+
+</body>
+</html>

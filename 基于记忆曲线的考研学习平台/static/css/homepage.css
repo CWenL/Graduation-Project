@@ -1,0 +1,193 @@
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+
+}
+
+hr{
+border-top: 1px solid #8c8b8b;
+}
+h1 {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  color: #fff;
+  font-size: 50px;
+  text-align: center;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  -webkit-text-stroke: 2px #00b4db; /* 设置2px宽度的描边效果，颜色为背景颜色 */
+  -webkit-text-fill-color:rgb(250, 252, 251) /* 将文字填充颜色设置为透明 */
+}
+
+main {
+  padding: 20px;
+
+}
+p {
+  color: #000000;
+  padding: 10px;
+  text-align: left;
+}
+.login{
+  position: absolute;
+  top: 35%;
+  margin-top: -280px;
+  left: 50%;
+  margin-left: -650px;
+  /* absolute居中 */
+  background-color: rgba(218, 244, 249, 0.85);
+  width: 1300px;
+  /* height: 4000px; */
+  border-radius: 25px;
+  text-align: center;
+  padding: 20px 40px;
+  box-sizing: border-box;
+
+}
+
+.navbar {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+  display: flex;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.navbar li {
+  list-style: none;
+  margin: 0 1rem;
+  padding: 1rem;
+}
+
+.navbar li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #f4f4f4;
+}
+
+.navbar li a:hover {
+  color: #22bbff;
+}
+/* 内容 */
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  color: #0f0f0f;
+
+  /* 放在子元素上，和上面那个父元素一伙的 */
+  scroll-snap-align: center;
+}
+.tech-hr {
+  width: 300px;
+  height: 3px;
+  background: linear-gradient(to right, #00b4db, #0083b0); /* Gradient colors: Blue shades */
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 180, 219, 0.7); /* Shadow effect */
+  animation: glow 1.5s ease-in-out infinite alternate; /* Animation effect */
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Animation keyframes for glow effect */
+@keyframes glow {
+  from {
+    box-shadow: 0px 0px 10px rgba(0, 180, 219, 0.7);
+  }
+  to {
+    box-shadow: 0px 0px 20px rgba(0, 180, 219, 0.9);
+  }
+}
+
+.subtle-hr {
+  width: 100%;
+  height: 2px; /* 更显眼的水平线 */
+  background: linear-gradient(to right, #bfbfbf, #d9d9d9); /* 更强烈的渐变 */
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2); /* 一些阴影效果 */
+  
+}
+
+.show_td{
+  width: 15%;
+  border-left: 2%;
+  border-right: 2%;
+}
+
+.key{
+width: 60px;
+text-align: center;
+font-family: POL-Bold-Number,Impact,Helvetica,Microsoft YaHei,sans-serif;
+font-size: 34px;
+text-shadow: 0 0 4px #32003C, 0 0 4px #32003C, 0 0 4px #32003C, 0 0 4px #32003C, 0 0 4px #32003C, 0 0 4px #32003C, 0 0 4px #32003C;
+}
+
+.cor1 {
+color: rgb(242, 255, 64);
+}
+.cor2 {
+color: #0aa770;
+}
+.cor3 {
+color: #f08080;
+}
+.cor {
+color: rgb(120, 164, 229);
+}
+
+
+
+ /* 外部盒子,控制搜索框在页面中的位置 */
+ .searchcontainer{
+  display : flex;
+  justify-content: center;    /*水平方向居中*/
+  align-items: center;          /*垂直方向居中*/
+}
+/* 搜索框样式 */
+.search{
+  width: 400px;
+  height: 45px;
+  background-image: url(搜索.png);    /*搜索框背景图片*/
+  background-repeat: no-repeat;        /*设置背景图片不平铺*/
+  border-radius: 30px 0px 0px 30px;  
+  padding-left: 50px;
+  background-position: 10px 10px;       /*设置背景图片的位置*/
+  color:darkgray;
+  font-size: 18px; 
+  border: none;                   /*去除边框*/ 
+}
+/* 搜索框获得焦点时样式 */
+.search:focus{
+  outline: coral solid 1px;    /*添加外边框*/
+}
+/* 搜索按钮样式 */
+.btnsearch{
+  width: 90px;
+  height: 47px;
+  border: none;
+  background-color: rgb(255, 235, 80);
+  color: #080808;
+  border-radius: 0px 20px 20px 0px;
+  font-size: 20px;
+  cursor: pointer;
+}
+/* 按钮悬浮时样式 */
+.btnsearch:hover{
+  background-color: #ff5900;
+}

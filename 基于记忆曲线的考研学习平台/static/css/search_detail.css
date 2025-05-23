@@ -1,0 +1,194 @@
+/* 导航栏 */
+header {
+    background-color: #197febb6;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    min-height:100vh;
+    z-index: 1; /* 位于顶层 */
+  }
+  
+  header .back-btn {
+    background-color: #0056b3;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 10px;
+  }
+  
+  header h1 {
+    font-size: 24px;
+  }
+
+/* 整体页面样式 */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    display: flex;
+    background-color: #f0f0f0; /* 淡灰色背景 */
+}
+
+.home_h1 {
+    background-image: radial-gradient(#ED4264, #FFEDBC);
+    width: 250px;
+    height: 100%;
+    font-size: 22px;
+    background-clip: text;
+    color: transparent;
+    animation: ani 3s infinite ease-in-out;
+    background-position: 200px 200px;
+    padding-top: 15px;
+}
+
+@keyframes ani {
+    0% {
+        background-position: 250px 200px;
+    }
+
+    100% {
+        background-position: 450px 400px;
+
+    }
+}
+/* 中间内容区域样式 */
+.content {
+    width: 60%; /* 中间内容区域占 60% 宽度 */
+    min-height:100vh;
+    padding: 20px;
+    margin: 0 auto;
+    background-color: white;
+    margin-top: 50px;
+    border-radius: 30px;
+}
+
+/* 搜索表单样式 */
+form {
+    margin-bottom: 20px;
+}
+
+/* 百度 logo 样式，这里简单模拟，实际可使用图片 */
+.btn_search {
+    width: 649px !important;
+    border-radius: 24px;
+    border: none;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, .05), 0 2px 4px 1px rgba(0, 0, 0, .09);
+}
+
+input[type="text"] {
+    padding: 12px;
+    width: 400px;
+    font-size: 24px;
+}
+
+input[type="submit"] {
+    padding: 12px 24px;
+    font-size: 24px;
+    background-color: #1890ff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #40a9ff;
+}
+
+/* 搜索关键词标题样式 */
+h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+/* 分类标题样式 */
+h2 {
+    font-size: 30px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+/* 结果列表样式 */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+    border: 1px solid #e0e0e0;
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 25px;
+    line-height: 40px;
+}
+
+.input_check {
+    width: 26px !important;
+    height: 26px !important;
+    line-height: 60px;
+}
+
+.label_check {
+    font-size: 25px !important;
+    line-height: 60px;
+}
+
+a {
+    text-decoration:none;
+    color: #2440b3;
+    font-size: 35px;
+}
+
+/* 无结果提示样式 */
+p {
+    color: #757575;
+    font-size: 24px;
+}
+
+/* 分页导航整体样式 */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+}
+
+/* 每个页码按钮样式 */
+.pagination li {
+    margin: 0 5px;
+}
+
+/* 当前页码按钮样式 */
+.pagination li.active a {
+    background-color: #007BFF;
+    color: white;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+/* 普通页码按钮样式 */
+.pagination li a {
+    background-color: #f4f4f4;
+    color: #333;
+    border-radius: 5px;
+    padding: 5px 10px;
+    text-decoration: none;
+}
+
+/* 省略号样式 */
+.pagination li.ellipsis {
+    margin: 0 5px;
+    color: #333;
+}
+
+/* 下一页按钮样式 */
+.pagination li.next a {
+    background-color: #f4f4f4;
+    color: #333;
+    border-radius: 5px;
+    padding: 5px 10px;
+    text-decoration: none;
+}

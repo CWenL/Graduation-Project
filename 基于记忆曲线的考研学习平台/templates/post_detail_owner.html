@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/static/css/post.css">
+  <link rel="stylesheet" href="/static/css/bootstrap.css">
+  <title>帖子详情</title>
+  <script src="/static/js/jquery-3.7.1.min.js" ></script>
+  <script src="/static/js/bootstrap.js"></script>
+  <script src="/static/js/bootstrap.bundle.js"></script>
+  <script src="/static/js/time.js"></script>
+  <script src="/static/js/search.js"></script>
+  <script src="/static/js/commonUser.js"></script>
+</head>
+<style>
+    /* 添加媒体查询覆盖容器宽度 */
+    @media (min-width: 1400px) {
+      .container-xxl,
+      .container-xl,
+      .container-lg,
+      .container-md,
+      .container-sm,
+      .container {
+            max-width: 80%; /* 设置你需要的宽度 */
+        }
+    }
+  </style>
+<body>
+<div class="container">
+  <div class="main-content">
+<!-- 模态框结构 -->
+<div id="myModal" class="modal">
+  <!-- 模态框的内容 -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <img class="modal-image" id="modalImage">
+  </div>
+</div>
+  <!-- 导航栏 -->
+  <header>
+    <!-- 绑定返回按钮事件 -->
+    <div style="float: left;">
+      <button class="back-btn" onclick="window.history.back();">返回上一级</button>
+      <button class="back-btn" onclick="window.location.href='/userpage';">返回个人主页</button>
+      <!-- 添加删除按钮 -->
+      <button class="delete-btn" data-question-id="{{ post[0] }}" onclick="deleteThisPost(this)">删除本帖</button>
+      </div>
+    <h1>帖子详情</h1>
+  </header>
+
+  <!-- 帖子内容 -->
+  <section class="post-content">
+    <h2 class="post-title">主题&nbsp;:&nbsp;{{ post[1] }}</h2><br>
+    <!-- 标签部分 -->
+    <div class="tags" style="text-align: left;">
+        {% set tags = post[5].split('#') %}
+        {% for tag in tags %}
+            {% if tag %}
+                {% if loop.index == 2 %}
+                    <span class="badge bg-danger">{{ tag }}</span>
+                {% elif loop.index == 3 %}
+                    <span class="badge bg-primary">{{ tag }}</span>
+                {% elif loop.index == 4 %}
+                    <span class="badge bg-info">{{ tag }}</span>
+                {% else %}
+                    <span class="badge bg-secondary">{{ tag }}</span>
+                {% endif %}
+            {% endif %}
+          {% endfor %}
+      </div>
+    <div class="post-body">
+        <!-- 图片部分 -->
+        {% if post[7]  %}
+        <img src="{{ post[7] }}" style="width: 700px; height: auto;" alt="Post Image">
+        {% endif %}
+        <br>
+        <p style="font-size: 25px;background-color: #fcfcfc;">描述：&nbsp;{{ post[6] }}</p>
+    </div><br>
+    <div class="post-info">
+        <span class="author"style="float: left;">作者: {{ post[2] }}</span><br>
+        <span class="author"style="float: left;">ip所属地: {{ post[4] }}</span>
+        <span class="post-time" style="float: right;">发布时间: {{ post[3] }}</span><br><hr>
+        <p class="card-text"style="text-align: left;">
+            <span style="float: right; font-size: large;"><i class="bi bi-eye "></i> {{post[9]}} view</span></p>
+            <div class="d-flex justify-content-between">
+              <button class="like-btn" data-id="{{ post[0] }}" data-liked="{{ 'true' if liked else 'false' }}">
+                {% if liked %}
+                  <span class="heart">❤️</span>
+                {% else %}
+                  <span class="heart">🤍</span>
+                {% endif %}
+                <span class="like-count">{{post[8]}}</span>
+            </button>  
+                    
+              </div>
+              
+        </div>   
+  </section>
+  
+  <!-- 评论区 -->
+  <section class="comments-section">
+    <h3>评论区</h3><hr><br>
+    <!-- 评论列表 -->
+    <div class="comments-list">
+        
+      <div class="comment">
+        <span class="comment-author">李四</span>
+        <p class="comment-body">这个帖子讲的真好，我很赞同！</p>
+        <span class="comment-time">2025-02-23 12:30</span>
+      </div>
+      {% for index, cdata in commentdata %}
+      <div class="comment">
+        <span class="comment-author">{{ cdata[2] }}</span><br>
+        <img src="{{ cdata[5] }}" style="width: 700px; height: auto;" alt="">
+        <p class="comment-body">{{ cdata[3] }}</p>
+        <span class="comment-time">{{ cdata[4] }}</span><span class="comment-time"style="float: right;">第{{ index+1 }}楼</span>
+      </div>
+      {% endfor %}
+    </div>
+
+    <!-- 评论输入框 -->
+    <form action="{{ url_for('InputComment') }}" method="POST" enctype="multipart/form-data">
+      <div class="comment-input">
+        <textarea name="comment_text" placeholder="发表评论..."></textarea><br>
+        <!-- 文件上传字段 -->
+        <input type="file" name="comment_image" accept="image/*">
+        <!-- 隐藏的帖子 ID 字段 -->
+        <input type="hidden" name="post_id" value="{{ post[0] }}">
+        <button type="submit" class="submit-btn">发布评论</button>
+      </div>
+    </form>
+  </section>
+</div>
+  <div class="edit-area">
+    <h2 class="fw-bolder">修改帖子信息</h2>
+    <form action="/update_post" method="post" enctype="multipart/form-data">
+      <input type="hidden" name="post_id" value="{{ post[0] }}">
+      <div class="form-group">
+        <label>帖子标题</label>
+        <input type="text" id="post_tittle" name="post_tittle" value="{{ post[1] }}">
+    </div>
+    <div class="form-group">
+        <label>帖子内容</label>
+        <textarea id="post_body" name="post_body" rows="5">{{ post[6] }}</textarea>
+    </div>
+    <div class="form-group">
+      <label>图片</label>
+      <input class="file_input" type="file" name="post_image" value="{{ post[7] }}">
+    </div>
+    <div class="form-group">
+        <label>题目标签(格式：#标签1#标签2...)</label>
+        <input type="text" id="post_tag" name="post_tag" value="{{ post[5] }}">
+        <span id="error_message" style="color: red;"></span>
+    </div>
+    <button type="submit" class="btn btn-primary" onclick="return validateForm() && validateLabel()">保存修改</button>
+    </form>
+  </div>
+</div>
+</div>
+<div class="time-container">
+  <div id="time"></div>
+</div>
+<br><br><br><br><br><br>
+<div class="time-container2">
+  <div id="countdown">00天 00小时 00分钟 00秒</div>
+</div>
+</div>
+  <script src="/static/js/modal.js"></script>   
+  <script src="/static/js/like.js"></script>   
+  <script>
+    function validateLabel() {
+    let inputField = document.getElementById("post_tag");
+    let errorMessage = document.getElementById("error_message");
+    let regex = /^(#[\u4e00-\u9fa5\w]+)+$/;  // 允许中文、字母、数字、下划线
+    if (!regex.test(inputField.value.trim())) {
+        errorMessage.innerText = "格式错误！请输入类似 #标签1#标签2 的格式";
+        return false;
+    }
+    errorMessage.innerText = ""; // 清除错误信息
+    return true;
+}
+    </script>
+    <!-- 判断必填项是否为空 -->
+  <script>
+    function validateForm() {
+    // 获取表单字段
+    var textContent = document.getElementById('post_body').value.trim();
+    var postTittle = document.getElementById('post_tittle').value.trim();
+    var postTag = document.getElementById('post_tag').value.trim();
+    // 检查帖子标题是否为空
+    if (postTittle === "") {
+        alert("请填写标题！");
+        return false;
+    }
+    // 检查帖子内容是否为空
+    if (textContent === "") {
+        alert("请填写内容！");
+        return false;
+    }
+    // 检查标签是否为空
+    if (postTag === "" || postTag === "#") {
+        alert("请至少添加一个标签！");
+        return false;
+    }
+    return true;
+}
+</script>
+</body>
+</html>

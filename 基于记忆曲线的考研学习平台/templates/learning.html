@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/bootstrap.css">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <!-- <link rel="stylesheet" href="/static/css/homepage.css"> -->
+    <script src="/static/js/jquery-3.7.1.min.js" ></script>
+    <script src="/static/js/bootstrap.js"></script>
+    <script src="/static/js/bootstrap.bundle.js"></script>
+    <script src="/static/js/time.js"></script>
+    <script src="/static/js/search.js"></script>
+    <script src="/static/js/script.js"></script>
+    
+    <title>Document</title>
+</head>
+<style>
+  .text-with-indent {
+            text-indent: 2em; /* 首行缩进两个字符 */            
+            font-size: 26px !important;
+            line-height: 1.5em; /* 设置行高 */
+            letter-spacing: 0.05em; /* 设置字符间距 */
+            white-space: pre-line; /* 保留空白符序列，但是正常换行 */
+        }
+  .carousel-indicators [data-bs-target] {
+    height: 10px;
+  }
+</style>
+<body style=" background: rgb(231, 231, 231);">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light" style="
+  padding-top: 0px; padding-bottom: 0px; position: fixed; width: 100%; z-index: 1000;">
+      <div class="container-fluid px-2" style="background-color: lavender; padding-left: 0px;">
+        <div class="p-3 rounded hover-effect left_more"><a class="navbar-brand" id="toggleSidebar" role="button">
+          <img style="width: 45px; height: 45px; float: right;" src="/static/imgs/菜单.png">
+          </a></div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <p class="fw-bolder home_h1">欢迎使用考研学习平台！</p>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-auto align-items-center d-flex">
+          <li class="nav-item">
+            <a class="nav-link active fs-4" aria-current="page" href="/homepage">
+              <img style="width: 35px; height: 35px;" src="/static/imgs/首页.png">
+              首页&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link fs-4" href="/GlobalNotice">
+                  <img style="width: 35px; height: 35px;" src="/static/imgs/公告.png">
+                平台公告&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+            </li>
+          <li class="nav-item">
+            <a class="nav-link fs-4" href="/community">
+              <img style="width: 35px; height: 35px;" src="/static/imgs/交流社区.png">
+              交流社区&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fs-4" href="/userpage">
+              <img style="width: 35px; height: 35px;" src="/static/imgs/个人主页.png">
+              个人主页&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fs-4" href="/learning_us"><img style="width:35px; height:35px;border-bottom: 5px solid #5ed8c5;" src="/static/imgs/了解我们.png">
+              了解我们&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle fs-4" href="#" id="dropdownMenuButton" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              设置
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <li><a class="dropdown-item" href="{{ url_for('change_password') }}">修改密码</a></li>
+              <li><a class="dropdown-item" href="/logout">退出登录</a></li>
+              <!-- 管理员权限选项，只有管理员才能看到 -->
+              {% if power =="admin" %}
+              <li><a class="dropdown-item" href="{{ url_for('adminOp') }}">管理员面板</a></li>
+              {% endif %}
+              {% if power =="CommunityAdmin" %}
+              <li><a class="dropdown-item" href="{{ url_for('adminOp') }}">社区管理员面板</a></li>
+              {% endif %}
+            </ul>
+          </li>
+        </ul>
+        <img style="width: 35px; height: 35px;" src="/static/imgs/平台搜索.png">
+        &nbsp;&nbsp;
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="搜你想看！" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+      </div>
+      </nav>
+        <!-- 侧边栏 -->
+        <div id="sidebar" style="width: 11%; position: fixed; height: 100vh; background-color: rgb(244 244 251); color: rgb(0, 0, 0); padding: 20px;">
+          <h5 class="fw-bolder">学习功能列表</h5>
+          <div style="margin-top: 5.5rem;">
+              <a href="/DataChart" class="btn fs-4 mb-3 d-block sidebar-button" style="text-align: left;">
+                  学习数据可视化
+                  <img style="width: 35px; height: 35px; float: right;" src="/static/imgs/可视化.png">
+              </a>
+              <a href="/planpage" class="btn fs-4 mb-3 d-block sidebar-button" style="text-align: left;">
+                  学习规划
+                  <img style="width: 35px; height: 35px; float: right;" src="/static/imgs/目标规划.png">
+              </a>
+              
+              <a href="/News" class="btn fs-4 mb-3 d-block sidebar-button" style="text-align: left;">
+                  考研相关资讯
+                  <img style="width: 35px; height: 35px; float: right;" src="/static/imgs/资讯.png">
+              </a>
+              <a href="/uploadpage" class="btn fs-4 mb-3 d-block sidebar-button" style="text-align: left;">
+                  上传错题
+                  <img style="width: 35px; height: 35px; float: right;" src="/static/imgs/错题解析-加入错题.png">
+              </a>
+              记忆曲线复习<hr>
+              <a href="/review" class="btn fs-4 mb-3 d-block sidebar-button" style="text-align: left;margin-bottom:0rem !important;">
+                  <span>错题本复习</span>
+                  <img style="width: 35px; height: 35px; float: right;" src="/static/imgs/复习.png">
+              </a>
+              <button class="dropdown-toggle btn fs-4 d-block sidebar-button" id="dropdown_label" style="margin-bottom:0rem !important;border-color: rgba(255, 255, 255, 0);">标签复习<img id="show_label" src="/static/imgs/展开.png"></button>
+              <div class="dropdown-content">
+                <a href="/Tags_Review/数学" class="btn fs-4 d-block sidebar-button" style="text-align: left;margin-bottom:0rem !important;">数学复习<img style="width: 35px; height: 35px; float: right;" src="/static/imgs/数学.png"></a>
+                    <a href="/Tags_Review/专业课" class="btn fs-4 d-block sidebar-button" style="text-align: left;margin-bottom:0rem !important;">专业课复习<img style="width: 35px; height: 35px; float: right;" src="/static/imgs/专业课.png"></a>
+                    <a href="/Tags_Review/英语" class="btn fs-4 d-block sidebar-button" style="text-align: left;margin-bottom:0rem !important;">英语复习<img style="width: 35px; height: 35px; float: right;" src="/static/imgs/英语.png"></a>
+                    <a href="/Tags_Review/政治" class="btn fs-4 d-block sidebar-button" style="text-align: left;margin-bottom:0rem !important;">政治复习<img style="width: 35px; height: 35px; float: right;" src="/static/imgs/政治.png"></a>
+              </div>
+          </div>
+      </div>
+          <div>
+            <section id="section1"></section>
+            <div class="time-container"><br><br><br>
+              <div id="time"></div>
+            </div>
+            <br><br><br>
+            <div class="time-container2">
+              <div id="countdown">00天 00小时 00分钟 00秒</div>
+            </div>
+              <div id="carouselExampleIndicators" class="carousel slide"data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner" style="width: 80%;object-fit: cover;transform: translateX(calc(-50% + 50vw)); border-radius: 40px;">
+                  <div class="carousel-item active">
+                    <img src="/static/imgs/h.jpg" class="d-block w-100" alt="..."style="border-bottom: 50px solid gray; border-top: 10px solid white; cursor: pointer;">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="/static/imgs/h4.jpg" class="d-block w-100" alt="..."style="border-bottom: 50px solid gray; border-top: 10px solid white; cursor: pointer;">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="/static/imgs/h3.jpg" class="d-block w-100" alt="..."style="border-bottom: 50px solid gray; border-top: 10px solid white; cursor: pointer;">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+          </div>
+            <form action="" class="panel" method="get" style="margin-top: 500px; top:30%">
+              <!-- 模态框结构 -->
+              <div id="myModal" class="modal">
+              <!-- 模态框的内容 -->
+              <div class="modal-content">
+                <span class="close">&times;</span>
+                <img class="modal-image" id="modalImage">
+              </div>
+            </div>
+            <hr>
+              <div class="paper-content"style="background-color:white">
+              <h1>平台理念</h1>
+              <p class="abstract">关键词：记忆曲线；元认知理论；考研学习平台；学习效率；个性化学习</p>
+              <section class="section">
+                  <p class="section-content text-with-indent text-start">自2016年以来，中国研究生招生信息网的统计数据显示，我国考研的报名人数呈现出明显的增长态势，这一趋势在2023年表现得尤为显著，报名人数相比前一年增长超过了30%，如图0-1所揭示的那样。
+                    这种持续的考研热潮，无疑使得考研的竞争变得更加激烈，考试的难度也随之水涨船高。
+                    在这样的大背景下，考生们面临着前所未有的挑战，他们急需寻找方法来提升自己的学习效率，
+                    以便在这场日益激烈的竞争中取得更好的成绩，从而在众多考生中脱颖而出，获得理想的研究生名额。
+                    在这种背景下，考生们对于提高学习效率的需求变得尤为迫切。他们开始寻求各种可能的途径，
+                    包括但不限于改进学习方法、利用科技辅助学习、参与培训课程等，以期在这场没有硝烟的战争中获得优势。这种对效率的追求，
+                    不仅仅是为了应对考试的难度，更是为了在个人职业发展的道路上迈出坚实的一步。因此，如何有效地提升学习效率，
+                    已经成为考研学生群体中一个共同关心的话题。</p>
+              </section>
+          </div>
+          <div class="paper-content"style="background-color:white">
+            <h1 class="title">研究方法</h1>
+            <section class="section">
+                <p class="section-content text-with-indent text-start">元认知理论强调学习者对自身学习过程的认识和调控。根据下表可知，考研学生可以通过元认知监控来评估自己的学习进度和效果，
+                  及时发现学习中的不足。元认知不仅涉及监控，还包括调节。考研学生可以根据自我评估的结果调整学习策略，比如改变学习方法或增加学习时间，
+                  以提高学习效率增强应对压力的能力，考研过程中压力较大，通过元认知策略，学生可以更好地管理自己的情绪和压力，保持积极的学习态度。</p>
+            </section>
+          </div>
+          <div class="paper-content"style="background-color:white">
+            <h1 class="title">记忆曲线相关复习计划的重要性</h1>
+            <section class="section">
+                <p class="section-content text-with-indent text-start">艾宾浩斯遗忘曲线表明，遗忘的速度是先快后慢的。通过在遗忘发生之前及时复习，可以有效巩固记忆，减少遗忘。
+                  考生可以根据记忆曲线安排复习频率，例如在学习后的第1天、第3天、第7天、第15天等关键时间点进行复习，确保知识在大脑中留下深刻印象，而不是盲目地“刷题”或“背书”。
+                  考研复习需要长期积累，利用记忆曲线可以确保知识在考试时仍然清晰记得，而不是临考前“临时抱佛脚”，导致记忆模糊或遗忘。
+                  考生能够更有条理地复习，避免因遗忘而产生的慌乱，保持良好的心态，有助于更好地应对考试。
+                  考生可以根据不同科目的特点，灵活运用记忆曲线，比如对英语单词进行高频次的间隔重复复习，对数学公式进行周期性的回顾，确保各科复习都能达到最佳效果。
+                  良好的学习习惯不仅对考研有帮助，还能在未来的学术和工作中发挥重要作用，提升个人的综合素质。
+                  这种进步会增强考生的自信心，让他们更有动力继续复习，形成良性循环。
+                  基于艾宾浩斯遗忘曲线的最佳复习时间表
+            </section>
+            <section id="section2"></section>
+          </div>
+          </form>
+          
+          </div>
+          <!-- <div class="time-container"><br><br><br>
+            <div id="time"></div>
+          </div>
+          <br><br><br><br><br><br><br><br><br>
+          <div class="time-container2">
+            <div id="countdown">00天 00小时 00分钟 00秒</div>
+          </div> -->
+          <script src="/static/js/modal.js"></script>      
+          
+</body>
+</html>

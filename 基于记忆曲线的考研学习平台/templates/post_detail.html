@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/static/css/post.css">
+  <link rel="stylesheet" href="/static/css/bootstrap.css">
+  <title>帖子详情</title>
+  <script src="/static/js/jquery-3.7.1.min.js" ></script>
+  <script src="/static/js/bootstrap.js"></script>
+  <script src="/static/js/bootstrap.bundle.js"></script>
+  <script src="/static/js/time.js"></script>
+  <script src="/static/js/search.js"></script>
+</head>
+<body>
+  <div class="toast-container position-fixed bottom-0 end-0 p-3" style="position: fixed; top: 70px; right: 20px;">
+    <div id="uploadToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header">
+            <svg t="1739350551406" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="9721" width="20" height="20"><path d="M298.688 170.688h42.688v42.688h-42.688z" p-id="9722"></path><path d="M341.312 170.688H384v42.688h-42.688z" fill="#FFF100" p-id="9723"></path><path d="M384 170.688h42.688v42.688H384zM426.688 170.688h42.688v42.688h-42.688z" fill="#E50046" p-id="9724"></path><path d="M469.312 170.688H512v42.688h-42.688z" fill="#E50046" p-id="9725"></path><path d="M298.688 213.312h42.688V256h-42.688z" p-id="9726"></path><path d="M341.312 213.312H384V256h-42.688zM384 213.312h42.688V256H384zM426.688 213.312h42.688V256h-42.688z" fill="#E50046" p-id="9727"></path><path d="M469.312 213.312H512V256h-42.688z" fill="#E50046" p-id="9728"></path><path d="M256 256h42.688v42.688H256z" p-id="9729"></path><path d="M298.688 256h42.688v42.688h-42.688z" fill="#E50046" p-id="9730"></path><path d="M341.312 256H384v42.688h-42.688zM384 256h42.688v42.688H384z" fill="#E50046" p-id="9731"></path><path d="M426.688 256h42.688v42.688h-42.688z" fill="#FFF100" p-id="9732"></path><path d="M469.312 256H512v42.688h-42.688z" fill="#FFF100" p-id="9733"></path><path d="M256 298.688h42.688v42.688H256z" p-id="9734"></path><path d="M298.688 298.688h42.688v42.688h-42.688z" fill="#E50046" p-id="9735"></path><path d="M341.312 298.688H384v42.688h-42.688zM384 298.688h42.688v42.688H384z" fill="#E50046" p-id="9736"></path><path d="M426.688 298.688h42.688v42.688h-42.688z" fill="#FFF100" p-id="9737"></path><path d="M469.312 298.688H512v42.688h-42.688z" fill="#FFF100" p-id="9738"></path><path d="M512 170.688h42.688v42.688H512z" fill="#E50046" p-id="9739"></path><path d="M512 213.312h42.688V256H512zM512 256h42.688v42.688H512zM512 298.688h42.688v42.688H512z" fill="#FFF100" p-id="9740"></path><path d="M554.688 170.688h42.688v42.688h-42.688z" fill="#E50046" p-id="9741"></path><path d="M554.688 213.312h42.688V256h-42.688zM554.688 256h42.688v42.688h-42.688z" fill="#FFF100" p-id="9742"></path><path d="M554.688 298.688h42.688v42.688h-42.688zM597.312 170.688H640v42.624h-42.688z" fill="#E50046" p-id="9743"></path><path d="M597.312 213.312H640V256h-42.688zM597.312 256H640v42.688h-42.688z" fill="#FFF100" p-id="9744"></path><path d="M597.312 298.688H640v42.688h-42.688z" fill="#E50046" p-id="9745"></path><path d="M640 213.312h42.688V256H640zM640 256h42.688v42.688H640zM682.688 213.312h42.624V256h-42.624z" fill="#FFF100" p-id="9746"></path><path d="M640 170.688h42.688v42.624H640zM682.688 170.688h42.688v42.624h-42.688z" fill="#E50046" p-id="9747"></path><path d="M725.312 170.688H768v42.624h-42.688z" fill="#E50046" p-id="9748"></path><path d="M426.688 42.688h42.688v42.688h-42.688z" p-id="9749"></path><path d="M469.312 42.688H512v42.688h-42.688zM384 85.312h42.688V128H384z" p-id="9750"></path><path d="M426.688 85.312h42.688V128h-42.688z" fill="#FFF100" p-id="9751"></path><path d="M469.312 85.312H512V128h-42.688zM512 42.688h42.688v42.688H512z" fill="#FFF100" p-id="9752"></path><path d="M512 85.312h42.688V128H512zM554.688 42.688h42.688v42.688h-42.688z" fill="#FFF100" p-id="9753"></path><path d="M554.688 85.312h42.688V128h-42.688z" fill="#FFF100" p-id="9754"></path><path d="M597.312 42.688H640v42.688h-42.688z" fill="#FFF100" p-id="9755"></path><path d="M597.312 85.312H640V128h-42.688zM640 42.688h42.688v42.688H640z" fill="#FFF100" p-id="9756"></path><path d="M640 85.312h42.688V128H640zM682.688 42.688h42.688v42.688h-42.688z" fill="#FFF100" p-id="9757"></path><path d="M682.688 85.312h42.688V128h-42.688z" fill="#FFF100" p-id="9758"></path><path d="M725.312 42.688H768v42.688h-42.688z" fill="#FFF100" p-id="9759"></path><path d="M725.312 85.312H768V128h-42.688z" fill="#FFF100" p-id="9760"></path><path d="M768 42.688h42.688v42.688H768z" p-id="9761"></path><path d="M768 85.312h42.688V128H768zM682.688 298.688h42.688v42.688h-42.688zM725.312 256H768v42.688h-42.688z" fill="#FFF100" p-id="9762"></path><path d="M725.312 298.688H768v42.688h-42.688z" fill="#FFF100" p-id="9763"></path><path d="M768 213.312h42.688V256H768zM768 256h42.688v42.688H768zM768 298.688h42.688v42.688H768z" fill="#E50046" p-id="9764"></path><path d="M810.688 170.688h42.688v42.688h-42.688z" fill="#FFF100" p-id="9765"></path><path d="M810.688 213.312h42.688V256h-42.688z" fill="#FFF100" p-id="9766"></path><path d="M810.688 256h42.688v42.688h-42.688zM810.688 298.688h42.688v42.688h-42.688z" fill="#E50046" p-id="9767"></path><path d="M853.312 213.312H896V256h-42.688zM853.312 256H896v42.688h-42.688zM853.312 298.688H896v42.688h-42.688zM896 256h42.688v42.688H896zM896 298.688h42.688v42.688H896z" fill="#FFF100" p-id="9768"></path><path d="M938.624 298.688h42.688v42.688h-42.688z" fill="#E50046" p-id="9769"></path><path d="M682.688 384h42.688v42.688h-42.688zM682.688 426.688h42.688v42.688h-42.688z" fill="#FFF100" p-id="9770"></path><path d="M682.688 469.312h42.688V512h-42.688zM725.312 384H768v42.688h-42.688z" fill="#FFF100" p-id="9771"></path><path d="M725.312 426.688H768v42.688h-42.688z" fill="#FFF100" p-id="9772"></path><path d="M725.312 469.312H768V512h-42.688zM682.688 512h42.688v42.688h-42.688z" fill="#E50046" p-id="9773"></path><path d="M725.312 512H768v42.688h-42.688zM768 384h42.688v42.688H768zM768 426.688h42.688v42.688H768z" fill="#E50046" p-id="9774"></path><path d="M768 469.312h42.688V512H768z" fill="#E50046" p-id="9775"></path><path d="M768 512h42.688v42.688H768z" fill="#FFF100" p-id="9776"></path><path d="M682.688 554.688h42.688v42.688h-42.688z" fill="#E50046" p-id="9777"></path><path d="M682.688 597.312h42.688V640h-42.688z" fill="#FFF100" p-id="9778"></path><path d="M725.312 554.688H768v42.688h-42.688z" fill="#FFF100" p-id="9779"></path><path d="M725.312 597.312H768V640h-42.688zM682.688 640h42.688v42.688h-42.688z" fill="#FFF100" p-id="9780"></path><path d="M725.312 640H768v42.688h-42.688zM768 554.688h42.688v42.688H768z" fill="#FFF100" p-id="9781"></path><path d="M768 597.312h42.688V640H768z" fill="#FFF100" p-id="9782"></path><path d="M768 640h42.688v42.688H768zM682.688 682.688h42.688v42.688h-42.688z" fill="#E50046" p-id="9783"></path><path d="M725.312 682.688H768v42.688h-42.688z" fill="#E50046" p-id="9784"></path><path d="M768 682.688h42.688v42.688H768zM682.688 725.312h42.688V768h-42.688z" p-id="9785"></path><path d="M725.312 725.312H768V768h-42.688z" p-id="9786"></path><path d="M810.688 384h42.688v42.688h-42.688zM810.688 426.688h42.688v42.688h-42.688z" fill="#E50046" p-id="9787"></path><path d="M810.688 469.312h42.688V512h-42.688zM810.688 512h42.688v42.688h-42.688zM810.688 554.688h42.688v42.688h-42.688z" fill="#FFF100" p-id="9788"></path><path d="M810.688 597.312h42.688V640h-42.688z" fill="#FFF100" p-id="9789"></path><path d="M810.688 640h42.688v42.688h-42.688z" fill="#E50046" p-id="9790"></path><path d="M810.688 682.688h42.688v42.688h-42.688z" p-id="9791"></path><path d="M853.312 384H896v42.688h-42.688zM853.312 426.688H896v42.688h-42.688z" fill="#FFF100" p-id="9792"></path><path d="M853.312 469.312H896V512h-42.688zM896 384h42.688v42.688H896zM896 426.688h42.688v42.688H896z" fill="#FFF100" p-id="9793"></path><path d="M896 469.312h42.688V512H896zM853.312 512H896v42.688h-42.688z" fill="#FFF100" p-id="9794"></path><path d="M896 512h42.688v42.688H896zM938.624 384h42.688v42.688h-42.688zM938.688 426.688h42.688v42.688h-42.688z" fill="#E50046" p-id="9795"></path><path d="M938.688 469.312h42.688V512h-42.688z" fill="#E50046" p-id="9796"></path><path d="M938.688 512h42.688v42.688h-42.688z" p-id="9797"></path><path d="M853.312 554.688H896v42.688h-42.688z" fill="#FFF100" p-id="9798"></path><path d="M853.312 597.312H896V640h-42.688zM896 554.688h42.688v42.688H896z" fill="#E50046" p-id="9799"></path><path d="M896 597.312h42.688V640H896zM853.312 640H896v42.688h-42.688zM938.688 554.688h42.688v42.688h-42.688zM256 384h42.688v42.688H256z" p-id="9800"></path><path d="M298.688 384h42.688v42.688h-42.688z" fill="#E50046" p-id="9801"></path><path d="M341.312 384H384v42.688h-42.688z" fill="#E50046" p-id="9802"></path><path d="M384 384h42.688v42.688H384zM426.688 384h42.688v42.688h-42.688z" fill="#FFF100" p-id="9803"></path><path d="M469.312 384H512v42.688h-42.688z" fill="#E50046" p-id="9804"></path><path d="M256 426.688h42.688v42.688H256z" p-id="9805"></path><path d="M298.688 426.688h42.688v42.688h-42.688z" fill="#E50046" p-id="9806"></path><path d="M341.312 426.688H384v42.688h-42.688z" fill="#E50046" p-id="9807"></path><path d="M384 426.688h42.688v42.688H384zM426.688 426.688h42.688v42.688h-42.688z" fill="#FFF100" p-id="9808"></path><path d="M469.312 426.688H512v42.688h-42.688zM298.688 469.312h42.688V512h-42.688z" fill="#E50046" p-id="9809"></path><path d="M384 469.312h42.688V512H384zM426.688 469.312h42.688V512h-42.688z" fill="#FFF100" p-id="9810"></path><path d="M512 384h42.688v42.688H512zM512 426.688h42.688v42.688H512z" fill="#E50046" p-id="9811"></path><path d="M512 469.312h42.688V512H512z" fill="#E50046" p-id="9812"></path><path d="M298.688 512h42.688v42.688h-42.688z" p-id="9813"></path><path d="M384 512h42.688v42.688H384z" fill="#E50046" p-id="9814"></path><path d="M426.688 512h42.688v42.688h-42.688z" fill="#FFF100" p-id="9815"></path><path d="M554.688 384h42.688v42.688h-42.688zM554.688 426.688h42.688v42.688h-42.688z" fill="#E50046" p-id="9816"></path><path d="M597.312 384H640v42.688h-42.688zM597.312 426.688H640v42.688h-42.688z" fill="#E50046" p-id="9817"></path><path d="M597.312 469.312H640V512h-42.688zM554.688 512h42.688v42.688h-42.688z" fill="#E50046" p-id="9818"></path><path d="M597.312 512H640v42.688h-42.688z" fill="#E50046" p-id="9819"></path><path d="M298.688 554.688h42.688v42.688h-42.688z" p-id="9820"></path><path d="M384 554.688h42.688v42.688H384z" fill="#E50046" p-id="9821"></path><path d="M426.688 554.688h42.688v42.688h-42.688z" fill="#FFF100" p-id="9822"></path><path d="M298.688 597.312h42.688V640h-42.688z" p-id="9823"></path><path d="M426.688 597.312h42.688V640h-42.688z" fill="#E50046" p-id="9824"></path><path d="M512 554.688h42.688v42.688H512z" fill="#FFF100" p-id="9825"></path><path d="M512 597.312h42.688V640H512z" fill="#FFF100" p-id="9826"></path><path d="M256 640h42.688v42.688H256z" p-id="9827"></path><path d="M298.688 640h42.688v42.688h-42.688z" fill="#FFFFFF" p-id="9828"></path><path d="M341.312 640H384v42.688h-42.688z" p-id="9829"></path><path d="M384 640h42.688v42.688H384zM426.688 640h42.688v42.688h-42.688z" fill="#E50046" p-id="9830"></path><path d="M469.312 640H512v42.688h-42.688zM512 640h42.688v42.688H512zM597.312 554.688H640v42.688h-42.688z" fill="#E50046" p-id="9831"></path><path d="M597.312 597.312H640V640h-42.688zM554.688 640h42.688v42.688h-42.688z" fill="#FFF100" p-id="9832"></path><path d="M597.312 640H640v42.688h-42.688z" fill="#FFF100" p-id="9833"></path><path d="M213.312 682.688H256v42.688h-42.688z" p-id="9834"></path><path d="M256 682.688h42.688v42.688H256zM298.688 682.688h42.688v42.688h-42.688z" fill="#FFFFFF" p-id="9835"></path><path d="M341.312 682.688H384v42.688h-42.688z" fill="#E3E7E6" p-id="9836"></path><path d="M384 682.688h42.688v42.688H384zM426.688 682.688h42.688v42.688h-42.688z" p-id="9837"></path><path d="M469.312 682.688H512v42.688h-42.688z" p-id="9838"></path><path d="M512 682.688h42.688v42.688H512zM554.688 682.688h42.688v42.688h-42.688z" fill="#E50046" p-id="9839"></path><path d="M597.312 682.688H640v42.688h-42.688z" fill="#E50046" p-id="9840"></path><path d="M170.688 725.312h42.688V768h-42.688zM341.312 725.312H384V768h-42.688zM128 768h42.688v42.688H128zM512 725.312h42.688V768H512zM554.688 725.312h42.688V768h-42.688z" p-id="9841"></path><path d="M213.312 768H256v42.688h-42.688z" fill="#FFFFFF" p-id="9842"></path><path d="M256 768h42.688v42.688H256z" fill="#E3E7E6" p-id="9843"></path><path d="M298.688 768h42.688v42.688h-42.688z" p-id="9844"></path><path d="M170.688 810.688h42.688v42.688h-42.688z" fill="#FFFFFF" p-id="9845"></path><path d="M213.312 810.688H256v42.688h-42.688z" fill="#E3E7E6" p-id="9846"></path><path d="M256 810.688h42.688v42.688H256z" p-id="9847"></path><path d="M85.312 853.312H128V896h-42.688zM128 853.312h42.688V896H128z" fill="#FFFFFF" p-id="9848"></path><path d="M170.688 853.312h42.688V896h-42.688z" fill="#E3E7E6" p-id="9849"></path><path d="M213.312 853.312H256V896h-42.688z" p-id="9850"></path><path d="M42.688 896h42.688v42.688H42.688z" fill="#FFFFFF" p-id="9851"></path><path d="M85.312 896H128v42.688h-42.688z" fill="#FFFFFF" p-id="9852"></path><path d="M128 896h42.688v42.688H128z" fill="#E3E7E6" p-id="9853"></path><path d="M170.688 896h42.688v42.688h-42.688z" p-id="9854"></path><path d="M42.688 938.688h42.688v42.688H42.688z" fill="#E3E7E6" p-id="9855"></path><path d="M85.312 938.688H128v42.688h-42.688z" fill="#E3E7E6" p-id="9856"></path><path d="M128 938.688h42.688v42.688H128zM597.312 725.312H640V768h-42.688zM42.688 853.312h42.688V896H42.688zM341.312 128H384v42.688h-42.688z" p-id="9857"></path><path d="M384 128h42.688v42.688H384z" fill="#FFF100" p-id="9858"></path><path d="M426.688 128h42.688v42.688h-42.688z" fill="#E50046" p-id="9859"></path><path d="M469.312 128H512v42.688h-42.688z" fill="#E50046" p-id="9860"></path><path d="M256 341.312h42.688V384H256z" p-id="9861"></path><path d="M298.688 341.312h42.688V384h-42.688z" fill="#E50046" p-id="9862"></path><path d="M341.312 341.312H384V384h-42.688z" fill="#E50046" p-id="9863"></path><path d="M384 341.312h42.688V384H384zM426.688 341.312h42.688V384h-42.688z" fill="#FFF100" p-id="9864"></path><path d="M469.312 341.312H512V384h-42.688z" fill="#FFF100" p-id="9865"></path><path d="M512 0h42.688v42.688H512z" p-id="9866"></path><path d="M512 128h42.688v42.688H512zM512 341.312h42.688V384H512z" fill="#E50046" p-id="9867"></path><path d="M554.688 0h42.688v42.688h-42.688z" p-id="9868"></path><path d="M554.688 128h42.688v42.688h-42.688zM554.688 341.312h42.688V384h-42.688z" fill="#E50046" p-id="9869"></path><path d="M597.312 0H640v42.688h-42.688z" p-id="9870"></path><path d="M597.312 128H640v42.688h-42.688zM597.312 341.312H640V384h-42.688z" fill="#E50046" p-id="9871"></path><path d="M640 0h42.688v42.688H640z" p-id="9872"></path><path d="M640 128h42.688v42.688H640zM640 298.688h42.688v42.688H640z" fill="#E50046" p-id="9873"></path><path d="M640 341.312h42.688V384H640zM640 384h42.688v42.688H640z" fill="#E50046" p-id="9874"></path><path d="M640 426.688h42.688v42.688H640z" fill="#FFF100" p-id="9875"></path><path d="M640 469.312h42.688V512H640z" fill="#FFF100" p-id="9876"></path><path d="M640 512h42.688v42.688H640zM640 554.688h42.688v42.688H640z" fill="#E50046" p-id="9877"></path><path d="M640 597.312h42.688V640H640zM640 640h42.688v42.688H640z" fill="#FFF100" p-id="9878"></path><path d="M682.688 0h42.688v42.688h-42.688z" p-id="9879"></path><path d="M682.688 128h42.688v42.688h-42.688z" fill="#E50046" p-id="9880"></path><path d="M682.688 256h42.688v42.688h-42.688zM682.688 341.312h42.688V384h-42.688z" fill="#FFF100" p-id="9881"></path><path d="M725.312 0H768v42.688h-42.688z" p-id="9882"></path><path d="M725.312 128H768v42.688h-42.688z" fill="#FFF100" p-id="9883"></path><path d="M725.312 213.312H768V256h-42.688z" fill="#E50046" p-id="9884"></path><path d="M725.312 341.312H768V384h-42.688z" fill="#FFF100" p-id="9885"></path><path d="M853.312 85.312H896V128h-42.688z" p-id="9886"></path><path d="M853.312 128H896v42.688h-42.688z" fill="#E50046" p-id="9887"></path><path d="M896 128h42.688v42.688H896z" p-id="9888"></path><path d="M896 170.688h42.688v42.688H896z" fill="#E50046" p-id="9889"></path><path d="M938.624 170.688h42.688v42.688h-42.688z" p-id="9890"></path><path d="M938.624 213.312h42.688V256h-42.688zM981.312 256H1024v42.688h-42.688z" p-id="9891"></path><path d="M768 128h42.688v42.688H768zM768 170.688h42.688v42.688H768z" fill="#FFF100" p-id="9892"></path><path d="M768 341.312h42.688V384H768zM640 682.688h42.688v42.688H640z" fill="#E50046" p-id="9893"></path><path d="M640 725.312h42.688V768H640zM810.688 42.688h42.688v42.688h-42.688z" p-id="9894"></path><path d="M810.624 85.312h42.688V128h-42.688z" fill="#E50046" p-id="9895"></path><path d="M810.688 128h42.688v42.688h-42.688z" fill="#FFF100" p-id="9896"></path><path d="M810.688 341.312h42.688V384h-42.688z" fill="#E50046" p-id="9897"></path><path d="M853.312 170.688H896v42.688h-42.688zM853.312 341.312H896V384h-42.688zM896 213.312h42.688V256H896zM896 341.312h42.688V384H896z" fill="#FFF100" p-id="9898"></path><path d="M938.624 256h42.688v42.688h-42.688zM938.624 341.312h42.688V384h-42.688z" fill="#E50046" p-id="9899"></path><path d="M981.312 298.688H1024v42.688h-42.688z" p-id="9900"></path><path d="M981.312 341.312H1024V384h-42.688zM981.312 384H1024v42.688h-42.688zM981.312 426.688H1024v42.688h-42.688z" p-id="9901"></path><path d="M981.312 469.312H1024V512h-42.688zM0 896h42.688v42.688H0zM0 938.688h42.688v42.624H0zM42.688 981.312h42.688V1024H42.688z" p-id="9902"></path><path d="M85.312 981.312H128V1024h-42.688zM256 469.312h42.688V512H256z" p-id="9903"></path><path d="M341.312 469.312H384V512h-42.688z" fill="#E50046" p-id="9904"></path><path d="M469.312 469.312H512V512h-42.688z" fill="#FFF100" p-id="9905"></path><path d="M341.312 512H384v42.688h-42.688z" fill="#E50046" p-id="9906"></path><path d="M469.312 512H512v42.688h-42.688z" fill="#FFF100" p-id="9907"></path><path d="M512 512h42.688v42.688H512zM554.688 469.312h42.688V512h-42.688zM341.312 554.688H384v42.688h-42.688z" fill="#E50046" p-id="9908"></path><path d="M469.312 554.688H512v42.688h-42.688z" fill="#FFF100" p-id="9909"></path><path d="M341.312 597.312H384V640h-42.688zM384 597.312h42.688V640H384z" fill="#E50046" p-id="9910"></path><path d="M469.312 597.312H512V640h-42.688zM554.688 554.688h42.688v42.688h-42.688z" fill="#FFF100" p-id="9911"></path><path d="M554.688 597.312h42.688V640h-42.688z" fill="#FFF100" p-id="9912"></path><path d="M213.312 725.312H256V768h-42.688zM256 725.312h42.688V768H256z" fill="#FFFFFF" p-id="9913"></path><path d="M298.688 725.312h42.688V768h-42.688z" fill="#E3E7E6" p-id="9914"></path><path d="M170.688 768h42.688v42.688h-42.688z" fill="#FFFFFF" p-id="9915"></path><path d="M85.312 810.688H128v42.688h-42.688z" p-id="9916"></path><path d="M128 810.688h42.688v42.688H128z" fill="#FFFFFF" p-id="9917"></path></svg>
+            <!-- <img src="..." class="rounded me-2" alt="..."> -->
+            <strong class="me-auto">提示</strong>
+            <small class="text-muted">刚刚</small>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body">
+          {{ message }}
+        </div>
+    </div>
+  </div>
+<div style="position: absolute;width:50%;height:100%;min-height: 2000px;
+left: 50%;transform: translate(-50%, 0%);">
+<!-- 模态框结构 -->
+<div id="myModal" class="modal">
+  <!-- 模态框的内容 -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <img class="modal-image" id="modalImage">
+  </div>
+</div>
+  <!-- 导航栏 -->
+  <header>
+    <!-- 绑定返回按钮事件 -->
+    <button class="back-btn" onclick="window.location.href='/community';">返回</button>
+    <h1>帖子详情</h1>
+  </header>
+
+  <!-- 帖子内容 -->
+  <section class="post-content">
+    <h2 class="post-title">主题&nbsp;:&nbsp;{{ post[1] }}</h2><br>
+    <!-- 标签部分 -->
+    <div class="tags" style="text-align: left;">
+        {% set tags = post[5].split('#') %}
+        {% for tag in tags %}
+            {% if tag %}
+                {% if loop.index == 2 %}
+                    <span class="badge bg-danger">{{ tag }}</span>
+                {% elif loop.index == 3 %}
+                    <span class="badge bg-primary">{{ tag }}</span>
+                {% elif loop.index == 4 %}
+                    <span class="badge bg-info">{{ tag }}</span>
+                {% endif %}
+            {% endif %}
+          {% endfor %}
+      </div>
+    <div class="post-body">
+        <!-- 图片部分 -->
+        {% if post[7]  %}
+        <img src="{{ post[7] }}" style="width: 700px; height: auto;" alt="Post Image">
+        {% endif %}
+        <br>
+      <p>{{ post[6] }}</p>
+    </div><br>
+    <div class="post-info">
+        <span class="author"style="float: left;">作者: {{ post[2] }}</span><br>
+        <span class="author"style="float: left;">ip所属地: {{ post[4] }}</span>
+        <span class="post-time" style="float: right;">发布时间: {{ post[3] }}</span><br><hr>
+        <p class="card-text"style="text-align: left;">
+            <span style="float: right; font-size: large;"><i class="bi bi-eye "></i> {{post[9]}} view</span></p>
+            <div class="d-flex justify-content-between">
+              <button class="like-btn" data-id="{{ post[0] }}" data-liked="{{ 'true' if liked else 'false' }}">
+                {% if liked %}
+                  <span class="heart">❤️</span>
+                {% else %}
+                  <span class="heart">🤍</span>
+                {% endif %}
+                <span class="like-count">{{post[8]}}</span>
+            </button>  
+                    
+              </div>
+              
+        </div>   
+  </section>
+  <!-- 评论区 -->
+  <section class="comments-section">
+    <h3>评论区</h3><hr><br>
+    <!-- 评论列表 -->
+    <div class="comments-list">
+        
+      <div class="comment">
+        <span class="comment-author">李四</span>
+        <p class="comment-body">这个帖子讲的真好，我很赞同！</p>
+        <span class="comment-time">2025-02-23 12:30</span>
+      </div>
+      {% for index, cdata in commentdata %}
+      <div class="comment">
+        <span class="comment-author">{{ cdata[2] }}</span><br>
+        <img src="{{ cdata[5] }}" style="width: 700px; height: auto;" alt="">
+        <p class="comment-body">{{ cdata[3] }}</p>
+        <span class="comment-time">{{ cdata[4] }}</span><span class="comment-time"style="float: right;">第{{ index+1 }}楼</span>
+      </div>
+      {% endfor %}
+    </div>
+
+    <!-- 评论输入框 -->
+    <form action="{{ url_for('InputComment') }}" method="POST" enctype="multipart/form-data">
+      <div class="comment-input">
+        <textarea name="comment_text" placeholder="发表评论..."></textarea><br>
+        <!-- 文件上传字段 -->
+        <input type="file" name="comment_image" accept="image/*">
+        <!-- 隐藏的帖子 ID 字段 -->
+        <input type="hidden" name="post_id" value="{{ post[0] }}">
+        <button type="submit" class="submit-btn">发布评论</button>
+      </div>
+    </form>
+  </section>
+</div>
+</div>
+<div class="time-container">
+  <div id="time"></div>
+</div>
+<br><br><br><br><br><br>
+<div class="time-container2">
+  <div id="countdown">00天 00小时 00分钟 00秒</div>
+</div>
+</div>
+
+  <script src="/static/js/modal.js"></script>   
+  <script src="/static/js/like.js"></script>   
+</body>
+</html>

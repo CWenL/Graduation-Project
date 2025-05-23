@@ -1,0 +1,287 @@
+ /* 通用样式 */
+ * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: rgb(244 244 244) !important;
+  padding: 20px;
+}
+
+/* 导航栏 */
+header {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header .back-btn {
+  background-color: #0056b3;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+header h1 {
+  font-size: 24px;
+}
+
+/* 帖子内容区 */
+.post-content {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.post-title {
+  font-size: 28px;
+  color: #333;
+}
+
+.post-info {
+  color: #888;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.post-body p {
+  font-size: 16px;
+  color: #444;
+}
+
+/* 评论区 */
+.comments-section {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.comments-section h3 {
+  font-size: 22px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.comments-list .comment {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+}
+
+.comment-author {
+  font-weight: bold;
+  color: #007bff;
+}
+
+.comment-body {
+  margin-top: 5px;
+  color: #555;
+}
+
+.comment-time {
+  font-size: 12px;
+  color: #888;
+  margin-top: 5px;
+}
+
+/* 评论输入框 */
+.comment-input {
+  display: flex;
+  flex-direction: column;
+}
+
+.comment-input textarea {
+  width: 100%;
+  height: 100px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  resize: none;
+}
+
+.submit-btn {
+  background-color: #28a745;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background-color: #218838;
+}
+
+.time-container {
+  position: fixed;
+  background-color: #f6cca2d6;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  max-width: 600px;
+  width: 10%;
+}
+
+.time-container2 {
+  position: fixed;
+  background-color: rgba(188, 238, 243, 0.839);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  max-width: 600px;
+  width: 10%;
+}
+
+#time {
+  font-size: 24px;
+  color: #333333;
+  letter-spacing: 1px;
+  line-height: 1.5;
+}
+
+#countdown {
+  font-size: 24px;
+  color: #333333;
+  letter-spacing: 1px;
+  line-height: 1.5;
+}
+
+#time::before {
+  content: "当前时间：";
+  font-size: 18px;
+  color: #666666;
+  display: block;
+  margin-bottom: 10px;
+}
+
+#countdown::before {
+  content: "距离考研十二月还有：";
+  font-size: 18px;
+  color: #666666;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.card-text {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.4;
+  margin-bottom: 5px;
+}
+
+.tags {
+  margin: 5px 0;
+}
+
+.tags span {
+  margin-right: 5px;
+}
+
+.heart {
+  font-size: 24px;
+  margin-right: 5px;
+}
+
+.like-btn {
+  font-size: 18px;
+  padding: 5px 10px;
+  border: none;
+  background: none;
+  cursor: pointer !important;
+  line-height: 0.2;
+}
+
+.like-btn:hover {
+  opacity: 0.8;
+}
+
+.container {
+  display: flex;
+  gap: 20px;
+}
+
+.main-content {
+  flex: 3;
+}
+
+.edit-area {
+  flex: 1;
+  border: 1px solid #ddd;
+  padding: 20px;
+  background: #fcfcfc;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input,
+textarea {
+  width: 100% ;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+/* 删除按钮样式 */
+.delete-btn {
+  background-color: #dc3545;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+
+/* 模态框样式 */
+.modal {
+  display: none; /* 默认隐藏 */
+  position: fixed; /* 固定位置 */
+  z-index: 1; /* 位于顶层 */
+  left: 0;
+  top: 0;
+  width: 100%; /* 全宽 */
+  height: 100%; /* 全高 */
+  overflow: auto; /* 允许滚动条 */
+  background-color: rgb(0,0,0); /* 背景色 */
+  background-color: rgba(0,0,0,0.9); /* 背景色，带透明度 */
+}
+
+
+/* 模态框内容样式 */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 居中显示 */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* 宽度 */
+}
+
+/* 关闭按钮样式 */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}

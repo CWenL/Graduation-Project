@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/static/css/post.css">
+  <link rel="stylesheet" href="/static/css/bootstrap.css">
+  <title>帖子详情</title>
+  <script src="/static/js/jquery-3.7.1.min.js" ></script>
+  <script src="/static/js/bootstrap.js"></script>
+  <script src="/static/js/bootstrap.bundle.js"></script>
+  <script src="/static/js/time.js"></script>
+  <script src="/static/js/search.js"></script>
+  <script src="/static/js/commonUser.js"></script>
+</head>
+<style>
+    /* 添加媒体查询覆盖容器宽度 */
+    @media (min-width: 1400px) {
+      .container-xxl,
+      .container-xl,
+      .container-lg,
+      .container-md,
+      .container-sm,
+      .container {
+            max-width: 80%; /* 设置你需要的宽度 */
+        }
+    }
+  </style>
+<body>
+    <div class="container">
+      <div class="main-content">
+        <!-- 模态框结构 -->
+        <div id="myModal" class="modal">
+          <!-- 模态框的内容 -->
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <img class="modal-image" id="modalImage">
+          </div>
+        </div>
+        <!-- 导航栏 -->
+        <header>
+          <!-- 绑定返回按钮事件 -->
+          <div style="float: left;">
+          <button class="back-btn" onclick="window.history.back();">返回上一级</button>
+          <button class="back-btn" onclick="window.location.href='/userpage';">返回个人主页</button>
+          <!-- 添加删除按钮 -->
+          <button class="delete-btn" data-question-id="{{ Wrong[0] }}" onclick="deleteLearningRecord(this)">删除学习记录</button>
+          </div>
+          <h1>题目详情</h1>
+        </header>
+  
+        <!-- 帖子内容 -->
+        <section class="post-content">
+          <h2 class="post-title">题目类型：&nbsp;&nbsp;{{ Wrong[3] }}</h2><br>
+          <!-- 标签部分 -->
+          <div class="tags" style="text-align: left;">
+            {% set tags = Wrong[4].split('#') %}
+            {% for tag in tags %}
+              {% if tag %}
+                {% if loop.index == 2 %}
+                  <span class="badge bg-danger">{{ tag }}</span>
+                {% elif loop.index == 3 %}
+                  <span class="badge bg-primary">{{ tag }}</span>
+                {% elif loop.index == 4 %}
+                  <span class="badge bg-info">{{ tag }}</span>
+                {% endif %}
+              {% endif %}
+            {% endfor %}
+          </div>
+          <div class="post-body">
+            <!-- 图片部分 -->
+            <img src="/{{ Wrong[5] }}" style="width: 700px; height: auto;" alt="question Image">
+            <br><br>
+            <p style="font-size: 30px;background-color: #fcfcfc;">描述：&nbsp;{{ Wrong[2] }}</p>
+          </div><br>
+          <div class="post-info">
+            <span class="author" style="float: left;">作者: {{ Wrong[1] }}</span>
+            <span class="post-time" style="float: right;">题目id: {{ Wrong[0] }}</span>
+            <br>
+            <span class="author" style="float: left;">当前权重: {{ Wrong[9] }}</span>
+            <span class="post-time" style="float: right;">发布时间: {{ Wrong[7] }}</span><br><hr>
+          </div>
+        </section>
+        <!-- 解答区 -->
+        <section class="comments-section">
+          <h2 class="post-title">解答：</h2><br>
+          <div class="post-body">
+            <!-- 图片部分 -->
+            <img src="/{{ Wrong[6] }}" alt="答案图片" style="width: 700px; height: auto;">
+            <br>
+          </div><br>
+          <div class="post-info">
+            <span class="author" style="float: left;">当前权重: {{ Wrong[9] }}</span>
+            <span class="post-time" style="float: right;">最近一次更新答案时间: {{Wrong [8] if Wrong [8] else Wrong [7] }}</span><br><hr>
+          </div>
+        </section>
+      </div>
+      <div class="edit-area">
+        <h2 class="fw-bolder">修改题目信息</h2>
+        <form action="/update_study" method="post" enctype="multipart/form-data">
+          <input type="hidden" name="question_id" value="{{ Wrong[0] }}">
+          <div class="form-group">
+            <label>题目类型</label>
+            <select id="question_type" name="question_type" id="question_type" value="{{ Wrong[3] }}" style="font-size: 22px;">
+              <option value="数学">数学</option>
+              <option value="英语">英语</option>
+              <option value="政治">政治</option>
+              <option value="专业课">专业课</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>题目标签(格式：#标签1#标签2...)</label>
+            <input type="text" name="question_label" id="question_label" value="{{ Wrong[4] }}" oninput="validateLabel()">
+            <span id="error_message" style="color: red;"></span>
+          </div>
+          <div class="form-group">
+            <label>题目内容</label>
+            <textarea name="question_body" id="question_body" rows="5">{{ Wrong[2] }}</textarea>
+          </div>
+          <div class="form-group">
+            <label>题目图片</label>
+            <input class="file_input" type="file" name="question_image" id="question_image" value="{{ Wrong[5] }}">
+          </div>
+          <div class="form-group">
+            <label>答案图片</label>
+            <input class="file_input" type="file" name="answer_image" id="answer_image" value="{{ Wrong[6] }}">
+          </div>
+          <button type="submit" class="btn btn-primary" onclick="return validateForm() && validateLabel()">保存修改</button>
+        </form>
+      </div>
+    </div>
+    <!-- <div class="time-container">
+      <div id="time"></div>
+    </div>
+    <br><br><br><br><br><br>
+    <div class="time-container2">
+      <div id="countdown">00天 00小时 00分钟 00秒</div>
+    </div> -->
+  
+    <script src="/static/js/modal.js"></script>
+    <script src="/static/js/like.js"></script>
+    <script>
+      function validateLabel() {
+    let inputField = document.getElementById("question_label");
+    let errorMessage = document.getElementById("error_message");
+    let regex = /^(#[\u4e00-\u9fa5\w]+)+$/;  // 允许中文、字母、数字、下划线
+    if (!regex.test(inputField.value.trim())) {
+        errorMessage.innerText = "格式错误！请输入类似 #标签1#标签2 的格式";
+        return false;
+    }
+    errorMessage.innerText = ""; // 清除错误信息
+    return true;
+    }
+      </script>
+      <script>
+    function validateForm() {
+    // 获取表单字段
+    var question_type = document.getElementById('question_type').value.trim();
+    var content = document.getElementById('question_body').value.trim();
+    var question_label = document.getElementById('question_label').value.trim();
+    // 检查帖子标题是否为空
+    if (question_type === "") {
+        alert("请选择类型！");
+        return false;
+    }
+    // 检查内容是否为空
+    if (content === "") {
+        alert("请填写内容！");
+        return false;
+    }
+    // 检查标签是否为空
+    if (question_label === "" || question_label === "#") {
+        alert("请至少添加一个标签！");
+        return false;
+    }
+    return true;
+    }
+    </script>
+  </body>
+</html>

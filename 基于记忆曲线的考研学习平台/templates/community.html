@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/bootstrap.css">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/CardStyle.css">
+    <!-- <link rel="stylesheet" href="/static/css/homepage.css"> -->
+    <script src="/static/js/jquery-3.7.1.min.js" ></script>
+    <script src="/static/js/bootstrap.js"></script>
+    <script src="/static/js/bootstrap.bundle.js"></script>
+    <script src="/static/js/time.js"></script>
+    <script src="/static/js/search.js"></script>
+    <script src="/static/js/script.js"></script>
+    <title>Document</title>
+    <style>
+      .banner {
+        background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), 
+              url('/static/imgs/社区.gif') no-repeat center/cover;
+        color: white;
+        text-align: center;
+        padding: 80px 20px;
+        /* 新增优化属性 */
+        background-attachment: fixed;  /* 视差效果 */
+        min-height: 400px;              /* 保持容器高度 */
+        animation: fadeIn 1s ease;      /* 入场动画 */
+      }
+      /* 动画定义 */
+      @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+      }
+      .container {
+        max-width: 100%;
+    }
+    .panel {
+    position: absolute;
+    top: 38%;
+    margin-top: -400px;
+    left: 46%;
+    margin-left: -893px;
+    background-color: rgba(250, 250, 250, 0.9);
+    width: 80%;
+    height: auto;
+    min-height: 100%;
+    border-radius: 25px;
+    text-align: center;
+    padding: 20px 40px;
+    box-sizing: border-box;
+    }
+    .badge {
+      --bs-badge-padding-x: 0.75em;
+      --bs-badge-padding-y: 0.45em;
+      --bs-badge-font-size: 0.85em;
+    }
+    .btn-outline-dark {
+      --bs-btn-hover-bg: #eacbbc;
+    }
+    
+    .tag-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+}
+
+.tag-filter {
+    padding: 5px 15px;
+    border-radius: 7px;
+    background-color: #dc9999;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 17px;
+    transition: all 0.3s ease;
+}
+
+.tag-filter:hover, .tag-filter.active {
+    background-color: #63bac9;;
+    color: white;
+}
+
+.toggle-tags {
+    cursor: pointer;
+    color: #7e60e6;
+    font-size: 17px;
+}
+    </style>
+</head>
+<body style=" background: rgb(231, 231, 231);">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="
+    padding-top: 0px; padding-bottom: 0px; position: fixed; width: 100%; z-index: 1000;">
+        <div class="container-fluid px-2" style="background-color: lavender; padding-left: 0px;">
+          <div class="p-3 rounded hover-effect left_more"><a class="navbar-brand" id="toggleSidebar" role="button">
+            <img style="width: 45px; height: 45px; float: right;" src="/static/imgs/菜单.png">
+            </a></div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <p class="fw-bolder home_h1">欢迎使用考研学习平台！</p>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-auto align-items-center d-flex">
+            <li class="nav-item">
+              <a class="nav-link active fs-4" aria-current="page" href="/homepage">
+                <img style="width: 35px; height: 35px;" src="/static/imgs/首页.png">
+                首页&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link fs-4" href="/GlobalNotice">
+                    <img style="width: 35px; height: 35px;" src="/static/imgs/公告.png">
+                  平台公告&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+              </li>
+            <li class="nav-item">
+              <a class="nav-link fs-4" href="/community">
+                <img style="width: 35px; height: 35px;border-bottom: 5px solid #5ed8c5;" src="/static/imgs/交流社区.png">
+                交流社区&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fs-4" href="/userpage">
+                <img style="width: 35px; height: 35px;" src="/static/imgs/个人主页.png">
+                个人主页&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fs-4" href="/learning_us"><img style="width:35px; height:35px" src="/static/imgs/了解我们.png">
+                了解我们&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle fs-4" href="#" id="dropdownMenuButton" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                设置
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <li><a class="dropdown-item" href="{{ url_for('change_password') }}">修改密码</a></li>
+                <li><a class="dropdown-item" href="/logout">退出登录</a></li>
+                <!-- 管理员权限选项，只有管理员才能看到 -->
+                {% if power =="admin" %}
+                <li><a class="dropdown-item" href="{{ url_for('adminOp') }}">管理员面板</a></li>
+                {% endif %}
+                {% if power =="CommunityAdmin" %}
+                <li><a class="dropdown-item" href="{{ url_for('adminOp') }}">社区管理员面板</a></li>
+                {% endif %}
+              </ul>
+            </li>
+          </ul>
+          <img style="width: 35px; height: 35px;" src="/static/imgs/平台搜索.png">
+          &nbsp;&nbsp;
+          <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="搜你想看！" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
+        </div>
+        </nav>
+        <!-- 侧边栏 -->
+        <div id="sidebar" style="width: 11%; position: fixed; height: 100vh; background-color: rgb(244 244 251); color: rgb(0, 0, 0); padding: 20px;">
+          <h5 class="fw-bolder">学习功能列表</h5>
+          <div style="margin-top: 5.5rem;">
+              <a href="/DataChart" class="btn fs-4 mb-3 d-block sidebar-button" style="text-align: left;">
+                  学习数据可视化
+                  <img style="width: 35px; height: 35px; float: right;" src="/static/imgs/可视化.png">
+              </a>
+              <a href="/planpage" class="btn fs-4 mb-3 d-block sidebar-button" style="text-align: left;">
+                  学习规划
+                  <img style="width: 35px; height: 35px; float: right;" src="/static/imgs/目标规划.png">
+              </a>
+              
+              <a href="/News" class="btn fs-4 mb-3 d-block sidebar-button" style="text-align: left;">
+                  考研相关资讯
+                  <img style="width: 35px; height: 35px; float: right;" src="/static/imgs/资讯.png">
+              </a>
+              <a href="/uploadpage" class="btn fs-4 mb-3 d-block sidebar-button" style="text-align: left;">
+                  上传错题
+                  <img style="width: 35px; height: 35px; float: right;" src="/static/imgs/错题解析-加入错题.png">
+              </a>
+              记忆曲线复习<hr>
+              <a href="/review" class="btn fs-4 mb-3 d-block sidebar-button" style="text-align: left;margin-bottom:0rem !important;">
+                  <span>错题本复习</span>
+                  <img style="width: 35px; height: 35px; float: right;" src="/static/imgs/复习.png">
+              </a>
+              <button class="dropdown-toggle btn fs-4 d-block sidebar-button" id="dropdown_label" style="margin-bottom:0rem !important;border-color: rgba(255, 255, 255, 0);">标签复习<img id="show_label" src="/static/imgs/展开.png"></button>
+              <div class="dropdown-content">
+                <a href="/Tags_Review/数学" class="btn fs-4 d-block sidebar-button" style="text-align: left;margin-bottom:0rem !important;">数学复习<img style="width: 35px; height: 35px; float: right;" src="/static/imgs/数学.png"></a>
+                    <a href="/Tags_Review/专业课" class="btn fs-4 d-block sidebar-button" style="text-align: left;margin-bottom:0rem !important;">专业课复习<img style="width: 35px; height: 35px; float: right;" src="/static/imgs/专业课.png"></a>
+                    <a href="/Tags_Review/英语" class="btn fs-4 d-block sidebar-button" style="text-align: left;margin-bottom:0rem !important;">英语复习<img style="width: 35px; height: 35px; float: right;" src="/static/imgs/英语.png"></a>
+                    <a href="/Tags_Review/政治" class="btn fs-4 d-block sidebar-button" style="text-align: left;margin-bottom:0rem !important;">政治复习<img style="width: 35px; height: 35px; float: right;" src="/static/imgs/政治.png"></a>
+              </div>
+          </div>
+      </div>
+          <div>
+            <section id="section1"></section>
+            <div class="time-container"><br><br><br>
+              <div id="time"></div>
+            </div>
+            <br><br><br>
+            <div class="time-container2">
+              <div id="countdown">00天 00小时 00分钟 00秒</div>
+            </div>
+            <form action="{{ url_for('To_Post') }}" method="GET" class="panel" style="background-color: rgb(255 255 255);">
+              <div class="vertical-navbar">
+                <a href="#section1">↑顶部</a>
+                <a href="#section2">↓底部</a>
+              </div>
+              <div class="container">
+                <div class="banner" style="border-radius: 30px;">
+                  <h1 style="font-weight: 600;font-size: 3.5rem;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">交流社区</h1>
+                  <p>获取社群信息</p><br>
+                  <div class="search-box">
+                    <input type="text" id="keyword" placeholder="请输入关键词搜索帖子" value="{{ keyword }}">
+                    <button id="search-button-forum" type="button">搜索</button>
+                </div>
+                </div>
+                <br>
+                <div style="display: flex; align-items: center;">
+                  <button type="submit" class="btn btn-outline-dark fs-4" style="border: none; font-weight: 400; height:100%;">
+                      <img style="width:35px; height:35px;" src="/static/imgs/发布.png">发布贴子
+                  </button>
+                  <div id="tag-container" style="margin-left: 20px;"></div>
+              </div>
+                <hr>
+                {% for fdata in forum %}
+                <a href="{{ url_for('post_detail', post_id=fdata[0]) }}" class="card-link" style="text-decoration: none;width: 70%;display: contents;">
+                    <div class="card card-wrapper">
+                        {% if fdata[7] %}
+                        <img src="{{ fdata[7] }}" class="card-img" style="width: 40%;" alt="Post Image"onclick="event.stopPropagation()">
+                        {% endif %}
+                        <div class="card-body" style="text-align: left;">
+                            <h5 class="card-title" style="font-size: 20px;">{{ fdata[1] }}</h5>
+                            
+                            <div class="tags" style="text-align: left;">
+                                {% set tags = fdata[5].split('#') %}
+                                {% for tag in tags %}
+                                    {% if tag %}
+                                        {% if loop.index == 2 %}
+                                            <span class="badge bg-danger">{{ tag }}</span>
+                                        {% elif loop.index == 3 %}
+                                            <span class="badge bg-primary">{{ tag }}</span>
+                                        {% elif loop.index == 4 %}
+                                            <span class="badge bg-info">{{ tag }}</span>
+                                        {% else %}
+                                            <span class="badge bg-secondary">{{ tag }}</span>
+                                        {% endif %}
+                                    {% endif %}
+                                {% endfor %}
+                            </div>
+                            <p class="card-text">{{ fdata[6][:20] }}...</p>
+                            <div class="d-flex justify-content-between">
+                                <span class="card-text" style="text-align: left;">
+                                    发布者： {{ fdata[2] }} </span>
+                                <span class="bouncing-text" style="float: right; font-size: large;">
+                                    <i class="bi bi-eye"></i> {{ fdata[9] }} view</span>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <span class="card-text" style="color: darkgrey;">{{ fdata[3] }}</span>
+                                <span class="no-bids"><i class="bi bi-heart"></i> {{ fdata[8] }} ❤️</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                {% endfor %}
+            
+                <nav aria-label="Page navigation">
+                    <ul class="pagination justify-content-center">
+                        {% if pagination.has_prev %}
+                        <li class="page-item">
+                            <a class="page-link" href="{{ url_for('CommunityPage', page=pagination.prev_num) }}" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+                        {% else %}
+                        <li class="page-item disabled">
+                            <span class="page-link" aria-hidden="true">&laquo;</span>
+                        </li>
+                        {% endif %}
+            
+                        {% for page_num in range(1, pagination.total_pages + 1) %}
+                        {% if page_num == pagination.page %}
+                        <li class="page-item active">
+                            <span class="page-link">{{ page_num }}</span>
+                        </li>
+                        {% else %}
+                        <li class="page-item">
+                            <a class="page-link" href="{{ url_for('CommunityPage', page=page_num) }}">{{ page_num }}</a>
+                        </li>
+                        {% endif %}
+                        {% endfor %}
+            
+                        {% if pagination.has_next %}
+                        <li class="page-item">
+                            <a class="page-link" href="{{ url_for('CommunityPage', page=pagination.next_num) }}" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                        {% else %}
+                        <li class="page-item disabled">
+                            <span class="page-link" aria-hidden="true">&raquo;</span>
+                        </li>
+                        {% endif %}
+                    </ul>
+                </nav>
+            </div>
+              <section id="section2"></section>    
+            </form>
+          </div>      
+          <script>
+document.getElementById('search-button-forum').addEventListener('click', function(e) {
+    e.preventDefault();
+    const keyword = document.getElementById('keyword').value.trim();
+    if (keyword) {
+        window.location.href = `/community?keyword=${encodeURIComponent(keyword)}&page=1`;
+    } else {
+        window.location.href = `/community`;
+    }
+});
+
+// 动态生成标签
+async function loadTags() {
+    try {
+        const response = await fetch('/get_forum_tags');
+        const tags = await response.json();
+        
+        const tagContainer = document.getElementById('tag-container');
+        tagContainer.innerHTML = ''; // 清空容器
+        
+        const tagFilters = document.createElement('div');
+        tagFilters.className = 'tag-filters';
+        
+        // 添加“全部”标签
+        const allTagElement = document.createElement('a');
+        allTagElement.className = 'tag-filter';
+        allTagElement.href = '#';
+        allTagElement.dataset.tag = '全部';
+        allTagElement.textContent = '全部';
+        tagFilters.appendChild(allTagElement);
+        
+        // 默认显示前5个标签
+        const visibleTags = tags.slice(0, 5);
+        const hiddenTags = tags.slice(5);
+        
+        // 添加可见标签
+        visibleTags.forEach(tag => {
+            const tagElement = document.createElement('a');
+            tagElement.className = 'tag-filter';
+            tagElement.href = '#';
+            tagElement.dataset.tag = tag;
+            tagElement.textContent = tag;
+            tagFilters.appendChild(tagElement);
+        });
+        
+        // 如果有隐藏标签，添加展开按钮
+        if (hiddenTags.length > 0) {
+            const toggleButton = document.createElement('div');
+            toggleButton.className = 'toggle-tags';
+            toggleButton.textContent = '展开';
+            toggleButton.dataset.state = 'collapsed'; // 添加状态属性
+            
+            // 将隐藏标签存储在按钮上
+            toggleButton.dataset.hiddenTags = hiddenTags.join(',');
+            
+            toggleButton.addEventListener('click', function() {
+                if (this.textContent === '展开') {
+                    // 显示隐藏标签
+                    const hiddenTags = this.dataset.hiddenTags.split(',');
+                    hiddenTags.forEach(tag => {
+                        const tagElement = document.createElement('a');
+                        tagElement.className = 'tag-filter';
+                        tagElement.href = '#';
+                        tagElement.dataset.tag = tag;
+                        tagElement.textContent = tag;
+                        tagFilters.insertBefore(tagElement, this); // 将标签插入到展开按钮之前
+                    });
+                    this.textContent = '收起';
+                    this.dataset.state = 'expanded';
+                } else {
+                    // 隐藏标签
+                    while (tagFilters.children.length > 6) { // 保留“全部”标签和前5个标签
+                        tagFilters.removeChild(tagFilters.children[5]); // 移除第6个标签（索引为5）
+                    }
+                    this.textContent = '展开';
+                    this.dataset.state = 'collapsed';
+                }
+            });
+            tagFilters.appendChild(toggleButton);
+        }
+        
+        tagContainer.appendChild(tagFilters);
+        
+        // 使用事件委托处理标签点击事件
+        tagFilters.addEventListener('click', function(e) {
+            const tagElement = e.target.closest('.tag-filter');
+            if (tagElement) {
+                handleTagClick(e, tagElement.dataset.tag);
+            }
+        });
+        
+        // 根据URL中的标签参数设置active状态
+        setActiveTag();
+    } catch (error) {
+        console.error('Failed to load tags:', error);
+    }
+}
+
+// 处理标签点击事件
+function handleTagClick(e, tag) {
+    e.preventDefault();
+    
+    // 移除所有标签的active类
+    document.querySelectorAll('.tag-filter').forEach(t => t.classList.remove('active'));
+    
+    // 为当前点击的标签添加active类
+    e.target.classList.add('active');
+    
+    // 构建新的URL并跳转
+    const keyword = document.getElementById('keyword').value.trim();
+    let url = `/community?page=1`;
+    
+    if (tag !== '全部') {
+        url += `&tag=${encodeURIComponent(tag)}`;
+    }
+    
+    if (keyword) {
+        url += `&keyword=${encodeURIComponent(keyword)}`;
+    }
+    
+    window.location.href = url;
+}
+
+// 根据URL中的标签参数设置active状态
+function setActiveTag() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const tagParam = urlParams.get('tag');
+    
+    if (tagParam) {
+        const tagElement = document.querySelector(`.tag-filter[data-tag="${tagParam}"]`);
+        if (tagElement) {
+            document.querySelectorAll('.tag-filter').forEach(t => t.classList.remove('active'));
+            tagElement.classList.add('active');
+            
+            // 如果标签是隐藏的，则展开标签
+            const toggleButton = document.querySelector('.toggle-tags');
+            if (toggleButton && toggleButton.dataset.state === 'collapsed') {
+                const hiddenTags = toggleButton.dataset.hiddenTags.split(',');
+                if (hiddenTags.includes(tagParam)) {
+                    // 模拟点击展开按钮
+                    toggleButton.click();
+                }
+            }
+        }
+    } else {
+        // 默认设置“全部”标签为active
+        const allTagElement = document.querySelector('.tag-filter[data-tag="全部"]');
+        if (allTagElement) {
+            allTagElement.classList.add('active');
+        }
+    }
+}
+
+// 页面加载时加载标签
+window.addEventListener('DOMContentLoaded', loadTags);
+            </script>   
+</body>
+</html>

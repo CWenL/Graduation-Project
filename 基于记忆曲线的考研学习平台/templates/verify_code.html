@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/Login.css">
+    <link rel="stylesheet" href="../static/css/bootstrap.css">
+    <title>修改密码</title>
+    <style>
+        .panel{
+    position: absolute;
+    top: 35%;
+    margin-top: -120px;
+    left: 50%;
+    margin-left: -500px;
+    /* absolute居中 */
+    background-color: rgba(244, 246, 247, 0.85);
+    width: 40%;
+    /* height: 自适应且最小2800px */
+    height: 50%;
+    border-radius: 25px;
+    text-align: center;
+    padding: 20px 40px;
+    box-sizing: border-box;
+  }
+    </style>
+</head>
+<body>
+    <form class="panel" method="POST" action="{{ url_for('verify_code') }}"><br><br>
+        <h1 style="color: black;font-size: 42px;
+  font-weight: 600;">注意</h1><br>
+        <label for="verification_code" name="verification_code" style="font-size: 20px;font-weight: 500;">请输入验证码&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </label><br><br>
+        <div class="input-group mb-3">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="verification_code" class="form-control"  aria-describedby="button-addon2" name="verification_code" id="verification_code" value="{{ email }}" required>
+            <button class="btn btn-outline-secondary" type="submit" id="button-addon2">提交验证码</button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </div>
+        
+    </form>
+</body>
+</html>

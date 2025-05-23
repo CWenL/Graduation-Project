@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/bootstrap.css">
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <!-- <link rel="stylesheet" href="/static/css/homepage.css"> -->
+    <script src="/static/js/jquery-3.7.1.min.js" ></script>
+    <script src="/static/js/bootstrap.js"></script>
+    <script src="/static/js/bootstrap.bundle.js"></script>
+    <script src="/static/js/time.js"></script>
+    <script src="/static/js/search.js"></script>
+    <script src="/static/js/script.js"></script>
+    
+    <title>Document</title>
+</head>
+<style>
+.container{
+    max-width: 100%;
+}
+.panel {
+    position: absolute;
+    top: 38%;
+    margin-top: -400px;
+    left: 46%;
+    margin-left: -893px;
+    background-color: rgba(250, 250, 250, 0.9);
+    width: 80%;
+    height: auto;
+    min-height: 100%;
+    border-radius: 25px;
+    text-align: center;
+    padding: 20px 40px;
+    box-sizing: border-box;
+}
+.text-with-indent {
+            text-indent: 2em; /* 首行缩进两个字符 */            
+            font-size: 26px !important;
+            line-height: 1.5em; /* 设置行高 */
+            letter-spacing: 0.05em; /* 设置字符间距 */
+            white-space: pre-line; /* 保留空白符序列，但是正常换行 */
+        }
+.banner {
+    position: relative;
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+    min-height: 430px;
+    overflow: hidden;
+    border-radius: 30px;
+    pointer-events: none; /* 阻止鼠标事件传递到该区域 */
+}
+
+.banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
+    z-index: 1;
+}
+
+.banner video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.7);
+    z-index: 0;
+    animation: fadeIn 1s ease;
+    pointer-events: none;
+    object-fit: cover;
+}
+.banner-content {
+    position: relative;
+    z-index: 2; /* 确保文字层级高于视频 */
+    color: white;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .banner video {
+        object-fit: contain;
+    }
+}
+.banner-content h1 {
+    color: white; /* 明确文字颜色 */
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5); /* 增加文字清晰度 */
+}
+.banner-content p {
+    color: white;
+    font-size: 1.2rem;
+}
+._video_op_wrapper_96mx8_1 {
+        display: none !important;
+    }
+.chart-preview {
+        width: 100%;
+        height: 520px !important;
+        border: none;
+        margin: 10px 0;
+        transition: transform 0.3s ease;
+    }
+.chart-preview:hover {
+      transform: scale(1);
+}
+/* 侧边按钮样式 */
+.toggle-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 10;
+}
+
+/* 调整卡片样式 */
+.card {
+    position: relative;
+    overflow: hidden;
+}
+
+.card {
+    flex: 1 1 calc(50% - 20px);
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: scale(1.5);
+    z-index: 1;
+}
+
+.card-title {
+    font-size: 16px;  /* 减小标题字体大小 */
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;  /* 减少标题和正文的间距 */
+    line-height: 1.4;
+  }
+
+.card-body {
+    padding: 15px;
+}
+</style>
+<body style=" background: rgb(231, 231, 231);">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="
+    padding-top: 0px; padding-bottom: 0px; position: fixed; width: 100%; z-index: 1000;">
+        <div class="container-fluid px-2" style="background-color: lavender; padding-left: 0px;">
+          <div class="p-3 rounded hover-effect left_more"><a class="navbar-brand" id="toggleSidebar" role="button">
+            <img style="width: 45px; height: 45px; float: right;" src="/static/imgs/菜单.png">
+            </a></div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <p class="fw-bolder home_h1">欢迎使用考研学习平台！</p>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-auto align-items-center d-flex">
+            <li class="nav-item">
+              <a class="nav-link active fs-4" aria-current="page" href="/homepage">
+                <img style="width: 35px; height: 35px;border-bottom: 5px solid #5ed8c5;" src="/static/imgs/首页.png">
+                首页&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link fs-4" href="/GlobalNotice">
+                    <img style="width: 35px; height: 35px;" src="/static/imgs/公告.png">
+                  平台公告&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+              </li>
+            <li class="nav-item">
+              <a class="nav-link fs-4" href="/community">
+                <img style="width: 35px; height: 35px;" src="/static/imgs/交流社区.png">
+                交流社区&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fs-4" href="/userpage">
+                <img style="width: 35px; height: 35px;" src="/static/imgs/个人主页.png">
+                个人主页&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fs-4" href="/learning_us"><img style="width:35px; height:35px" src="/static/imgs/了解我们.png">
+                了解我们&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle fs-4" href="#" id="dropdownMenuButton" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                设置
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <li><a class="dropdown-item" href="{{ url_for('change_password') }}">修改密码</a></li>
+                <li><a class="dropdown-item" href="/logout">退出登录</a></li>
+                <!-- 管理员权限选项，只有管理员才能看到 -->
+                {% if power =="admin" %}
+                <li><a class="dropdown-item" href="{{ url_for('adminOp') }}">管理员面板</a></li>
+                {% endif %}
+                {% if power =="CommunityAdmin" %}
+                <li><a class="dropdown-item" href="{{ url_for('adminOp') }}">社区管理员面板</a></li>
+                {% endif %}
+              </ul>
+            </li>
+          </ul>
+          <img style="width: 35px; height: 35px;" src="/static/imgs/平台搜索.png">
+          &nbsp;&nbsp;
+          <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="搜你想看！" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
+        </div>
+        </nav>
+        <!-- 侧边栏 -->
+        <div id="sidebar" style="width: 11%; position: fixed; height: 100vh; background-color: rgb(244 244 251); color: rgb(0, 0, 0); padding: 20px;">
+            <h5 class="fw-bolder">学习功能列表</h5>
+            <div style="margin-top: 5.5rem;">
+                <a href="/DataChart" class="btn fs-4 mb-3 d-block sidebar-button" style="text-align: left;">
+                    学习数据可视化
+                    <img style="width: 35px; height: 35px; float: right;" src="/static/imgs/可视化.png">
+                </a>
+                <a href="/planpage" class="btn fs-4 mb-3 d-block sidebar-button" style="text-align: left;">
+                    学习规划
+                    <img style="width: 35px; height: 35px; float: right;" src="/static/imgs/目标规划.png">
+                </a>
+                
+                <a href="/News" class="btn fs-4 mb-3 d-block sidebar-button" style="text-align: left;">
+                    考研相关资讯
+                    <img style="width: 35px; height: 35px; float: right;" src="/static/imgs/资讯.png">
+                </a>
+                <a href="/uploadpage" class="btn fs-4 mb-3 d-block sidebar-button" style="text-align: left;">
+                    上传错题
+                    <img style="width: 35px; height: 35px; float: right;" src="/static/imgs/错题解析-加入错题.png">
+                </a>
+                记忆曲线复习<hr>
+                <a href="/review" class="btn fs-4 mb-3 d-block sidebar-button" style="text-align: left;margin-bottom:0rem !important;">
+                    <span>错题本复习</span>
+                    <img style="width: 35px; height: 35px; float: right;" src="/static/imgs/复习.png">
+                </a>
+                <button class="dropdown-toggle btn fs-4 d-block sidebar-button active" id="dropdown_label" style="margin-bottom:0rem !important;border-color: rgba(255, 255, 255, 0);">标签复习<img id="show_label" src="/static/imgs/展开.png"></button>
+                <div class="dropdown-content">
+                    <a href="/Tags_Review/数学" class="btn fs-4 d-block sidebar-button" style="text-align: left;margin-bottom:0rem !important;">数学复习<img style="width: 35px; height: 35px; float: right;" src="/static/imgs/数学.png"></a>
+                    <a href="/Tags_Review/专业课" class="btn fs-4 d-block sidebar-button" style="text-align: left;margin-bottom:0rem !important;">专业课复习<img style="width: 35px; height: 35px; float: right;" src="/static/imgs/专业课.png"></a>
+                    <a href="/Tags_Review/英语" class="btn fs-4 d-block sidebar-button" style="text-align: left;margin-bottom:0rem !important;">英语复习<img style="width: 35px; height: 35px; float: right;" src="/static/imgs/英语.png"></a>
+                    <a href="/Tags_Review/政治" class="btn fs-4 d-block sidebar-button" style="text-align: left;margin-bottom:0rem !important;">政治复习<img style="width: 35px; height: 35px; float: right;" src="/static/imgs/政治.png"></a>
+                </div>
+            </div>
+        </div>
+          <div>
+            <div class="vertical-navbar">
+              <a href="#section1">↑顶部</a>
+              <a href="#studyplan_section1">学习规划表</a>
+              <a href="#studyplan_section2">错题与复习</a>
+              <a href="#section2">↓底部</a>
+            </div>
+            <section id="section1"></section>
+              <div class="time-container"><br><br><br>
+                <div id="time"></div>
+              </div>
+              <div class="time-container2">
+                <div id="countdown">00天 00小时 00分钟 00秒</div>
+              </div>
+            <form action="#" class="panel" method="get">
+            <div class="container" style="pointer-events: none; /* 阻止鼠标交互，避免误触 */">
+              <div class="banner">
+                <video autoplay loop muted plays-inline poster="/static/imgs/主页.jpg">
+                    <source src="/static/imgs/主页.mp4" type="video/mp4">
+                    <!-- 备用图片 -->
+                    <img src="/static/imgs/主页.jpg" alt="Background Image">
+                </video>
+                <div class="banner-content">
+                    <h1 style="font-weight: 600;font-size: 3.5rem;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">欢迎来到考研学习平台！</h1>
+                    <br><p>千里之行，始于足下</p>
+                </div>
+            </div>
+          </div>
+          <section id="studyplan_section1"></section>
+    <div class="container-fluid my-4">
+        <div class="row">
+            <!-- 学习规划饼图 -->
+            <div class="col-md-6 mb-4" id="phase1_chart_container">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="card-title">当前复习阶段</div>
+                        <iframe id="phase1_chart" 
+                                class="img-fluid chart-preview" 
+                                frameborder="0" 
+                                style="width: 100%; height: 300px; overflow: hidden;">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4" id="phase2_chart_container" style="display: none;">
+                <div class="card">
+                    <div class="card-body">
+                        <iframe id="phase2_chart" 
+                                class="img-fluid chart-preview" 
+                                frameborder="0" 
+                                style="width: 100%; height: 300px; overflow: hidden;">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4" id="phase3_chart_container" style="display: none;">
+                <div class="card">
+                    <div class="card-body">
+                        <iframe id="phase3_chart" 
+                                class="img-fluid chart-preview" 
+                                frameborder="0" 
+                                style="width: 100%; height: 300px; overflow: hidden;">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="card-title">复习时间总揽</div>
+                        <iframe id="total_days_chart" 
+                                class="img-fluid chart-preview" 
+                                frameborder="0" 
+                                style="width: 100%; height: 300px; overflow: hidden;">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+            <section id="studyplan_section2"></section>
+            <div class="col-md-6 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="card-title">建议用户针对深色知识点尽快复习薄弱点</div>
+                        <iframe id="user_tag_heatmap_chart" 
+                                class="img-fluid chart-preview" 
+                                frameborder="0" 
+                                style="width: 100%; height: 300px; overflow: hidden;">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+            <!-- 错题复习情况折线图 -->
+            <div class="col-md-6 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="card-title">近期复习趋势,累计错题复习次数：{{ review_counts }}</div>
+                        <iframe id="error_review_chart" 
+                                class="img-fluid chart-preview" 
+                                frameborder="0" 
+                                style="width: 100%; height: 300px; overflow: hidden;">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+            <!-- 复习与学习综合图 -->
+            <div class="col-md-6 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="card-title">{{ labei_review }}</div>
+                        <iframe id="review_study_bar_line" 
+                                class="img-fluid chart-preview" 
+                                frameborder="0" 
+                                style="width: 100%; height: 300px; overflow: hidden;">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+            <!-- 复习与学习综合图 -->
+            <div class="col-md-6 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <iframe id="review_complex_study_bar_line" 
+                                class="img-fluid chart-preview" 
+                                frameborder="0" 
+                                style="width: 100%; height: 300px; overflow: hidden;">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+            <section id="section2"></section>
+            </div>
+        </div>
+    </form>
+<script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // 发送 AJAX 请求获取 study_plan
+            fetch('/api/get_study_plan')
+               .then(response => response.json())
+               .then(data => {
+                    if (data.success) {
+                        const studyPlan = data.study_plan;
+                        // 当前日期
+                        const currentDate = new Date();
+                        let currentPhase = null;
+                        for (const phase in studyPlan) {
+                            const start = new Date(studyPlan[phase].start_date);
+                            const end = new Date(studyPlan[phase].end_date);
+                            if (currentDate >= start && currentDate <= end) {
+                                currentPhase = phase;
+                                break;
+                            }
+                        }
+                        // 获取图表列表
+                        fetch('/get_chart_list')
+                           .then(response => response.json())
+                           .then(chartList => {
+                                const chartPaths = {};
+                                chartList.forEach(([path, type]) => {
+                                    chartPaths[type] = path.replace('/static', '');
+                                });
+
+                                // 根据当前阶段设置图表的显示和src属性
+                                if (currentPhase === 'phase1') {
+                                    document.getElementById('phase1_chart_container').style.display = 'block';
+                                    if (chartPaths['一轮复习每日学习时间安排']) {
+                                        document.getElementById('phase1_chart').src = "{{ url_for('static', filename='') }}" + chartPaths['一轮复习每日学习时间安排'];
+                                    }
+                                } else if (currentPhase === 'phase2') {
+                                    document.getElementById('phase2_chart_container').style.display = 'block';
+                                    if (chartPaths['二轮强化每日学习时间安排']) {
+                                        document.getElementById('phase2_chart').src = "{{ url_for('static', filename='') }}" + chartPaths['二轮强化每日学习时间安排'];
+                                    }
+                                } else if (currentPhase === 'phase3') {
+                                    document.getElementById('phase3_chart_container').style.display = 'block';
+                                    if (chartPaths['三轮冲刺每日学习时间安排']) {
+                                        document.getElementById('phase3_chart').src = "{{ url_for('static', filename='') }}" + chartPaths['三轮冲刺每日学习时间安排'];
+                                    }
+                                }
+                                // 设置其他图表的src属性
+                                if (chartPaths['一轮、二轮、三轮各占的时间']) {
+                                    document.getElementById('total_days_chart').src = "{{ url_for('static', filename='') }}" + chartPaths['一轮、二轮、三轮各占的时间'];
+                                }
+                                if (chartPaths['用户标签热力图']) {
+                                    document.getElementById('user_tag_heatmap_chart').src = "{{ url_for('static', filename='') }}" + chartPaths['用户标签热力图'];
+                                }
+                                
+                                if (chartPaths['错题复习情况']) {
+                                    document.getElementById('error_review_chart').src = "{{ url_for('static', filename='') }}" + chartPaths['错题复习情况'];
+                                }
+                                if (chartPaths['复习与学习综合图（原子标签版）']) {
+                                    document.getElementById('review_study_bar_line').src = "{{ url_for('static', filename='') }}" + chartPaths['复习与学习综合图（原子标签版）'];
+                                }
+                                if (chartPaths['复习与学习综合图（组合标签版）']) {
+                                    document.getElementById('review_complex_study_bar_line').src = "{{ url_for('static', filename='') }}" + chartPaths['复习与学习综合图（组合标签版）'];
+                                }
+                            });
+                    } else {
+                        console.error(data.message);
+                    }
+                })
+               .catch(error => {
+                    console.error('获取学习计划数据失败:', error);
+                });
+        });
+    </script>
+</body>
+</html>

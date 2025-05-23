@@ -1,0 +1,220 @@
+body {
+    display: flex;
+    background: #e7f2fc;
+}
+#sidebar {
+width: 250px;
+height: 100vh;
+background: #878787;
+color: #4c1818;
+font-weight: bolder;
+padding: 10px;
+position: fixed;
+top: 50px; /* 让侧边栏从顶部导航栏下方开始 */
+left: 0;
+transition: width 0.3s;
+overflow: hidden;
+}
+#sidebar.collapsed {
+    width: 60px;
+}
+#sidebar.collapsed .nav-link span {
+    display: none;
+}
+#sidebar.collapsed h5 {
+    display: none;
+}
+#sidebar.collapsed .nav-item:first-child,
+#sidebar.collapsed .nav-item:nth-child(7) {
+    display: none;
+}
+
+#content {
+    margin-left: 250px;
+    width: 100%;
+    padding: 20px;
+    background: #e7f2fc;
+    height: 100%;
+    transition: margin-left 0.3s;
+    box-sizing: border-box; /* 新增，确保内边距不影响宽度计算 */
+}
+#content-display {
+    margin-top: 20px;
+    padding: 20px;
+    background: #e7f2fc;
+    min-height: 400px;
+}
+#sidebar.collapsed + #content {
+    margin-left: 60px;
+}
+.nav-link {
+    color: white;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: flex;
+    align-items: center;
+}
+.nav-link i {
+    margin-right: 10px;
+    margin-left: -11px;
+}
+.nav-link:hover {
+    background: #34495e;
+}
+.topbar {
+    height: 50px;
+    background: #322124;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+.toggle-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+.main-content {
+    margin-top: 50px;
+    padding: 20px;
+}
+.card-body{
+    background: #dce4e2;
+}
+.post-card, .user-card {
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+.post-card:hover,.user-card:hover{
+    background-color: #f8f9fa;
+}
+#content-display, #comment-content, #user-content, #global-notice-content,#community-notice-content{
+    margin-top: 20px;
+    padding: 20px;
+    background: #fff;
+    min-height: 400px;
+    display: none; /* 初始隐藏内容区域 */
+}
+
+#notice-list {
+    margin-top: 20px;
+}
+
+.notice-card {
+    margin-bottom: 15px;
+    padding: 15px;
+    background-color: #dce4e2;
+    border-radius: 6px;
+}
+.notice-card h5 {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+.notice-card p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+.action-btns {
+    margin-top: 10px;
+    display: flex;
+    gap: 5px;
+}
+.action-btns button {
+    padding: 6px 12px;
+    font-size: 14px;
+}
+.create-notice-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    background: transparent;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.create-notice-btn i {
+    font-size: 36px;
+}
+.create-notice-btn:hover {
+    background-color: #989888;
+    transform: scale(1.05);
+}
+
+.disabled-link {
+    text-decoration: line-through;
+    color: #999;
+    pointer-events: none;
+}
+
+/* 图片预览样式 */
+.preview-image {
+    cursor: zoom-in;
+    max-width: 200px;
+    height: auto;
+}
+
+#imageModal .modal-body {
+    text-align: center;
+}
+
+
+.image-container {
+    position: relative;
+    display: inline-block;
+}
+
+.zoom-controls {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 10;
+}
+
+.zoom-controls button {
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    margin: 2px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.zoom-controls button:hover {
+    background: rgba(0, 0, 0, 0.9);
+}
+
+.zoom-in:active {
+    transform: scale(1.1);
+}
+
+.zoom-out:active {
+    transform: scale(0.9);
+}
+
+#modal-image {
+    max-width: 100%;
+    max-height: 80vh;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+#modal-image.zoomed {
+    transform: scale(1);
+    cursor: zoom-out;
+}
+
+#modal-image.zoomed:hover {
+    transform: scale(1.2);
+}

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>管理员后台</title>
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/css/adminStyle.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://gcore.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <script src="/static/js/bootstrap.bundle.js"></script>
+    
+</head>
+<body>
+    <div id="sidebar">
+        <button class="toggle-btn" onclick="toggleSidebar()">&#9776;</button>
+        <h5 class="text-white text-center">考研学习平台</h5>
+        <ul class="nav flex-column">
+            <li class="nav-item"><i>&#8962;</i> <span>后台主页</span></li><br>
+            <li class="nav-item"><a href="#" class="nav-link" data-url="/api/community/posts"><i>&#128101;</i> <span>社区管理</span></a></li>
+            <li class="nav-item"><a href="#" class="nav-link" data-url="/admin/comments" id="comment-management-link">
+                &nbsp;<i class="bi bi-chat-left-dots"></i> 
+                <span>评论管理</span>
+            </a></li>
+            <li class="nav-item"><a href="#" class="nav-link" data-url="/api/user/list" id="user-nav-link"><i>&#128100;</i> <span>用户管理</span></a></li>
+            <br>
+            <li class="nav-item"><i>#</i> <span>公告管理</span></li><br>
+            <li class="nav-item"><a href="#" class="nav-link" data-url="/global-notice" id="global-notice-nav-link"><i>&#128190;</i> <span>全服公告</span></a></li>
+            <li class="nav-item"><a href="#" class="nav-link" data-url="/community-notice" id="community-notice-nav-link"><i>&#128221;</i> <span>社区公告</span></a></li>
+        </ul>
+    </div>
+    <div id="content">
+        <div class="topbar">
+            <span class="text-white" style="float: right;">
+                <a href="/homepage"><img style="width: 20px; height: 20px; float: left;" src="/static/imgs/主页.png"></a>&nbsp;&nbsp;
+                <a href="/logout"><img style="width: 20px; height: 20px; float: right;" src="/static/imgs/退出.png"></a>
+            </span>
+        </div>
+        <!-- 在模态框中添加缩放按钮 -->
+        <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="imageModalLabel">查看图片</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="image-container">
+                            <img src="" id="modal-image" class="img-fluid">
+                            <div class="zoom-controls">
+                                <button class="zoom-in" title="放大">+</button>
+                                <button class="zoom-out" title="缩小">-</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <div class="container mt-5">
+                <div id="welcome-card" class="card bg-dark text-white" style="border: none;--bs-bg-opacity: 0;">
+                    <div class="card-body" style="color: black;border-radius: 30px;border: none;">
+                        <h2 class="card-title" style="font-weight: 500;">尊敬的管理员-{{ AdminName }}欢迎来到平台管理后台！</h2><br>
+                        <div id="power-container" data-power="{{ power | safe }}">当前权限：{{ power }}</div>
+                    </div>
+                </div>
+            </div>
+            <div id="content-display" class="mt-4 p-4 bg-white">
+                <h1 class="text-center">社区管理</h1>
+                <div class="row mb-3">
+                    <div class="col-md-4">
+                        <input type="text" class="form-control" id="searchKeyword" placeholder="搜索帖子内容">
+                    </div>
+                    <div class="col-md-3">
+                        <input type="date" class="form-control" id="startDate">
+                    </div>
+                    <div class="col-md-3">
+                        <input type="date" class="form-control" id="endDate">
+                    </div>
+                    <div class="col-md-2">
+                        <div>
+                            <button class="btn btn-outline-info btn-sm ms-2" onclick="clearSearch()">清空</button>
+                            <button class="btn btn-primary btn-sm" style="width: 70%; height: 40px;" onclick="searchPosts()">搜索</button>          
+                        </div>
+                    </div>
+                </div>
+                <div id="postList"></div>
+                <div id="pagination-container"></div>
+            </div>
+            <div id="user-content" class="mt-4 p-4 bg-white">
+                <div class="row mb-3">
+                    <div class="col-md-4">
+                        <input type="text" class="form-control" id="userSearch" placeholder="搜索用户名/邮箱">
+                    </div>
+                    <div class="col-md-2">
+                        <button class="btn btn-primary w-100" onclick="User.searchUsers()">搜索</button>
+                    </div>
+                </div>
+                <div id="userList"></div>
+                <div id="userPagination"></div>
+            </div>
+            <!-- 全服公告管理 -->
+            <div id="global-notice-content">
+                <h1 class="text-center">全服公告管理</h1>
+                <button class="create-notice-btn" onclick="GlobalNotice.showCreateNoticeModal()">
+                    <i class="bi bi-journal-plus"></i>
+                </button>
+                <div class="row mb-3">
+                    <div class="col-md-4">
+                        <input type="text" class="form-control" id="global-searchKeyword" placeholder="搜索公告内容">
+                    </div>
+                    <div class="col-md-3">
+                        <input type="date" class="form-control" id="global-startDate">
+                    </div>
+                    <div class="col-md-3">
+                        <input type="date" class="form-control" id="global-endDate">
+                    </div>
+                    <div class="col-md-2">
+                        <div>
+                            <button class="btn btn-outline-info btn-sm ms-2" onclick="GlobalNotice.clearSearch()">清空</button>
+                            <button class="btn btn-primary btn-sm" onclick="GlobalNotice.searchNotices()">搜索</button>
+                        </div>
+                    </div>
+                </div>
+                <div id="global-notice-list"></div>
+                <div id="global-pagination-container"></div>
+            </div>
+
+            <!-- 社区公告管理 -->
+            <div id="community-notice-content">
+                <h1 class="text-center">社区公告管理</h1>
+                <button class="create-notice-btn" onclick="CommunityNotice.showCreateNoticeModal()">
+                    <i class="bi bi-journal-plus"></i>
+                </button>
+                <div class="row mb-3">
+                    <div class="col-md-4">
+                        <input type="text" class="form-control" id="community-searchKeyword" placeholder="搜索公告内容">
+                    </div>
+                    <div class="col-md-3">
+                        <input type="date" class="form-control" id="community-startDate">
+                    </div>
+                    <div class="col-md-3">
+                        <input type="date" class="form-control" id="community-endDate">
+                    </div>
+                    <div class="col-md-2">
+                        <div>
+                            <button class="btn btn-outline-info btn-sm ms-2" onclick="CommunityNotice.clearSearch()">清空</button>
+                            <button class="btn btn-primary btn-sm" onclick="CommunityNotice.searchNotices()">搜索</button>
+                        </div>
+                    </div>
+                </div>
+                <div id="community-notice-list"></div>
+                <div id="community-pagination-container"></div>
+            </div>
+            <div id="comment-content" class="mt-4 p-4 bg-white">
+                <h1 class="text-center">评论管理</h1>
+                <div class="row mb-3">
+                    <div class="col-md-4">
+                        <input type="text" class="form-control" id="comment-searchKeyword" placeholder="搜索评论内容">
+                    </div>
+                    <div class="col-md-3">
+                        <input type="date" class="form-control" id="comment-startDate">
+                    </div>
+                    <div class="col-md-3">
+                        <input type="date" class="form-control" id="comment-endDate">
+                    </div>
+                    <div class="col-md-2">
+                        <button class="btn btn-primary btn-sm" onclick="CommentManager.searchComments()">搜索</button>
+                        <button class="btn btn-danger btn-sm ms-2" onclick="CommentManager.clearSearch()">清空</button>
+                    </div>
+                </div>
+                <div id="comment-list"></div>
+                <div id="comment-pagination-container"></div>
+            </div>
+    </div>
+    <script src="/static/js/adminOp.js"></script>
+</body>
+</html>

@@ -1,0 +1,373 @@
+<html><head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<title>985研究生给准备考研的大学生的12条忠告_大学生必备网</title>
+<meta name="keywords" content="考研,孤独,信心,计划,心态">
+<meta name="description" content="（本文作者为天津大学结构专业研究生）  1、既然准备考研了，就要学会放弃，有舍才有得。  能不上的课尽量不要上，能不参加的活动尽量不要参加，放弃一切影响考研的东西（自我放松的时间除外）。  大家都不是小孩子了，逃几次课怎么了？就算挂了科又怎...">
+<meta name="mobile-agent" content="format=html5;url=https://m.dxsbb.com/news/1336.html">
+<meta name="mobile-agent" content="format=wml;url=https://m.dxsbb.com/news/1336.html">
+<meta name="mobile-agent" content="format=xhtml;url=https://m.dxsbb.com/news/1336.html">
+<link rel="alternate" media="only screen and (max-width: 640px)" href="https://m.dxsbb.com/news/1336.html">
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=202412">
+<script src="https://hm.baidu.com/hm.js?0fde2fa52b98e38f3c994a6100b45558"></script><script src="https://zz.bdstatic.com/linksubmit/push.js"></script><script src="/js/common.js"></script><script src="/js/jquery.min.js"></script>
+<script src="/js/m.js"></script>
+
+<script src="/js/OTca.js"></script>
+</head>
+<body>
+<div class="topBar">
+<div class="wrap">
+<div class="notice">欢迎访问大学生必备网！</div>
+<div class="favorite"><a href="/about/contact.html" target="_blank">我要纠错</a><a href="javascript:void(0);" onclick="addFavorite();">加入收藏</a></div>
+</div>
+</div>
+<div class="topLogo">
+<div class="wrap">
+<div class="logo">
+<a href="/"><img src="/img/logo.png?v=1" title="大学生必备网" alt="大学生必备网"></a>
+</div>
+<div class="search">
+<div class="searchBox">
+<input type="text" id="searchInput" class="searchInput" value="请输入要搜索的内容" onfocus="if (value =='请输入要搜索的内容'){value =''}" onblur="if (value ==''){value='请输入要搜索的内容'}">
+<input type="button" class="searchBtn" onclick="znss(document.getElementById('searchInput').value)" value="搜索">
+</div>
+</div>
+</div>
+</div>
+<div class="topMenu">
+<div class="menuList">
+<ul>
+<li class="active"><a href="/" target="_blank">首页</a></li>
+<li><a href="/news/list_86.html" target="_blank">考研频道</a></li>
+<li><a href="/news/list_41.html" target="_blank">考研常识</a></li>
+<li><a href="/news/list_983.html" target="_blank">考研报名</a></li>
+<li><a href="/news/list_984.html" target="_blank">考研时间</a></li>
+<li><a href="/news/list_551.html" target="_blank">考研科目</a></li>
+<li><a href="/news/list_985.html" target="_blank">成绩查询</a></li>
+<li><a href="/news/list_239.html" target="_blank">国 家 线</a></li>
+<li><a href="/news/list_986.html" target="_blank">复试调剂</a></li>
+<li><a href="/news/list_989.html" target="_blank">推免保研</a></li>
+<li><a href="/news/list_652.html" target="_blank">985</a></li>
+<li><a href="/news/list_651.html" target="_blank">211</a></li>
+<li><a href="/news/list_178.html" target="_blank">双一流</a></li>
+<li><a href="/news/list_712.html" target="_blank">学科评估</a></li>
+<li><a href="/news/list_1002.html" target="_blank">考研院校</a></li>
+<li><a href="/news/list_991.html" target="_blank">考研专业</a></li>
+</ul>
+</div>
+</div>
+<div class="position">当前位置：<a href="/">首页</a><span>&gt;</span><a href="/news/list_86.html" target="_blank">考研频道</a><span>&gt;</span><a href="/news/list_990.html" target="_blank">经验分享</a></div>
+<div class="navmenu">
+<ul class="second">
+<li class="firstname"><a href="/news/list_86.html">不限</a></li><li><a href="/news/list_41.html">常识科普</a></li><li class="selected"><a href="/news/list_990.html">经验分享</a></li><li><a href="/news/list_61.html">报考地区</a></li><li><a href="/news/list_983.html">报名时间</a></li><li><a href="/news/list_984.html">考试时间</a></li><li><a href="/news/list_551.html">考试科目</a></li><li><a href="/news/list_985.html">成绩查询</a></li><li><a href="/news/list_239.html">考研分数</a></li><li><a href="/news/list_986.html">复试调剂</a></li><li><a href="/news/list_989.html">推免保研</a></li><li><a href="/news/list_1011.html">专科考研</a></li><li><a href="/news/list_1002.html">院校信息</a></li><li><a href="/news/list_991.html">专业信息</a></li>
+</ul>
+</div>
+<div class="wrap">
+<script>OTca('ot002');</script><div style="margin:10px 0 0 0;padding:5px 12px 0px 16px;border:1px solid #f5f5f5;border-radius:2px;background:#fefefe;box-shadow:0 1px 3px rgba(0,37,55,.05);width: 1160px;float: left;"><script type="text/javascript" src="//2021.dxsbb.com/source/hcu_i_rdu/common/d_d.js"></script>
+</div>
+
+</div>
+<div class="newsBody">
+<div class="newsareaL">
+<div id="article" style="height: 1600px;">
+<h1>985研究生给准备考研的大学生的12条忠告</h1>
+<div class="update">更新：2023-2-6 9:13:48&nbsp;&nbsp;&nbsp;&nbsp;发布：大学生必备网</div>
+<div class="content"><div style="text-align:center;">（本文作者为<a href="/news/list_120.html" class="keyWord" target="_blank">天津</a>大学结构专业<a href="/news/list_41.html" class="keyWord" target="_blank">研究生</a>）</div><div> <b>1、既然准备<a href="/news/list_41.html" class="keyWord" target="_blank">考研</a>了，就要学会放弃，有舍才有得。</b></div><div>  能不上的课尽量不要上，能不参加的活动尽量不要参加，放弃一切影响考研的东西（自我放松的时间除外）。</div><div>  大家都不是小孩子了，逃几次课怎么了？就算挂了科又怎么了？奖学金没了又怎么了？开班会、年级大会我不去怎么了？被通报又怎么了？班上聚餐不去怎么了？既然决定考研了，一切皆是浮云，认真复习才是王道。这是很简单的道理，可就是有很多人不明白。我为了考研主动挂了3科，扔掉了<a href="/news/?list_mark-%B4%F3%D2%BB.html" class="keyWord" target="_blank">大一</a><a href="/news/?list_mark-%B4%F3%B6%FE.html" class="keyWord" target="_blank">大二</a>连拿2年的一等奖学金和一堆的荣誉证书，我敢说以一般人的智商，如果不大量逃课想考名牌学校是肯定没戏的！</div><div>  <b>2、考研是一个人孤独的战斗！</b></div><div>  不要“夫妻双双把研考”，不要“先找份<a href="/news/list_37.html" class="keyWord" target="_blank">工作</a>再考比较保险”，不要“考不上我还可以”，不要到比较吵的图书馆去自习，不要老是跟别人攀比。当然根据个人情况研伴是可以找的。</div><div>  我整个的考研期间基本都是一个人复习的，当时我上自习的教室由于位置较偏的缘故一直都只有我一个人，从早到晚，几乎没有任何人来打扰我，我个人对这样的环境是非常非常满意的。当然人与人是不同的，如果你认为跟别人一起复习效率更高的话，你可以按你的想法去做。</div><div>  考研需要花费很长的时间，中间还要承受很大的压力，其中有时你也会很烦躁，希望有人在身边和自己一起<a href="/news/list_32.html" class="keyWord" target="_blank">努力</a>，提醒自己曾经定下的目标和当初的<a href="/news/list_32.html" class="keyWord" target="_blank">梦想</a>；在遇到困难时有人与你并肩作战，可以排除孤独感，增加必胜的信心；同时在比较中前进，可能会有更好的效果。</div><div>  虽说考研最好结伴，但要睁大双眼选择。意志不坚定的不要选，你不仅要帮他增强信心上，而且说不定你的意志也会被他给摧垮了；边考研边<a href="/news/list_37.html" class="keyWord" target="_blank">找工作</a>的人不要选，这种人不会全心投入考研，最后很有可能结伴去找工作了；别做考研中的电灯泡，一来妨碍了别人，二来让你倍感凄凉与冷落，影响复习的心情；慎重对待男女同考，这是一件很危险的事情，试想两个人亲亲密密一边嗑瓜子一边看辅导书，效率到底会怎样呢？</div><div>  <b>3、准备不在于早，而在于是否真正用心准备，是否真正全身心地投入。</b></div><div>  一般情况下在<a href="/news/?list_mark-%B4%F3%C8%FD.html" class="keyWord" target="_blank">大三</a>暑假即七月份开始着手准备，此时距考试还有半年，时间足够了。但千万记住：一旦开始动手准备，就要全身心的投入，就像高速运转起来的齿轮一样，保持一种连贯性，千万不要停停歇歇，这样太容易掉链子了。一开始复习的时候可以每天4小时，逐渐递增，但进入状态之后至少要保证每天有8——10小时的复习时间，智商高点的可以6——8小时，一般人最好还是8——10小时。能坚持每天12小时以上的，那我只有2个字：佩服。</div><div>  <b>4、不要贪得无厌，买一堆参考书，<a href="/news/list_131.html" class="keyWord" target="_blank">一本</a>好书读5遍胜过5本好书读一遍！</b></div><div>  我在数学上花的功夫最多，暑假2个月的时间里，我所有的时间（从上午到深夜）都花在了数学上，效果是立竿见影的，临考试前一个月很多人的复习全书还没看完，而我的数学复习全书（李永乐的）完完整整看了3遍，《真题解析》完完整整看了3遍（部分章节4遍），《400题》2遍，《超越135分》2遍（部分章节3遍）。推荐李永乐系列，确实很经典，尤其是里面总结的解题思路与考生误区要反复研读。</div><div>  <b>5、对自己要有信心！不是因为做不到而没有信心，而是因为没有信心所以才做不到。</b></div><div>  可以这么说，考研那么多人，有信心的能有几个？这也许就是考研整体成绩不高，每年有大面积的人落榜的真正原因吧！</div><div>  不是因为做不到而没有信心，而是因为没有信心所以才做不到。这句话能理解的人不多，好在我当年是理解了。其实考研并不难，难的是如何相信自己有<a href="/news/list_32.html" class="keyWord" target="_blank">成功</a>的绝对实力。这是好多同学的通病，还没有考试前心已胆怯，那样失败只是早晚的事情。他们可能在<a href="/news/list_4.html" class="keyWord" target="_blank">大学四年</a>的成绩一般，甚至可能在一所不入流的学校，而考研的千军万马中不乏那些来自名校成绩骄人的学子，再加上地域、主场优势，可能未战已失去了一些信心，这是最要不得的！</div><div>  事实上，平时成绩好坏与能否考上研没有太大的关系，好多成绩不好的学生，他们甚至有个别课程没有及格，英语没过四级，但这并不影响他们考上重点院校；考研比考大学要相对容易的多，好多没能考上清华、北大的在考研时实现了他们四年前的梦想。大家都是从<a href="/" class="keyWord" target="_blank">高考</a>的独木桥上走过来的，为何在考研时不相信自己呢？</div><div>  <b>6、选学校不要怕好，但是也不要报那些只招几个人的专业。</b></div><div>  有些同学在选学校的时候，畏首畏尾，瞻前顾后，标准一降再降，或者是刚开始复习的时候选了名牌大学，正式报名的时候又动摇了，报了一所二流学校，结果到最后连那个较次的学校都没上，为什么？不管你承认不承认，一旦你在学校选择上降低了对自己的要求，复习的时间和质量绝对会随之而下，其实你选什么档次的学校都差不多，如果选了好学校，复习时间不自觉的就会上去了，所以大家选学校的时候尽量往好了选，有时候不逼自己一把，不知道自己有多优秀，尤其是在研究生如此泛滥的今天，我认为一个烂学校的研究生是绝对不值得读的。</div><div>  <b>7、复习最主要的还是要靠自己静下心来慢慢地理解。</b></div><div>  个人感觉千万不要上辅导班，尤其是那些英语数学全程班，最多最多上个政治的冲刺班！对数学跟英语来说，听老师在台上讲，根本不如自己静下心来慢慢理解。相信我，自己理解的绝对比老师硬灌给你的深的多。而且报了班之后会有惰性，老想着老师会帮你复习的，结果反而自己没复习。不要太迷信前人，也不要太在意周围的人怎么着怎么着。很重要的一点是问问自己究竟是属于哪一种<a href="/news/list_82.html" class="keyWord" target="_blank">学习</a>类型的人，再根据自己的情况制定计划书，千万不可以盲目跟从别人的<a href="/news/list_44.html" class="keyWord" target="_blank">经验</a>和进度，那样不但扰乱了自己正常的学习计划，也会影响了别人的情绪。</div><div>  <b>8、要有一个合理的复习计划，预则立，不预则废。</b></div><div>  计划不要定时，要定量（把每天的任务要定好并按时完成）。计划分为总计划、分期计划和每天计划。</div><div>  从开始复习到考试之前，一共有多少时间，每本书要看多少遍，这是总计划。</div><div>  每本书的每一遍花多长时间看完，在什么时间段看完，这是分期计划。</div><div>  每天各科复习参考书要看多少页，这是每天的计划。</div><p>  三者缺一不可，每天的计划可以变动，但分期计划千万别完不成或者拖期，否则你会发现任务越积越多。最后你可能会郁闷的吐血而亡。</p><div>  <b>9、考研最主要的还是一个心态的问题：三心二意、心猿意马、心浮气躁。</b></div><div>  考研成功的理由有成百上千个，但考研失败的原因却只有一个，那就是考研最大之忌：三心二意。</div><div>  我觉得考研最主要的还是一个心态的问题：三心二意、心猿意马、心浮气躁。不管是已经<a href="/news/list_37.html" class="keyWord" target="_blank">毕业</a>的还是在校的学生，这一点都是考研大忌。在考与不考之间徘徊，把考研当成一个平衡的手段，老觉得考不上还可以工作，实际上这种心理对考研的影响是很大的。考研是一件艰辛的事，耐不住寂寞的人和心浮气躁的人考研，往往不能把心事放在复习上，别看他整天在教室呆着，但效果究竟如何呢？在考研教室里趴着桌子睡觉是司空见惯的事情。</div><div>  有一些考研的复习时老爱灵魂出窍，三天打鱼，两天晒网，认真不了三天就想轻松轻松，可能是平时散漫惯了。考研考的是人的毅力，要坚持，虽不可能是天天如一日，但也不能只有三天的热情吧！要有足够的勇气去大胆的选择，要有足够的精力去应付，这是很重要的。</div><div>  考研需要耐力，信心，忍受寂寞，学会放松。既然选择了考研就要专心考，不要朝三暮四，花其它的心思，我知道做到这一点，非常困难，却很重要。考研就是两个字“坚持”。</div><div>  <b>10、考研之所以失败，是因为没有把考研真正的放在心上，态度决定一切。</b></div><div>  我认为始终要坚持考研第一，把考研当成自己目前的事业来做。态度决定一切，一定要端正考研态度，给自己一个明确的定位，知道自己在做什么该做什么并且知道自己要该怎样去做；要勇敢地面对考研中遇到的困难和障碍，克服犹豫不决、精力分散、躲避面对、信心不足等消极影响，集中精力积极面对，只要能够在较长时间里保持注意力，并且坚持学习到最后，我想没有什么我们达不到的目的。</div><div>  <b>11、注意学习方法，只说基本的但是很重要的几点。</b></div><div>  数学：打牢基础，善于总结，数学参考书每本要读2——3遍，每种题型的解题方法有哪些，什么条件下用哪种方法，一定要总结出来并烂熟于心，考场上才不会出现似曾相识的题做不对的情况，如果你真的经历过考研考场那紧张气氛的话，你就会充分理解我为什么这么强调这一点。</div><div>  英语：才考了61分，不敢在这误导大家，就少说2句。千万千万不要做《阅读XX篇》，绝对是浪费时间，只做真题，只背真题里出现的单词，真题是王道！真题做10遍都不为过！单词是每天都要背的，但注意每天都要复习以前那些没记住的。推荐用张剑编的《真题解析》（黄皮书），做阅读要注意出题者的陷阱，把真题研究透了，做起阅读来你会发现每个题都那么相似。</div><div>  政治：考研政治=马哲+马经+毛概+邓论+世经+时事，马哲马经重点是理解，毛概邓论重点是记忆，剩下2个占的分比较少。其实马哲马经是绝对的经典著作，真正的马克思主义，真正理解了之后，你会发现真正的马克思主义是多么的让人热血沸腾，记得考研的那段日子里，每天熄灯之后，总是要跟寝室的哥们一起探讨马克思主义，尝试用马哲马经里的理论去解释日常生活中发生的事，效果就不用我说了吧；毛概邓论是修改过的，我就不多说了，一个字：背。</div><div>  <b>12、要知道考研的全过程里边最重要的是什么：初试成绩尤其是三门公共课的成绩。</b></div><div>  现在有很多同学问我专业课的消息、如何买到试卷甚至是复试信息、如何提前联系导师等等，我想这些同学都犯了一个致命的错误：本末倒置。我认为初试成绩是重中之重，尤其是对我这种跨学校跨地区考的学生来说最重要的是三门公共课的成绩，因为这三门的成绩没有水分，谁复习的好谁考的就高。而专业课的水分是很大的，我曾经看到一个帖子：复习三周考上研究生。当时我想：这人简直是爱因斯坦再世啊！仔细一看我释然了：数学70+英语40+政治50+专业课145+总分320+，不用我再解释了吧。所以如果你是跨学校跨地区甚至是跨专业的话，请记住这一点：三门公共课才是你能有所依赖的，尤其是数学。我一直认为：想考天大结构这样的名牌学校的好专业，必须做到：英语要过线，数学分要高。当然，考普通学校或者是本校的的不在此列。</div></div><div style="float:left;width: 100%;overflow:hidden;margin:0;padding: 0px 0 10px 0;background:#fff;"><a href="#" style="color:#333333;">搜索微信公众号：<span style="color:#00aaff;font-weight: bold;">考研数据</span>，输入院校，可查各大学招生简章、复试分数、专业目录、参考书目、一流学科、学科排名、报录比...</a></div>
+<div class="mark">标签：<a href="/news/?list_mark-%E8%80%83%E7%A0%94.html" target="_blank">考研</a>&nbsp;<a href="/news/?list_mark-%E5%AD%A4%E7%8B%AC.html" target="_blank">孤独</a>&nbsp;<a href="/news/?list_mark-%E4%BF%A1%E5%BF%83.html" target="_blank">信心</a>&nbsp;<a href="/news/?list_mark-%E8%AE%A1%E5%88%92.html" target="_blank">计划</a>&nbsp;<a href="/news/?list_mark-%E5%BF%83%E6%80%81.html" target="_blank">心态</a>&nbsp;</div>
+</div><div id="readAll"><button id="readAll_btn">阅读全文</button></div>
+<script>OTca('ot022');</script><div style="background:#fefefe;float:left;overflow:hidden;width: 800px;padding:20px 20px 10px 20px;margin:10px 0 0 0;">
+<script type="text/javascript" src="//2021.dxsbb.com/production/up/source/o_qeq/rq/m.js"></script>
+</div>
+
+<div class="marknews">
+<h2>相关推荐</h2>
+<ul>
+<li>
+<a href="/news/67598.html" target="_blank">
+<div class="a"><img src="https://img.dxsbb.com/upFiles/infoImg/2019122463887853.png" alt="考研国家线及单科分数线汇总（含2021-2024历年）"></div>
+<div class="b"><h3>考研国家线及单科分数线汇总（含2021-2024历年）</h3><p class="time">2024-3-12</p></div>
+</a>
+</li>
+<li>
+<a href="/news/70215.html" target="_blank">
+<div class="a"><img src="https://img.dxsbb.com/upFiles/infoImg/2020021647767205.png" alt="2024考研成绩什么时候公布，何时可以查出来？"></div>
+<div class="b"><h3>2024考研成绩什么时候公布，何时可以查出来？</h3><p class="time">2024-2-26</p></div>
+</a>
+</li>
+<li>
+<a href="/news/3681.html" target="_blank">
+<div class="a"><img src="https://img.dxsbb.com/upFiles/infoImg/2019082841606045.png" alt="考研时间2025考试时间（2024年12月21日至22日）"></div>
+<div class="b"><h3>考研时间2025考试时间（2024年12月21日至22日）</h3><p class="time">2024-7-20</p></div>
+</a>
+</li>
+<li>
+<a href="/news/87035.html" target="_blank">
+<div class="a"><img src="https://img.dxsbb.com/upFiles/infoImg/2019082841606045.png" alt="2025考研时间及各科目考试时间安排"></div>
+<div class="b"><h3>2025考研时间及各科目考试时间安排</h3><p class="time">2024-7-20</p></div>
+</a>
+</li>
+<script>OTca('ot016');</script><li style="background:#fefefe;float:left;overflow:hidden;width:800px;">
+<script type="text/javascript" src="//2021.dxsbb.com/source/hcbl_r/k_ylb.js"></script>
+</li>
+
+<li>
+<a href="/news/94267.html" target="_blank">
+<div class="a"><img src="https://img.dxsbb.com/upFiles/infoImg/2021022040279717.png" alt="2024年考研成绩什么时候出来？"></div>
+<div class="b"><h3>2024年考研成绩什么时候出来？</h3><p class="time">2024-2-20</p></div>
+</a>
+</li>
+<li>
+<a href="/news/133192.html" target="_blank">
+<div class="a"><img src="https://img.dxsbb.com/upFiles/infoImg/2021031271671473.jpg" alt="2023考研国家线及单科分数线一览表"></div>
+<div class="b"><h3>2023考研国家线及单科分数线一览表</h3><p class="time">2024-2-21</p></div>
+</a>
+</li>
+<li>
+<a href="/news/67259.html" target="_blank">
+<div class="a"><img src="https://img.dxsbb.com/upFiles/infoImg/2019122146000589.png" alt="全国双高计划学校名单有哪些（56所高水平学校和141所高水平专业群建设高校）"></div>
+<div class="b"><h3>全国双高计划学校名单有哪些（56所高水平学校和141所高水平专业群建设高校）</h3><p class="time">2024-5-16</p></div>
+</a>
+</li>
+<li>
+<a href="/news/95117.html" target="_blank">
+<div class="a"><img src="https://img.dxsbb.com/upFiles/infoImg/2021031777431561.jpg" alt="2024考研专业目录大全（学术学位+专业学位）"></div>
+<div class="b"><h3>2024考研专业目录大全（学术学位+专业学位）</h3><p class="time">2023-9-12</p></div>
+</a>
+</li>
+<script>OTca('ot018');</script><li style="background:#fefefe;float:left;overflow:hidden;width:800px;"><script type="text/javascript" src="//2021.dxsbb.com/source/jew/common/b/k/source/wgdd.js"></script>
+</li>
+
+<li>
+<a href="/news/87037.html" target="_blank">
+<div class="a"><img src="https://img.dxsbb.com/upFiles/infoImg/2022022162429657.jpg" alt="考研总分多少，各科满分是多少？"></div>
+<div class="b"><h3>考研总分多少，各科满分是多少？</h3><p class="time">2024-2-28</p></div>
+</a>
+</li>
+<li>
+<a href="/news/60269.html" target="_blank">
+<div class="a"><img src="https://img.dxsbb.com/upFiles/infoImg/2019082841606045.png" alt="2025考研报名时间和考试时间"></div>
+<div class="b"><h3>2025考研报名时间和考试时间</h3><p class="time">2024-9-20</p></div>
+</a>
+</li>
+<li>
+<a href="/news/180.html" target="_blank">
+<div class="a"><img src="https://img.dxsbb.com/upFiles/infoImg/" alt="普通二本到名校研究生的蜕变——看了至少多考50分"></div>
+<div class="b"><h3>普通二本到名校研究生的蜕变——看了至少多考50分</h3><p class="time">2018-11-6</p></div>
+</a>
+</li>
+<li>
+<a href="/news/70168.html" target="_blank">
+<div class="a"><img src="https://img.dxsbb.com/upFiles/infoImg/2020021273293705.png" alt="强基计划是什么意思，报名条件有哪些？"></div>
+<div class="b"><h3>强基计划是什么意思，报名条件有哪些？</h3><p class="time">2024-4-7</p></div>
+</a>
+</li>
+<script>OTca('ot020');</script><li style="background:#fefefe;float:left;overflow:hidden;width:800px;"><script type="text/javascript" src="//2021.dxsbb.com/production/g/b_tkth_cc/common/c.js"></script></li>
+
+</ul>
+</div>
+<div class="hotnews">
+<h2>热门推荐</h2>
+<ul>
+<li>
+<a href="/news/180.html" target="_blank">
+<div class="a"><img src="https://img.dxsbb.com/upFiles/infoImg/" alt="普通二本到名校研究生的蜕变——看了至少多考50分"></div>
+<div class="b"><h3>普通二本到名校研究生的蜕变——看了至少多考50分</h3><p class="time">2018-11-6</p></div>
+</a>
+</li>
+<li>
+<a href="/news/1336.html" target="_blank">
+<div class="a"><img src="https://img.dxsbb.com/upFiles/infoImg/" alt="985研究生给准备考研的大学生的12条忠告"></div>
+<div class="b"><h3>985研究生给准备考研的大学生的12条忠告</h3><p class="time">2023-2-6</p></div>
+</a>
+</li>
+<li>
+<a href="/news/4.html" target="_blank">
+<div class="a"><img src="https://img.dxsbb.com/upFiles/infoImg/" alt="大学生毕业出路：考研、公务员、找工作、创业…利弊分析"></div>
+<div class="b"><h3>大学生毕业出路：考研、公务员、找工作、创业…利弊分析</h3><p class="time">2023-2-6</p></div>
+</a>
+</li>
+<li>
+<a href="/news/1300.html" target="_blank">
+<div class="a"><img src="https://img.dxsbb.com/upFiles/infoImg/" alt="从普通二本到北大：我的跨校跨专业考研经验分享"></div>
+<div class="b"><h3>从普通二本到北大：我的跨校跨专业考研经验分享</h3><p class="time">2018-11-6</p></div>
+</a>
+</li>
+<li>
+<a href="/news/954.html" target="_blank">
+<div class="a"><img src="https://img.dxsbb.com/upFiles/infoImg/" alt="考研知多少？"></div>
+<div class="b"><h3>考研知多少？</h3><p class="time">2023-2-6</p></div>
+</a>
+</li>
+<li>
+<a href="/news/1197.html" target="_blank">
+<div class="a"><img src="https://img.dxsbb.com/upFiles/infoImg/" alt="女生考研的成本太大了，你的青春伤不起"></div>
+<div class="b"><h3>女生考研的成本太大了，你的青春伤不起</h3><p class="time">2018-11-6</p></div>
+</a>
+</li>
+<li>
+<a href="/news/542.html" target="_blank">
+<div class="a"><img src="https://img.dxsbb.com/upFiles/infoImg/" alt="徘徊在考研边缘的人，一定想知道的一些问题"></div>
+<div class="b"><h3>徘徊在考研边缘的人，一定想知道的一些问题</h3><p class="time">2018-11-6</p></div>
+</a>
+</li>
+<li>
+<a href="/news/1366.html" target="_blank">
+<div class="a"><img src="https://img.dxsbb.com/upFiles/infoImg/" alt="大三了，考研还是找工作，该如何选择?"></div>
+<div class="b"><h3>大三了，考研还是找工作，该如何选择?</h3><p class="time">2018-11-6</p></div>
+</a>
+</li>
+<li>
+<a href="/news/25230.html" target="_blank">
+<div class="a"><img src="https://img.dxsbb.com/upFiles/infoImg/" alt="学长学姐告诉你，保研要从大一做起"></div>
+<div class="b"><h3>学长学姐告诉你，保研要从大一做起</h3><p class="time">2018-11-6</p></div>
+</a>
+</li>
+<li>
+<a href="/news/631.html" target="_blank">
+<div class="a"><img src="https://img.dxsbb.com/upFiles/infoImg/" alt="哪些人适合考研？"></div>
+<div class="b"><h3>哪些人适合考研？</h3><p class="time">2023-2-6</p></div>
+</a>
+</li>
+</ul>
+</div>
+<div class="shangxia">
+<div class="shang">上一篇：<a href="/news/4.html">大学生毕业出路：考研、公务员、找工作、创业…利弊分析</a> <span class="qwlb"><a href="/news/list_990.html" target="_blank">前往列表</a></span></div>
+<div class="xia">下一篇：<a href="/news/4558.html">人大导师：我到底想要什么样的研究生？</a> <span class="qwsy"><a href="/" target="_blank">前往首页</a></span></div>
+</div>
+</div>
+<div class="newsareaR">
+<div class="rightbox">
+<h2>考研科普</h2>
+<ul>
+<li><a href="/news/list_41.html" target="_blank">考研常识</a></li>
+<li><a href="/news/list_990.html" target="_blank">考研经验</a></li>
+<li><a href="/news/list_61.html" target="_blank">考研地区</a></li>
+<li><a href="/news/list_983.html" target="_blank">考研报名</a></li>
+<li><a href="/news/list_984.html" target="_blank">考研时间</a></li>
+<li><a href="/news/list_551.html" target="_blank">考研科目</a></li>
+<li><a href="/news/list_985.html" target="_blank">成绩查询</a></li>
+<li><a href="/news/list_239.html" target="_blank">考研分数</a></li>
+<li><a href="/news/list_987.html" target="_blank">国 家 线</a></li>
+<li><a href="/news/list_986.html" target="_blank">复试调剂</a></li>
+<li><a href="/news/list_989.html" target="_blank">推免保研</a></li>
+<li><a href="/news/list_1011.html" target="_blank">专科考研</a></li>
+</ul>
+</div>
+<div class="rightbox">
+<h2>考研院校</h2>
+<ul>
+<li><a href="/news/list_652.html" target="_blank">985大学</a></li>
+<li><a href="/news/list_651.html" target="_blank">211大学</a></li>
+<li><a href="/news/list_178.html" target="_blank">双 一 流</a></li>
+<li><a href="/news/list_1003.html" target="_blank">保研院校</a></li>
+<li><a href="/news/list_179.html" target="_blank">一流学科</a></li>
+<li><a href="/news/list_645.html" target="_blank">学科评估</a></li>
+<li><a href="/news/list_605.html" target="_blank">重点学科</a></li>
+<li><a href="/news/list_637.html" target="_blank">报录比例</a></li>
+<li><a href="/news/list_627.html" target="_blank">招生简章</a></li>
+<li><a href="/news/list_176.html" target="_blank">招生专业</a></li>
+<li><a href="/news/list_549.html" target="_blank">招生计划</a></li>
+<li><a href="/news/list_177.html" target="_blank">参考书目</a></li>
+<li><a href="/news/list_1238.html" target="_blank">考试大纲</a></li>
+<li><a href="/news/list_136.html" target="_blank">考研真题</a></li>
+<li><a href="/news/list_988.html" target="_blank">复试分数</a></li>
+<li><a href="/news/list_1240.html" target="_blank">复试内容</a></li>
+<li><a href="/news/list_1241.html" target="_blank">复试占比</a></li>
+<li><a href="/news/list_1255.html" target="_blank">调剂要求</a></li>
+<li><a href="/news/list_628.html" target="_blank">收费标准</a></li>
+<li><a href="/news/list_629.html" target="_blank">奖助学金</a></li>
+</ul>
+</div>
+<div class="rightbox">
+<h2>考研专业</h2>
+<ul>
+<li><a href="/news/list_712.html">学科评估</a></li>
+<li><a href="/news/list_952.html">专业目录</a></li>
+<li><a href="/news/list_138.html">考研方向</a></li>
+<li><a href="/news/list_992.html">考试科目</a></li>
+</ul>
+</div>
+<script>OTca('ot012');</script><div style="margin: 10px 0 0 0;float:left;padding: 20px;background: #ffffff;">
+<script type="text/javascript" src="//2021.dxsbb.com/source/xsboy/resource/u/common/o_bh.js"></script>
+</div>
+
+<div class="new">
+<h2>最近更新</h2>
+<ul>
+<li>
+<a href="/news/954.html" target="_blank">
+<div class="a"><img src="https://img.dxsbb.com/upFiles/infoImg/" alt="考研知多少？"></div>
+<div class="b"><h3>考研知多少？</h3><p class="time">2023-2-6</p></div>
+</a>
+</li>
+<li>
+<a href="/news/631.html" target="_blank">
+<div class="a"><img src="https://img.dxsbb.com/upFiles/infoImg/" alt="哪些人适合考研？"></div>
+<div class="b"><h3>哪些人适合考研？</h3><p class="time">2023-2-6</p></div>
+</a>
+</li>
+<li>
+<a href="/news/4.html" target="_blank">
+<div class="a"><img src="https://img.dxsbb.com/upFiles/infoImg/" alt="大学生毕业出路：考研、公务员、找工作、创业…利弊分析"></div>
+<div class="b"><h3>大学生毕业出路：考研、公务员、找工作、创业…利弊分析</h3><p class="time">2023-2-6</p></div>
+</a>
+</li>
+<li>
+<a href="/news/1336.html" target="_blank">
+<div class="a"><img src="https://img.dxsbb.com/upFiles/infoImg/" alt="985研究生给准备考研的大学生的12条忠告"></div>
+<div class="b"><h3>985研究生给准备考研的大学生的12条忠告</h3><p class="time">2023-2-6</p></div>
+</a>
+</li>
+<li>
+<a href="/news/4558.html" target="_blank">
+<div class="a"><img src="https://img.dxsbb.com/upFiles/infoImg/" alt="人大导师：我到底想要什么样的研究生？"></div>
+<div class="b"><h3>人大导师：我到底想要什么样的研究生？</h3><p class="time">2023-2-6</p></div>
+</a>
+</li>
+<li>
+<a href="/news/14226.html" target="_blank">
+<div class="a"><img src="https://img.dxsbb.com/upFiles/infoImg/" alt="大学生考研这个事，到底值不值？"></div>
+<div class="b"><h3>大学生考研这个事，到底值不值？</h3><p class="time">2023-2-6</p></div>
+</a>
+</li>
+<li>
+<a href="/news/617.html" target="_blank">
+<div class="a"><img src="https://img.dxsbb.com/upFiles/infoImg/" alt="考研没有动力？—适合作为考研的4大动力"></div>
+<div class="b"><h3>考研没有动力？—适合作为考研的4大动力</h3><p class="time">2022-9-1</p></div>
+</a>
+</li>
+<li>
+<a href="/news/544.html" target="_blank">
+<div class="a"><img src="https://img.dxsbb.com/upFiles/infoImg/" alt="教你如何搜集考研专业课资料"></div>
+<div class="b"><h3>教你如何搜集考研专业课资料</h3><p class="time">2022-2-21</p></div>
+</a>
+</li>
+<li>
+<a href="/news/1232.html" target="_blank">
+<div class="a"><img src="https://img.dxsbb.com/upFiles/infoImg/2013122356911881.jpg" alt="假如你是第一次考研的话：考场上你需要注意的那些事儿"></div>
+<div class="b"><h3>假如你是第一次考研的话：考场上你需要注意的那些事儿</h3><p class="time">2022-2-21</p></div>
+</a>
+</li>
+<li>
+<a href="/news/39137.html" target="_blank">
+<div class="a"><img src="https://img.dxsbb.com/upFiles/infoImg/" alt="读二流大学的我，为什么拼命考研？"></div>
+<div class="b"><h3>读二流大学的我，为什么拼命考研？</h3><p class="time">2019-7-12</p></div>
+</a>
+</li>
+</ul>
+</div>
+<script>OTca('ot015');</script><div style="float:left;margin: 10px 0 0 0;padding: 20px;background: #ffffff;">
+<script type="text/javascript" src="//2021.dxsbb.com/site/fa-j/openjs/s-sx/source/igz.js"></script></div>
+
+</div>
+</div>
+<div class="bottomBody">
+<div class="Copyright"><p class="about">Copyright&nbsp;©&nbsp;大学生必备网&nbsp;&nbsp;&nbsp;&nbsp;<a href="/about/contact.html" target="_blank">联系我们</a></p>
+<p class="beian"><a href="https://beian.miit.gov.cn" target="_blank">鄂ICP备2024032864号-2</a>&nbsp;&nbsp;&nbsp;&nbsp;<a target="_blank" href="https://www.beian.gov.cn/portal/registerSystemInfo?recordcode=42011102003869"><img src="/img/beian.png">鄂公网安备42011102003869号</a></p></div>
+</div>
+<script src="/js/k.js?v=20240928"></script><script src="/js/viewimages.js"></script>
+<script src="/js/echo.min.js"></script>
+<div style="position: fixed; bottom: 50px; right: 50px; width: 56px; height: 56px; border-radius: 5px; background: url(/img/backtop.png) 2px 2px no-repeat; background-color: #fff; "><a href="javascript:window.scrollTo(0, 0);" style="float: left; display: inline; margin-bottom: 1px; width: 56px; height: 56px; color: #fff; "></a></div>
+
+<script src="/readNum.asp?mudi=add&amp;dataID=1336&amp;isNoReturn=0"></script>
+
+</body></html>

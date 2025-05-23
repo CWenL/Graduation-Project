@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>搜索结果 - {{ keyword }}</title>
+    <link rel="stylesheet" href="/static/css/bootstrap.css">
+    <link rel="stylesheet" href="/static/css/search_detail.css">
+</head>
+
+<body>
+    <header>
+        <!-- 绑定返回按钮事件 -->
+        <p class="fw-bolder home_h1">&nbsp;欢迎使用考研学习平台！<span style="color: #ffffff;font-size: 19px;">
+                <br><br><br>&nbsp;搜你想索，基于全平台数据全文索引的搜索！</span></p><br>
+        <button class="back-btn" onclick="window.location.href='/homepage';">主页</button>
+    </header>
+    <div class="content">
+        <form action="/search" method="get">
+            <img src="/static/imgs/搜索.png" style="width: 80px;">
+            <input type="text" name="keyword" id="search-input" class="btn_search" placeholder="输入搜索关键词"
+                value="{{ keyword }}">
+            <input type="submit" style="border-radius: 10px;" value="搜索" onclick="return validateForm()">
+            <!-- 添加复选框 -->
+            <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input class="input_check" type="checkbox" id="news" name="categories" value="新闻资讯"
+                    {% if '新闻资讯' in selected_categories %}checked{% endif %}>
+                <label class="label_check" for="news">新闻资讯</label>
+                <input class="input_check" type="checkbox" id="community_post" name="categories" value="社区帖子"
+                    {% if '社区帖子' in selected_categories %}checked{% endif %}>
+                <label class="label_check" for="community_post">社区帖子</label>
+                <input class="input_check" type="checkbox" id="community_comment" name="categories" value="社区评论"
+                    {% if '社区评论' in selected_categories %}checked{% endif %}>
+                <label class="label_check" for="community_comment">社区评论</label>
+                <input class="input_check" type="checkbox" id="study_data" name="categories" value="学习数据专区"
+                    {% if '学习数据专区' in selected_categories %}checked{% endif %}>
+                <label class="label_check" for="study_data">学习数据专区</label>
+                <input class="input_check" type="checkbox" id="notice" name="categories" value="通知"
+                    {% if '通知' in selected_categories %}checked{% endif %}>
+                <label class="label_check" for="notice">通知</label>
+            </div>
+        </form>
+        <h1>搜索关键词: {{ keyword }}</h1>
+        <p>共找到 {{ total_count }} 条结果</p>
+        {% set selected_categories = request.args.getlist('categories') if request.args.getlist('categories') else ['新闻资讯', '社区帖子', '社区评论', '学习数据专区', '通知'] %}
+        {% for category, category_results in results.items() %}
+            {% if category in selected_categories %}
+                {% if category_results %}
+                    <h2>{{ category }} 分类结果如下：</h2>
+                    <ul>
+                        {% for result in category_results %}
+                            {% if category == '新闻资讯' %}
+                                <li><a href="/news_detail/{{ result[0] }}">{{ result[1]|safe }}</a><br>
+                                    <span style="color: darkgrey;">{{ result[2]|safe }}</span>{{ result[3]|safe }}<br>
+                                    </li>
+                            {% elif category == '社区帖子' %}
+                                <li><a href="{{ url_for('post_detail', post_id=result[0]) }}">{{ result[1]|safe }}</a><br>
+                                    <span style="color: darkgrey;">{{ result[3]|safe }}</span>{{ result[1]|safe }}|{{ result[2]|safe }}||{{ result[4]|safe }}|{{ result[5]|safe }}<br>{{ result[6][:20]|safe if result[6]|length > 20 else result[6]|safe }}...</li>
+                            {% elif category == '社区评论' %}
+                                <li><a href="{{ url_for('post_detail', post_id=result[1]) }}">{{ result[3][:20]|safe if result[3]|length > 20 else result[3]|safe }}...</a><br>
+                                    <span style="color: darkgrey;">{{ result[4]|safe }}</span>{{ result[2]|safe}}</li>
+                            {% elif category == '学习数据专区' %}
+                                <li><a href="/Wrong/{{ result[0] }}">{{ result[2]|safe }}|{{ result[4]|safe }}</a><br>
+                                    <span style="color: darkgrey;">{{ result[7]|safe }}</span>{{ result[1]|safe }}|{{ result[3]|safe }}|{{ result[4]|safe }}|{{ result[9]|safe }}{{ result[3][:20]|safe if result[3]|length > 20 else result[3]|safe }}...</li>
+                            {% elif category == '通知' %}
+                                <li><a href="/notice/{{ result[0] }}">通知:{{ result[1]|safe }}|{{ result[4]|safe }}</a><br>
+                                    <span style="color: darkgrey;">{{ result[4]|safe }}</span>{{ result[1]|safe }}|{{ result[2]|safe }}|{{ result[3]|safe }}{{ result[5][:20]|safe if result[5]|length > 20 else result[5]|safe }}...</li>
+                            {% endif %}
+                        {% endfor %}
+                    </ul> 
+                {% endif %}
+                {% else %}
+                    <p>{{ category }} 分类未找到相关结果。</p>
+            {% endif %}
+        {% endfor %}
+        <ul class="pagination">
+            {% if page > 1 %}
+                <li><a href="{{ url_for('search', keyword=keyword, categories=selected_categories, page=page - 1) }}">&lt;上一页</a></li>
+            {% endif %}
+            {% if page > 3 %}
+                <li><a href="{{ url_for('search', keyword=keyword, categories=selected_categories, page=1) }}">1</a></li>
+                <li class="ellipsis">...</li>
+            {% endif %}
+            {% for p in range(max(1, page - 2), min(page + 2, total_pages)+1) %}
+                {% if p == page %}
+                    <li class="active"><a href="#">{{ p }}</a></li>
+                {% else %}
+                    <li><a href="{{ url_for('search', keyword=keyword, categories=selected_categories, page=p) }}">{{ p }}</a></li>
+                {% endif %}
+            {% endfor %}
+            {% if page + 2 < total_pages %}
+                <li class="ellipsis">...</li>
+                <li><a href="{{ url_for('search', keyword=keyword, categories=selected_categories, page=total_pages) }}">{{ total_pages }}</a></li>
+            {% endif %}
+            {% if page < total_pages %}
+                <li class="next"><a href="{{ url_for('search', keyword=keyword, categories=selected_categories, page=page + 1) }}">下一页&gt;</a></li>
+            {% endif %}
+        </ul>
+    </div>
+</body>
+<!-- 判断必填项是否为空 -->
+<script>
+    function validateForm() {
+  // 检查文字描述是否为空
+  var textContent = document.getElementById('search-input').value;
+  if (textContent === "") {
+      alert("请填写关键词！");
+      return false;
+  }
+  // 如果所有必填项都已填写，返回 true 允许提交
+  return true;
+}
+</script>
+</html>
